@@ -1,4 +1,3 @@
-# TASK: IT Fundamentals - Building Computational Thinking
 
 ## Project Context
 

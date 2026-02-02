@@ -15,31 +15,36 @@
 
 ### IT Fundamentals
 
-Todo:
-- You should love your job
-- to love your job you should know its history
-- history of computers and programming languages
-	- tuning machine and etc.
-	- does they had CPU?
-	- how it worked?
-- Why 0 and 1 ? how it works in hardware
-- Why we need programming languages
-- Explain how all trillion dollar industries are built upon these computers
-- Startuper may have only laptop and writing code become a millionere or even billionere
-- AI and technology is being integrated everyhwere, so we always need SA
+#### Foundational Mindset
+- [[01-Почему SA нужны основы IT]] - System Analyst perspective on computing history
+- [[15-Режим любопытства]] - Always ask WHY, see possibilities others don't
 
 #### Computer Architecture
+- [[02-ОЗУ против постоянной памяти]] - Desk and Library analogy, speed comparison
+- [[03-Управление памятью ОС]] - LRU strategy, swapping, performance
+- [[04-Роль процессора и ОС]] - Commander vs soldier, instruction execution
 
-- CPU, RAM, Storage
-- Data processing basics
-- Client-Server architecture
+#### Binary and Physical Computing
+- [[05-Системы кодирования и переключатели]] - Flashlight analogy, switches, state vs quantity
+- [[06-Двоичный счёт и паттерны]] - Exponential efficiency (100 = 7 switches)
+- [[07-Почему двоичная система]] - Efficiency and reliability
+- [[08-Транзисторы и электрические помехи]] - How silicon becomes computing, noise resistance
 
-#### Networking Basics
+#### From Hardware to Software
+- [[09-Наборы команд процессора]] - Instruction sets baked into silicon, x86 standard
+- [[10-Кошмар программиста 1950-х]] - Writing in binary, debugging nightmare
+- [[11-Рождение языка ассемблера]] - Assembly as first abstraction, assembler translator
+- [[12-Языки высокого уровня]] - Compilers, complete translation chain
+- [[13-Полная картина]] - From Python to electricity
 
+#### Reflection and Application
+- [[14-Применение для SA]] - Before/After comparison, asking precise questions, layer understanding
+
+#### Networking Basics (Next Module)
 - Internet fundamentals
 - IP addresses and DNS
 - TCP vs UDP
-- HTTP/HTTPS1
+- HTTP/HTTPS
 - Ports and protocols
 
 ---
