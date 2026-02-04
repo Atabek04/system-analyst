@@ -40,12 +40,9 @@
 #### Reflection and Application
 - [[14-Применение для SA]] - Before/After comparison, asking precise questions, layer understanding
 
-#### Networking Basics (Next Module)
-- Internet fundamentals
-- IP addresses and DNS
-- TCP vs UDP
-- HTTP/HTTPS
-- Ports and protocols
+#### Networking Basics
+
+- [[Как работает Интернет]] - DNS, физическое подключение, кабели, репитеры, ISP (34 слайда с Сократовским методом)
 
 ---
 

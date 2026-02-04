@@ -3,49 +3,8 @@
 
 **Role:** Senior System Analyst teaching interns
 **Methodology:** Zettelkasten + Socratic Method
-**Output:** Russian-language teaching materials (slides, notes, flashcards)
+**Output:** Russian-language teaching materials (slides, notes)
 **Framework:** Evidence-based learning with active recall
-
----
-
-## Current Work: IT Fundamentals Module
-
-**File:** [1-inbox/IT Fundamentals.md](1-inbox/IT%20Fundamentals.md)
-
-**Objective:** Build foundational understanding of computer architecture and computational thinking from first principles.
-
-**Target Audience:** Interns transitioning to Middle System Analyst role
-
-**Location in Curriculum:** Foundation module - must be completed before moving to higher-level System Analyst concepts (see: `2-MOC/Middle System Analyst Roadmap.md`)
-
----
-
-## What We're Teaching
-
-### Core Concepts Covered
-
-1. **Storage vs RAM vs CPU Architecture**
-   - Desk and Library analogy (RAM = desk, Storage = library)
-   - Speed differences and why each component exists
-   - Data flow: Storage → RAM → CPU → RAM → Storage
-
-2. **Memory Management**
-   - What happens when RAM is full (LRU strategy)
-   - Role of Operating System (commander vs soldier/CPU)
-   - Swapping and virtual memory
-   - Performance implications
-
-3. **CPU Instruction Execution**
-   - From mystery: "How does silicon understand?"
-   - To mechanism: Code systems (flashlight analogy)
-   - Physical reactions without understanding
-   - Building memory with switches
-
-4. **Binary Representation** ⭐ (Current)
-   - Problem: Counting efficiently (100 switches vs 7 switches)
-   - Finger analogy: State vs quantity
-   - Discovery: 2ⁿ combinations
-   - Foundation for understanding how computers actually encode information
 
 ---
 
@@ -80,22 +39,31 @@
 
 ### Sections Completed
 
+#### IT Fundamentals Module (Completed)
 1. **Why IT Fundamentals Matter** (System Analyst perspective)
 2. **RAM vs Storage** (Desk and Library analogy)
 3. **Why Both Are Needed** (Speed comparison)
 4. **Memory Management** (OS role, LRU, swapping)
 5. **CPU Execution** (Flashlight analogy, code systems, switches)
-6. **Binary Counting** (Finger analogy, 2ⁿ pattern) ⭐ Current
+6. **Binary Counting** (Finger analogy, 2ⁿ pattern)
+
+#### Networking Basics Module (In Progress)
+7. **[[Как работает Интернет]]** ⭐ Just Completed
+   - 34 слайда с Сократовским методом (вопрос → ответ)
+   - Темы: DNS, IP-адреса, физическое подключение, кабели, репитеры, ISP
+   - Атомарная заметка: `3-permanent/Networking/Как работает Интернет.md`
+   - Wiki-link в `2-MOC/Middle System Analyst Roadmap.md`
+   - Флешкарты: `5-flashcards/Интернет-основы.csv` (12 карточек)
 
 ### Next Steps
 
-- [ ] Connect binary representation to actual CPU transistors
-- [ ] Explain instruction encoding (how "add" becomes binary pattern)
-- [ ] Show how CPU circuits react to binary patterns
-- [ ] Quick check questions for entire module
-- [ ] Move from `1-inbox/` to `3-permanent/`
-- [ ] Create flashcards in `5-flashcards/IT-Fundamentals.csv`
-- [ ] Update `2-MOC/Middle System Analyst Roadmap.md`
+- [ ] Create flashcards for "Как работает Интернет" in `5-flashcards/Интернет-основы.csv`
+- [ ] Archive source material: move `1-inbox/How internet works.md` → `4-archive/`
+- [ ] Continue Networking Basics:
+  - [ ] TCP vs UDP
+  - [ ] HTTP/HTTPS
+  - [ ] Ports and protocols
+  - [ ] WebSocket
 
 ---
 
@@ -132,60 +100,6 @@ Before moving to next section:
 - [ ] Formatting is clean and scannable
 
 ---
-
-## Integration with Project Guidelines
-
-**References:**
-- **CLAUDE.md** (project instructions) - Teaching philosophy and structure
-- **~/.claude/CLAUDE.md** (global rules) - Senior engineer thinking standards
-- **2-MOC/Middle System Analyst Roadmap.md** - Curriculum navigation
-
-**Alignment:**
-- ✓ Atomic note structure (one concept per section)
-- ✓ Interconnected (each section builds on previous)
-- ✓ Flashcard-ready (specific, testable concepts)
-- ✓ Socratic method (questions before answers)
-- ✓ Russian language (all teaching content)
-
----
-
-## Current Focus: Binary Foundation
-
-**Why This Matters:**
-Binary representation is the bridge between:
-- Physical reality (switches, transistors)
-- Computational abstraction (numbers, instructions, data)
-
-Without understanding binary, students cannot grasp:
-- How CPU instructions are encoded
-- Why data types have size limits
-- How memory addressing works
-- What "32-bit" vs "64-bit" actually means
-
-**Next Conceptual Jump:**
-From "7 switches can count to 100" → "CPU instructions are binary patterns that trigger specific circuits"
-
-This requires bridging:
-1. Binary as counting system
-2. Binary as instruction encoding
-3. CPU circuits wired to react to specific patterns
-
----
-
-## Success Criteria
-
-Module complete when student can:
-1. Explain data flow through Storage/RAM/CPU without looking at notes
-2. Diagnose "slow computer" by identifying bottleneck (RAM/CPU/Storage)
-3. Understand why CPU needs RAM (speed mismatch)
-4. Explain OS role in memory management
-5. Calculate: How many switches needed to represent N values (2ⁿ)
-6. Understand: Computer = patterns of on/off triggering physical reactions
-
-**Assessment:** Test Your Understanding questions at end of module (9 questions covering all concepts)
-
----
-
 ## Notes for AI Assistant
 
 **Context Preservation:**

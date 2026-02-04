@@ -4,41 +4,52 @@
     "type": "split",
     "children": [
       {
-        "id": "87e42eccaf5eeef7",
+        "id": "33365dc55ceeda71",
         "type": "tabs",
         "children": [
           {
-            "id": "8f8b267f39aa4f8d",
+            "id": "872e71d73400e7da",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-archive/IT Fundamentals.md",
+                "file": "2-MOC/Middle System Analyst Roadmap.md",
                 "mode": "source",
                 "source": false
               },
-              "pinned": true,
               "icon": "lucide-file",
-              "title": "IT Fundamentals"
+              "title": "Middle System Analyst Roadmap"
             }
           },
           {
-            "id": "d4d460e0643b4c81",
+            "id": "2ab2d826e0108e90",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4-archive/Role as a Teacher 2e97502b9d8a8020ac7cd4e35d9f64ae.md",
+                "file": "3-permanent/Networking/Как работает Интернет.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Как работает Интернет"
+            }
+          },
+          {
+            "id": "b2b67a27d3c4a57d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4-archive/How internet works.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Role as a Teacher 2e97502b9d8a8020ac7cd4e35d9f64ae"
+              "title": "How internet works"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1-inbox/IT Fundamentals.md",
+                "file": "2-MOC/Middle System Analyst Roadmap.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for IT Fundamentals"
+              "title": "Backlinks for Middle System Analyst Roadmap"
             }
           },
           {
@@ -172,21 +183,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4-archive/Role as a Teacher 2e97502b9d8a8020ac7cd4e35d9f64ae.md",
+                "file": "2-MOC/Middle System Analyst Roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Role as a Teacher 2e97502b9d8a8020ac7cd4e35d9f64ae"
+              "title": "Outline of Middle System Analyst Roadmap"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 269.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,9 +210,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "d4d460e0643b4c81",
+  "active": "872e71d73400e7da",
   "lastOpenFiles": [
+    "3-permanent/Networking/Как работает Интернет.md",
+    "4-archive/How internet works.md",
+    "3-permanent/Networking/Как работает Интернет.md.tmp.35147.1770111620872",
+    "3-permanent/Networking/sed9cyXsH",
+    "3-permanent/Networking/sedp0XUqY",
+    "3-permanent/Networking/sedVJMciz",
+    "3-permanent/Networking/sedjvZ7AD",
+    "3-permanent/Networking/sedrhLAce",
+    "3-permanent/Networking/sedEYwBw5",
+    "3-permanent/Networking/Как работает Интернет.md.tmp.35147.1770111557501",
+    "3-permanent/Networking/Как работает Интернет.md.tmp.35147.1770111517302",
+    "2-MOC/Middle System Analyst Roadmap.md",
+    "TASK.md.tmp.35147.1770106909520",
+    "TASK.md",
+    "3-permanent/IT-Fundamentals/15-Режим любопытства.md",
+    "1-inbox/How internet works.md",
     "4-archive/IT Fundamentals.md",
+    "4-archive/Role as a Teacher 2e97502b9d8a8020ac7cd4e35d9f64ae.md",
     "3-permanent/IT-Fundamentals/11-Рождение языка ассемблера.md",
     "3-permanent/IT-Fundamentals/12-Языки высокого уровня.md",
     "3-permanent/IT-Fundamentals/13-Полная картина.md",
@@ -215,27 +243,10 @@
     "3-permanent/IT-Fundamentals/03-Управление памятью ОС.md",
     "3-permanent/IT-Fundamentals/02-ОЗУ против постоянной памяти.md",
     "3-permanent/IT-Fundamentals/01-Почему SA нужны основы IT.md",
-    "2-MOC/Middle System Analyst Roadmap.md.tmp.1360.1769766665525",
-    "2-MOC/Middle System Analyst Roadmap.md",
     "1-inbox/IT Fundamentals.md",
-    "2-MOC/Middle System Analyst Roadmap.md.tmp.1360.1769753455301",
-    "3-permanent/IT-Fundamentals/15-Режим любопытства.md",
-    "3-permanent/IT-Fundamentals/15-Режим любопытства.md.tmp.1360.1769753432605",
     "3-permanent/IT-Fundamentals/14-Применение для SA.md",
-    "3-permanent/IT-Fundamentals/14-Применение для SA.md.tmp.1360.1769753432561",
-    "3-permanent/IT-Fundamentals/13-Полная картина.md.tmp.1360.1769753432522",
-    "3-permanent/IT-Fundamentals/12-Языки высокого уровня.md.tmp.1360.1769753432481",
-    "3-permanent/IT-Fundamentals/11-Рождение языка ассемблера.md.tmp.1360.1769753432449",
-    "3-permanent/IT-Fundamentals/10-Кошмар программиста 1950-х.md.tmp.1360.1769753432409",
-    "3-permanent/IT-Fundamentals/09-Наборы команд процессора.md.tmp.1360.1769753264434",
-    "3-permanent/IT-Fundamentals/08-Транзисторы и электрические помехи.md.tmp.1360.1769753264381",
     "3-permanent/intro/Job market and career entry for SA.md",
-    "TASK.md",
     "3-permanent/Mindset Foundations.md",
-    "3-permanent/How We Learn.md",
-    "3-permanent/Why People Don't Finish.md",
-    "3-permanent/intro/IT roles and hierarchy.md",
-    "3-permanent/intro/SA role and responsibilities.md",
     "image.png"
   ]
 }
