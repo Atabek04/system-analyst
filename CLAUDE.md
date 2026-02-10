@@ -202,6 +202,21 @@ System-Analyst/
 
 ---
 
+## Git Workflow
+
+### Commit Message Standards
+- **Never** include "Co-Authored-By" messages in commits
+- Write clear, concise commit messages following conventional commits format
+- Use prefixes: `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`
+- Keep commit messages focused on what changed and why
+
+### Push/Pull Protocol
+- Always pull from main before pushing
+- Review changes before committing
+- Ensure workspace state changes (like `.obsidian/workspace.json`) are intentional
+
+---
+
 ## Success Criteria
 
 ✓ CLAUDE.md provides clear guidance for all teaching tasks
