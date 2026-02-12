@@ -48,21 +48,10 @@
 
 ## Software Development Life Cycle (SDLC)
 
-### SDLC Stages
+### SDLC Stages & Methodologies
 
-- Requirements gathering
-- Design
-- Development
-- Testing
-- Deployment
-- Maintenance
-- Evolution/Retirement
-
-### Development Methodologies
-
-- Waterfall
-- Agile principles and manifesto
-- Comparison of methodologies
+- [[SDLC и методологии разработки]] - Полный жизненный цикл разработки ПО (7 фаз с участниками и артефактами), история методологий (Waterfall миф и реальность, Agile как возврат к истокам), практические кейсы выбора методологии (40 слайдов по Сократовскому методу)
+- [[Methodologies-Slides]] - Методологии разработки: SDLC vs Методология, Waterfall, Agile, Scrum (роли, церемонии, артефакты), Kanban, сравнительные таблицы (слайды по Сократовскому методу)
 
 ---
 
