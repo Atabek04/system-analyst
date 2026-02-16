@@ -51,76 +51,42 @@
 ### SDLC Stages & Methodologies
 
 - [[SDLC и методологии разработки]] - Полный жизненный цикл разработки ПО (7 фаз с участниками и артефактами), история методологий (Waterfall миф и реальность, Agile как возврат к истокам), практические кейсы выбора методологии (40 слайдов по Сократовскому методу)
-- [[Methodologies-Slides]] - Методологии разработки: SDLC vs Методология, Waterfall, Agile, Scrum (роли, церемонии, артефакты), Kanban, сравнительные таблицы (слайды по Сократовскому методу)
-
----
-
-## Agile & Scrum
-
-### Agile Principles
-
-- Agile manifesto
-- Core values and principles
-
-### Scrum Framework
-
-- Roles (Product Owner, Scrum Master, Development Team)
-- Artifacts (Product Backlog, Sprint Backlog, Increment)
-- Ceremonies (Sprint Planning, Daily Standup, Sprint Review, Sprint Retrospective)
-- Definition of Done
-- Backlog grooming/refinement
-
-### Kanban
-
-- Kanban principles
-- Kanban board structure
-- WIP limits
-- Comparison with Scrum
-
-### Task Management
-
-- Task estimation techniques
-- Story points vs hours
-- Velocity tracking
-- Working with Jira
+- [[Methodologies-Slides]] - Методологии разработки (слайды по Сократовскому методу):
+  - SDLC vs Методология (ингредиенты vs рецепт)
+  - Waterfall (последовательные фазы, когда подходит)
+  - Agile (итерации, фидбек, примеры с интернет-магазином и машиной)
+  - Waterfall vs Agile сравнение (таблица критериев)
+  - Scrum (роли: PO/SM/Dev Team, церемонии: Planning/Standup/Review/Retro/Refinement, артефакты: Product Backlog/Sprint Backlog/Increment)
+  - Kanban (непрерывный поток, WIP-лимиты, Scrum vs Kanban, Scrumban)
+- [[Task-Management-Slides]] - Управление задачами (34 слайда по Сократовскому методу):
+  - Зачем оценивать задачи (проблема оценки в часах, относительная оценка)
+  - Story Points (шкала Fibonacci, SP vs часы, T-shirt Sizing)
+  - Planning Poker (Anchoring Bias, одновременное раскрытие, обсуждение расхождений)
+  - Velocity (расчёт, предсказание сроков, стабилизация за 3-5 спринтов, почему не KPI)
+  - Definition of Done vs Acceptance Criteria (чеклист качества vs условия приёмки)
+  - Jira (Epic/Story/Task/Sub-task/Bug, Sprint Board, JQL-запросы)
 
 ---
 
 ## Requirements Engineering
 
-### Requirements Classification (BACC Framework)
-
-- Business requirements
-- User requirements
-- Functional requirements
-- Non-functional requirements (NFR)
-- System boundaries
-
-### Requirements Gathering Techniques
-
-- Stakeholder interviews
-- Workshops
-- Surveys vs interviews
-- Observation
-- Document analysis
-
-### Requirements Documentation
-
-- User Story format (As a... I want... So that...)
-- Job Story format
-- Acceptance criteria
-- Customer Journey Map (CJM)
-- Stakeholder Register
-
-### Requirements Management
-
-- MVP formation
-- Requirements prioritization (MoSCoW, Kano, etc.)
-- Conflicting requirements resolution
-- Completeness check
-- Change requests management
-- Scope creep prevention
-- Requirements traceability
+- [[Requirements-Engineering-Slides]] - Требования (64 слайда, 3 урока по Сократовскому методу):
+  - **Урок A: Что такое требования + Классификация**
+    - Зачем нужны требования (кейс "это не то что я хотел")
+    - Определение требования (измеримое, проверяемое, однозначное)
+    - Пирамида: Business → User → FR + NFR (с примерами и сравнением)
+  - **Урок B: Сбор требований (Elicitation)**
+    - 5 техник сбора (интервью, воркшоп, наблюдение, опросы, анализ документов)
+    - User Story (формат, INVEST критерии, хорошие vs плохие примеры)
+    - Job Story (альтернатива когда контекст важнее роли)
+    - Acceptance Criteria (Given-When-Then, 3 примера)
+  - **Урок C: Управление требованиями**
+    - Приоритизация (MoSCoW, Kano Model)
+    - MVP (скейтборд → машина, связь с MoSCoW, реальные примеры)
+    - Scope Creep (причины, Change Request Process)
+    - CJM (компоненты, пример заказа еды, от Pain Points к User Stories)
+    - Requirements Traceability (матрица связей Business→User→FR→Test)
+    - Stakeholder Register (шаблон и пример)
 
 ---
 
