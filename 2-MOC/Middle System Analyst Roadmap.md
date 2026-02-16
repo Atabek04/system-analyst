@@ -70,23 +70,27 @@
 
 ## Requirements Engineering
 
-- [[Requirements-Engineering-Slides]] - Требования (64 слайда, 3 урока по Сократовскому методу):
-  - **Урок A: Что такое требования + Классификация**
-    - Зачем нужны требования (кейс "это не то что я хотел")
-    - Определение требования (измеримое, проверяемое, однозначное)
-    - Пирамида: Business → User → FR + NFR (с примерами и сравнением)
-  - **Урок B: Сбор требований (Elicitation)**
-    - 5 техник сбора (интервью, воркшоп, наблюдение, опросы, анализ документов)
-    - User Story (формат, INVEST критерии, хорошие vs плохие примеры)
-    - Job Story (альтернатива когда контекст важнее роли)
-    - Acceptance Criteria (Given-When-Then, 3 примера)
-  - **Урок C: Управление требованиями**
-    - Приоритизация (MoSCoW, Kano Model)
-    - MVP (скейтборд → машина, связь с MoSCoW, реальные примеры)
-    - Scope Creep (причины, Change Request Process)
-    - CJM (компоненты, пример заказа еды, от Pain Points к User Stories)
-    - Requirements Traceability (матрица связей Business→User→FR→Test)
-    - Stakeholder Register (шаблон и пример)
+### Slides (Marp PDF)
+
+- [[7-slides/requirements-engineering-a/requirements-engineering-a|Урок A: Что такое требования + Классификация]] (20 слайдов)
+  - Зачем нужны требования (кейс "это не то что я хотел")
+  - Определение требования (измеримое, проверяемое, однозначное)
+  - Пирамида: Business → User → FR + NFR
+
+- [[7-slides/requirements-engineering-b/requirements-engineering-b|Урок B: Сбор требований (Elicitation)]] (26 слайдов)
+  - 5 техник сбора (интервью, воркшоп, наблюдение, опросы, документы)
+  - User Story (формат, INVEST, хорошие vs плохие)
+  - Job Story, Acceptance Criteria (Given-When-Then)
+
+- [[7-slides/requirements-engineering-c/requirements-engineering-c|Урок C: Управление требованиями]] (29 слайдов)
+  - Приоритизация (MoSCoW, Kano Model)
+  - MVP (скейтборд → машина)
+  - Scope Creep, Change Request Process
+  - CJM, Requirements Traceability, Stakeholder Register
+
+### Source (Canva format)
+
+- [[Requirements-Engineering-Slides]] - Оригинал для Canva (64 слайда)
 
 ---
 
