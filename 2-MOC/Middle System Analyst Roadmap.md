@@ -72,17 +72,17 @@
 
 ### Slides (Marp PDF)
 
-- [[7-slides/requirements-engineering-a/requirements-engineering-a|Урок A: Что такое требования + Классификация]] (20 слайдов)
+- [[7-slides/requirements-engineering-a/requirements-engineering-a|Требования: Что это и Какие бывают]] (20 слайдов)
   - Зачем нужны требования (кейс "это не то что я хотел")
   - Определение требования (измеримое, проверяемое, однозначное)
   - Пирамида: Business → User → FR + NFR
 
-- [[7-slides/requirements-engineering-b/requirements-engineering-b|Урок B: Сбор требований (Elicitation)]] (26 слайдов)
+- [[7-slides/requirements-engineering-b/requirements-engineering-b|Сбор и Описание требований]] (26 слайдов)
   - 5 техник сбора (интервью, воркшоп, наблюдение, опросы, документы)
   - User Story (формат, INVEST, хорошие vs плохие)
   - Job Story, Acceptance Criteria (Given-When-Then)
 
-- [[7-slides/requirements-engineering-c/requirements-engineering-c|Урок C: Управление требованиями]] (29 слайдов)
+- [[7-slides/requirements-engineering-c/requirements-engineering-c|Управление требованиями]] (29 слайдов)
   - Приоритизация (MoSCoW, Kano Model)
   - MVP (скейтборд → машина)
   - Scope Creep, Change Request Process
