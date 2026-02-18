@@ -50,15 +50,29 @@ You are a **Senior System Analyst** teaching interns with zero IT experience. Yo
 
 **After creating slides:** Link in `2-MOC/Middle System Analyst Roadmap.md`
 
-### Flashcards
-- Format: CSV (Question | Answer), Russian
-- Location: `5-flashcards/`
-- Requirements (non-negotiable):
-  1. **Specificity** — one distinct concept per card
-  2. **No pattern-matching** — answer can't be guessed from question wording
-  3. **Connected knowledge** — links to broader understanding
-- Preferred types: "Как работает...", "Почему...", "В чём разница...", "Когда бы ты..."
-- Avoid: Yes/No, cloze deletions, obvious answers
+### Flashcards (Obsidian → Anki)
+- **Location**: `05-Flashcards/{category}/{topic}.md`
+- **Format**: Markdown with `START/END` blocks, synced to Anki via `Obsidian_to_Anki` plugin
+- **Rules**:
+  - `06-rules/FLASHCARD_SYNTAX.md` — note types, deck hierarchy, START/END format
+  - `06-rules/WORKFLOW.md` — Obsidian → Anki sync process
+  - `06-rules/QUESTION_RULES.md` — active recall & question quality principles
+
+**Folder structure:**
+```
+05-Flashcards/
+├── {category}/
+│   └── {topic}.md   → TARGET DECK: System Analyst::{Category}::{Topic}
+```
+
+**Deck hierarchy:** All decks under `System Analyst::` parent, mirroring the MOC sections. See `06-rules/FLASHCARD_SYNTAX.md` for the full deck list.
+
+**Maintenance rule:** When adding a new `[[]]` linked note to a MOC chapter that already has a flashcard file, **immediately create flashcards** for that note in the corresponding file. Keep flashcards in sync with notes.
+
+**Extraction rules:**
+- Don't skip important points — every key concept, definition, or command becomes a card
+- Use `START/END` block format with `Coding Questions` note type
+- One flashcard file per topic area, matching the deck hierarchy
 
 ### Kahoot Questions
 - Rules: `KAHOOT-RULES.md`
@@ -85,10 +99,13 @@ System-Analyst/
 │   └── Middle System Analyst Roadmap.md
 ├── 3-permanent/           (atomic notes)
 ├── 4-archive/             (outdated/superseded)
-├── 5-flashcards/          (Anki CSV files)
+├── 05-Flashcards/         (Anki flashcards, synced via Obsidian_to_Anki)
 ├── 06-rules/              (task-specific rules for Claude)
 │   ├── slides.md          (slide content rules)
-│   └── marp.md            (Marp styling & export rules)
+│   ├── marp.md            (Marp styling & export rules)
+│   ├── FLASHCARD_SYNTAX.md (note types, START/END format)
+│   ├── WORKFLOW.md        (Obsidian → Anki sync process)
+│   └── QUESTION_RULES.md  (question quality principles)
 ├── 7-slides/              (Marp presentations + PDFs)
 │   └── {topic}/           (one folder per topic)
 │       ├── {topic}.md     (Marp source)
@@ -113,6 +130,6 @@ System-Analyst/
    - Write `{topic}.md` with Marp frontmatter
    - Export: `marp {topic}.md -o {topic}.pdf`
    - Optional: add `notes.md` for extended teacher notes
-4. **Generate flashcards** — verify against 3 requirements
+4. **Generate flashcards** — follow `06-rules/FLASHCARD_SYNTAX.md`, verify against `06-rules/QUESTION_RULES.md`, sync per `06-rules/WORKFLOW.md`
 5. **Link in MOC** — update `2-MOC/Middle System Analyst Roadmap.md`:
    - Add `[[7-slides/{topic}/{topic}|Topic Name (slides)]]`
