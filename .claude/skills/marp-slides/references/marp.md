@@ -1,14 +1,6 @@
 # Marp Rules
 
-Use Marp when exporting slides to PDF. Follows all rules from `slides.md` + these styling specifics.
-
----
-
-## When to Trigger
-
-- User asks for PDF slides
-- User says "export to PDF", "create presentation", "marp"
-- Converting existing `.md` slide content to printable format
+Use Marp when exporting slides to PDF. Follows all rules from `references/slides.md` + these styling specifics.
 
 ---
 
@@ -37,9 +29,9 @@ Every presentation starts with a title slide using `<!-- _class: title -->`:
 ```
 
 **Design rationale:**
-- Course branding (small, subtle) → establishes context without competing
-- Author credit → professional attribution
-- Lesson title (large, handwriting) → unique, memorable, draws attention
+- Course branding (small, subtle) — establishes context without competing
+- Author credit — professional attribution
+- Lesson title (large, handwriting) — unique, memorable, draws attention
 - Header/footer hidden on title page
 
 This inverted hierarchy follows the "repeated context, unique focus" principle — the course name appears every lesson (can be subtle), while the lesson title is unique and deserves emphasis.
@@ -120,7 +112,7 @@ Memes OK when they reinforce the learning point.
 
 ```yaml
 style: |
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=JetBrains+Mono&family=Source+Serif+4:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=JetBrains+Mono&family=Source+Serif+4:wght@400;600&family=Dancing+Script:wght@400;700&display=swap');
 
   section {
     font-family: 'Ubuntu', sans-serif;
@@ -129,7 +121,6 @@ style: |
     padding: 40px;
   }
 
-  /* Content slides: h1 with underline */
   h1 {
     color: #2C3E50;
     border-bottom: 3px solid #3498DB;
@@ -137,7 +128,6 @@ style: |
   }
 
   h2 { color: #2C3E50; }
-
   strong { color: #E74C3C; }
 
   code {
@@ -211,33 +201,35 @@ style: |
     padding: 60px;
   }
 
-  section.title::before {
-    content: "SYSTEM ANALYST";
-    font-family: 'Source Serif 4', 'Source Serif Pro', serif;
+  section.title header,
+  section.title footer {
+    display: none;
+  }
+
+  section.title .course {
+    font-family: 'Source Serif 4', serif;
     font-size: 45px;
     font-weight: 600;
     color: #2C3E50;
     margin-bottom: 8px;
   }
 
-  section.title::after {
-    content: "presented by Ayub";
-    font-family: 'Source Serif 4', 'Source Serif Pro', serif;
+  section.title .author {
+    font-family: 'Source Serif 4', serif;
     font-size: 25px;
     font-weight: 400;
     color: #6B6B6B;
-    position: absolute;
-    top: calc(50% - 30px);
+    margin-bottom: 40px;
   }
 
   section.title h1 {
-    font-family: 'Apricots', 'Dancing Script', 'Pacifico', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 75px;
     font-weight: 400;
     color: #2C3E50;
     border-bottom: none;
     padding-bottom: 0;
-    margin-top: 40px;
+    margin: 0;
   }
 ```
 

@@ -99,7 +99,7 @@ style: |
     margin: 0;
   }
 ---
-
+El
 <!-- _class: title _paginate: skip -->
 
 <div class="course">SYSTEM ANALYST</div>

@@ -1,0 +1,382 @@
+{
+  "settings": {
+    "CUSTOM_REGEXPS": {
+      "A_English_Grammar": "",
+      "A_English_Translate": "",
+      "Arabic Custom Nouns": "",
+      "Arabic Custom Verbs": "",
+      "Arabic nouns": "",
+      "Arabic verbs": "",
+      "Arabic_Night": "",
+      "Basic": "",
+      "Basic (and reversed card)": "",
+      "Basic (and reversed card)-62252": "",
+      "Basic (optional reversed card)-4c31c": "",
+      "Basic with audio": "",
+      "Basic+": "",
+      "Basic-2e165": "",
+      "Cloze": "",
+      "Coding Questions": "",
+      "English-Dictionary": "",
+      "Image Occlusion": "",
+      "Islamic_notes": "",
+      "n2a-basic": "",
+      "Sarf-Book-1": "",
+      "Tutorial deck": "",
+      "Базовая (обратная по выбору)": "",
+      "Базовый": "",
+      "Базовый (ввод ответа)": "",
+      "Мединский 001": "",
+      "Мединский 2 том": "",
+      "Основная (с обратной карточкой)": "",
+      "Подсказки для Мединского": "",
+      "Подсказки для Мединского+": "",
+      "С пропусками": ""
+    },
+    "FILE_LINK_FIELDS": {
+      "A_English_Grammar": "Russian",
+      "A_English_Translate": "Definition",
+      "Arabic Custom Nouns": "Russian",
+      "Arabic Custom Verbs": "Russian",
+      "Arabic nouns": "Front",
+      "Arabic verbs": "Front",
+      "Arabic_Night": "front",
+      "Basic": "Front",
+      "Basic (and reversed card)": "Russian",
+      "Basic (and reversed card)-62252": "Front",
+      "Basic (optional reversed card)-4c31c": "Front",
+      "Basic with audio": "Front",
+      "Basic+": "Front",
+      "Basic-2e165": "Front",
+      "Cloze": "Text",
+      "Coding Questions": "Front",
+      "English-Dictionary": "Front",
+      "Image Occlusion": "Occlusion",
+      "Islamic_notes": "Question",
+      "n2a-basic": "Front",
+      "Sarf-Book-1": "Question",
+      "Tutorial deck": "Front",
+      "Базовая (обратная по выбору)": "Лицо",
+      "Базовый": "Лицо",
+      "Базовый (ввод ответа)": "Лицо",
+      "Мединский 001": "Арабский",
+      "Мединский 2 том": "Русский",
+      "Основная (с обратной карточкой)": "Лицо",
+      "Подсказки для Мединского": "Арабский",
+      "Подсказки для Мединского+": "Арабский",
+      "С пропусками": "Текст"
+    },
+    "CONTEXT_FIELDS": {},
+    "FOLDER_DECKS": {
+      "06-rules": "",
+      "1-inbox": "",
+      "2-MOC": "",
+      "3-permanent": "",
+      "4-archive": "",
+      "7-slides": "",
+      "05-Flashcards": "",
+      "3-permanent/intro": "",
+      "3-permanent/IT-Fundamentals": "",
+      "3-permanent/Networking": "",
+      "3-permanent/Requirements": "",
+      "3-permanent/SDLC": "",
+      "4-archive/Intro": "",
+      "4-archive/SA_responsibilities": "",
+      "7-slides/api-basics": "",
+      "7-slides/requirements-engineering-a": "",
+      "7-slides/requirements-engineering-b": "",
+      "7-slides/requirements-engineering-c": "",
+      "05-Flashcards/intro": "",
+      "05-Flashcards/sdlc": "",
+      "05-Flashcards/requirements": ""
+    },
+    "FOLDER_TAGS": {
+      "06-rules": "",
+      "1-inbox": "",
+      "2-MOC": "",
+      "3-permanent": "",
+      "4-archive": "",
+      "7-slides": "",
+      "05-Flashcards": "",
+      "3-permanent/intro": "",
+      "3-permanent/IT-Fundamentals": "",
+      "3-permanent/Networking": "",
+      "3-permanent/Requirements": "",
+      "3-permanent/SDLC": "",
+      "4-archive/Intro": "",
+      "4-archive/SA_responsibilities": "",
+      "7-slides/api-basics": "",
+      "7-slides/requirements-engineering-a": "",
+      "7-slides/requirements-engineering-b": "",
+      "7-slides/requirements-engineering-c": "",
+      "05-Flashcards/intro": "",
+      "05-Flashcards/sdlc": "",
+      "05-Flashcards/requirements": ""
+    },
+    "Syntax": {
+      "Begin Note": "START",
+      "End Note": "END",
+      "Begin Inline Note": "STARTI",
+      "End Inline Note": "ENDI",
+      "Target Deck Line": "TARGET DECK",
+      "File Tags Line": "FILE TAGS",
+      "Delete Note Line": "DELETE",
+      "Frozen Fields Line": "FROZEN"
+    },
+    "Defaults": {
+      "Scan Directory": "",
+      "Tag": "Obsidian_to_Anki",
+      "Deck": "Default",
+      "Scheduling Interval": 0,
+      "Add File Link": false,
+      "Add Context": false,
+      "CurlyCloze": false,
+      "CurlyCloze - Highlights to Clozes": false,
+      "ID Comments": true,
+      "Add Obsidian Tags": false
+    },
+    "IGNORED_FILE_GLOBS": [
+      "**/*.excalidraw.md"
+    ]
+  },
+  "Added Media": [],
+  "File Hashes": {
+    "05-Flashcards/requirements/cjm-and-traceability.md": "58d01fe47619ea6cd342d28d3594d747",
+    "05-Flashcards/requirements/mvp-and-scope-creep.md": "d089ff87d472f658f0356b1aaaa3bcd7",
+    "05-Flashcards/requirements/prioritization.md": "f4cb6d6db8195bc92ec74e9c2b8b137d",
+    "05-Flashcards/requirements/acceptance-criteria.md": "757fbc7b9be68a229d853d0928bd52ac",
+    "05-Flashcards/requirements/user-story-and-invest.md": "583a0384801bea46cc0cfec83232ebe1",
+    "05-Flashcards/requirements/elicitation-techniques.md": "5f4e3db7ae6fdf01b5b7b686e5aa6ef8",
+    "05-Flashcards/requirements/types.md": "39b5904e853d547e04153b1c5257e0b6",
+    "05-Flashcards/requirements/fundamentals.md": "f9b0720f0941afc8318dc52db062750a",
+    "05-Flashcards/sdlc/jira.md": "3e7022b7d7159d77836b25901888beac",
+    "05-Flashcards/sdlc/story-points-and-velocity.md": "b96499018ce4d2fd51bea522ef3fc0ce",
+    "05-Flashcards/sdlc/task-management.md": "f155e86461a51bfef95d185ee5522ce5",
+    "05-Flashcards/sdlc/kanban.md": "f2307d6427202dd1247131242b24ef60",
+    "05-Flashcards/sdlc/agile-and-scrum.md": "71ea81920006c3540515c6917ba75559",
+    "05-Flashcards/sdlc/stages-and-methodologies.md": "4fc62a6ad39014e83879ef9084930b26",
+    "05-Flashcards/intro/networking-basics.md": "634fd2b557ed1bf798c85c98914c93f5",
+    "05-Flashcards/intro/hardware-to-software.md": "3e9aac8f6b0b826f00477f7cb249e8ac",
+    "05-Flashcards/intro/computer-architecture.md": "20d27abc243a6ebfc29b9865c328141a",
+    "05-Flashcards/intro/it-fundamentals.md": "a1fe404fdccab71ea549fe1eb189a80c",
+    "05-Flashcards/intro/learning-methodology.md": "77c687fc0ac16689a370d677f927d43f",
+    "05-Flashcards/intro/role-and-responsibilities.md": "6293634e785ff269ef37a6d8b90476c3",
+    "KAHOOT-RULES.md": "d6489117cd7a424056f3ed95864ead47",
+    "CLAUDE.md": "a5451e4eab5a9bd08c04ac724abeaeea",
+    "chatgpt-practice-prompt.md": "1b11db2f23cf111723a8ea82ee60832e",
+    "7-slides/requirements-engineering-c/requirements-engineering-c.md": "a348a477e7dc3081a56e48127420c3f4",
+    "7-slides/requirements-engineering-b/requirements-engineering-b.md": "64dc05623f6fa246c4bdc54d2f6f16ba",
+    "7-slides/requirements-engineering-a/requirements-engineering-a.md": "0282bc7d33aa9a0abd955f3b69fb343d",
+    "7-slides/api-basics/api-basics.md": "737c339a36ced0d1242609eea9263937",
+    "4-archive/SA_responsibilities/Teez 2ec7502b9d8a80bd8d15c669dc3c4f64.md": "2eacf9a62082024b8dd389eca97dbb43",
+    "4-archive/SA_responsibilities/Netcracker 2ec7502b9d8a805da08fd61fbfec79bc.md": "190a03de921b603a389ecf85f0ca89bc",
+    "4-archive/SA_responsibilities/Andersen 2ec7502b9d8a80088085fad2aeed1737.md": "ecc15f573970f23d61ef2651a4282449",
+    "4-archive/Role as a Teacher 2e97502b9d8a8020ac7cd4e35d9f64ae.md": "0b1dde0d9c94e8e2db9dea01bb5e8b42",
+    "4-archive/Methodologies_Chat.md": "2f748d1d509f3b92f2f088c4515cf659",
+    "4-archive/IT Fundamentals.md": "1a08f1c32e9ed585f374c3ee59280b7a",
+    "4-archive/Intro/Mindset Foundations 2e97502b9d8a8078bca2e535a59d7efc.md": "d7de5bd7bf736364d982cbd79488ff07",
+    "4-archive/Intro/Lesson Structure & Interaction 2e97502b9d8a809aac4afc0714e1c435.md": "477b7d57ab42c93b2edc4af547ac15e1",
+    "4-archive/Intro/Introduction to the Course 2ed7502b9d8a8075be14c2b03c068d99.md": "7c7dbede0422ead8a4bb48f09fa3c044",
+    "4-archive/Intro/Engagement & Retention System 2e97502b9d8a80339e20db2c7fcef314.md": "a8158085e3323675b12167f01666e028",
+    "4-archive/Intro/About System Analyst 2ed7502b9d8a809dba62c3249fe3ba6b.md": "579d972b32ffca77a0e0a3e4ba891bd8",
+    "4-archive/How internet works.md": "e9b468c3e0931dcb35c829ec56b3ff90",
+    "3-permanent/Why People Don't Finish.md": "3ae93d30b8941c58523460b5c9a15aae",
+    "3-permanent/SDLC/Task-Management-Slides.md": "3085af85d0df8748666459482dd75ee7",
+    "3-permanent/SDLC/SDLC и методологии разработки.md": "b036fae904016420d02210279d720154",
+    "3-permanent/SDLC/Methodologies-Slides.md": "2879d2895c745807bd3197959a6f2818",
+    "3-permanent/Requirements/Requirements-Engineering-Slides.md": "b3cdee89dce600cade062b65250c093f",
+    "3-permanent/Mindset Foundations.md": "c7f2a5968becf29b7b79436edb5ed330",
+    "3-permanent/Networking/Как работает Интернет.md": "c751bede3dfb63f57085ae809e1fcf93",
+    "3-permanent/IT-Fundamentals/15-Режим любопытства.md": "e97d6b30ac864236465ab8345c2ab5a2",
+    "3-permanent/IT-Fundamentals/14-Применение для SA.md": "f65e4dd2cce32764ab580434c57acefd",
+    "3-permanent/IT-Fundamentals/13-Полная картина.md": "2dc095273ee0b8f7878c65866bebe334",
+    "3-permanent/IT-Fundamentals/12-Языки высокого уровня.md": "99a8dda3a0e07abf5b3b4b0ad3d2f115",
+    "3-permanent/IT-Fundamentals/11-Рождение языка ассемблера.md": "53c1eff6f42f66dcec3553c682b8d934",
+    "3-permanent/IT-Fundamentals/10-Кошмар программиста 1950-х.md": "0651179d2f16e9420f4363b55b7022b7",
+    "3-permanent/IT-Fundamentals/09-Наборы команд процессора.md": "8393e07c975ae22e2c5a15b9e96c877d",
+    "3-permanent/IT-Fundamentals/08-Транзисторы и электрические помехи.md": "d299bd3b666ea5c813bbaf32dfe7126f",
+    "3-permanent/IT-Fundamentals/07-Почему двоичная система.md": "efb323b5e5f8db692fc8809f680033f1",
+    "3-permanent/IT-Fundamentals/06-Двоичный счёт и паттерны.md": "d75202ea7e7b1e93bdaa1c4919b42e14",
+    "3-permanent/IT-Fundamentals/05-Системы кодирования и переключатели.md": "702eb4711bb1c1ccebd85bf4ff8e1ba5",
+    "3-permanent/IT-Fundamentals/04-Роль процессора и ОС.md": "ba5efb7fa480a77d61132bf986ae9aaf",
+    "3-permanent/IT-Fundamentals/03-Управление памятью ОС.md": "3c14f74ba0567e510e6c9c76355e95ff",
+    "3-permanent/IT-Fundamentals/02-ОЗУ против постоянной памяти.md": "6ec1cef6e2a2aaad94a89c4e9ebc8ae9",
+    "3-permanent/IT-Fundamentals/01-Почему SA нужны основы IT.md": "8c14f78e558f4e2c46496ee84ce2c5fd",
+    "3-permanent/intro/Stakeholder identification and management.md": "cc035229960105ab22735a44598e4f85",
+    "3-permanent/intro/SA role and responsibilities.md": "0635295906a01a7804dfc842bc44c62c",
+    "3-permanent/intro/Job market and career entry for SA.md": "45eb6ebf6f4db7fdca562cdcd9da8bf5",
+    "3-permanent/intro/IT roles and hierarchy.md": "8398629113573e296b406038a420fa98",
+    "3-permanent/How We Learn.md": "a0ae0036b73e47b3fcc2b85a1d54526f",
+    "2-MOC/Middle System Analyst Roadmap.md": "26541dcf11f017edba22e4c87e3fd172",
+    "1-inbox/Role-Responsibilities-Kahoot-Questions.md": "a551b299a34665b3d84946fe12708878",
+    "1-inbox/Learning-Mindset-Kahoot-Questions.md": "5d3a1759b7ca9b81c8ab067d0106c850",
+    "1-inbox/IT-Fundamentals-Kahoot-Questions.md": "eb0d9ccdc74f9b5278c74baeafde2023",
+    "06-rules/QUESTION_RULES.md": "33da6ed17711534f55239ae79307e853",
+    "06-rules/FLASHCARD_SYNTAX.md": "56ac9e64caf88de714c99a9536617a98",
+    "06-rules/WORKFLOW.md": "acc4915b9250c0794f7f0d18bd440ffb",
+    "06-rules/slides.md": "118e6e76fa80fadb30d72448e82d75dd",
+    "06-rules/marp.md": "00d43cf22eb05fd77c2ce55961384910"
+  },
+  "fields_dict": {
+    "A_English_Grammar": [
+      "Russian",
+      "English",
+      "Example",
+      "Image",
+      "Note"
+    ],
+    "A_English_Translate": [
+      "Definition",
+      "English",
+      "Russian",
+      "Example",
+      "Note"
+    ],
+    "Arabic Custom Nouns": [
+      "Russian",
+      "Arabic Singular",
+      "Arabic Plural",
+      "Example",
+      "Translation"
+    ],
+    "Arabic Custom Verbs": [
+      "Russian",
+      "Arabic Madhiy",
+      "Arabic Mudhoriy",
+      "Arabic Amr",
+      "Arabic Masdar",
+      "Example",
+      "Translation"
+    ],
+    "Arabic nouns": [
+      "Front",
+      "Back",
+      "Root",
+      "Hans Link"
+    ],
+    "Arabic verbs": [
+      "Front",
+      "Back",
+      "Form",
+      "Root",
+      "Hans Link"
+    ],
+    "Arabic_Night": [
+      "front",
+      "back"
+    ],
+    "Basic": [
+      "Front",
+      "Back"
+    ],
+    "Basic (and reversed card)": [
+      "Russian",
+      "Singular [AR]",
+      "Plural [AR]"
+    ],
+    "Basic (and reversed card)-62252": [
+      "Front",
+      "Back"
+    ],
+    "Basic (optional reversed card)-4c31c": [
+      "Front",
+      "Back",
+      "Add Reverse"
+    ],
+    "Basic with audio": [
+      "Front",
+      "Back",
+      "Audio"
+    ],
+    "Basic+": [
+      "Front",
+      "Back"
+    ],
+    "Basic-2e165": [
+      "Front",
+      "Back"
+    ],
+    "Cloze": [
+      "Text",
+      "Back"
+    ],
+    "Coding Questions": [
+      "Front",
+      "Back"
+    ],
+    "English-Dictionary": [
+      "Front",
+      "Back",
+      "Example"
+    ],
+    "Image Occlusion": [
+      "Occlusion",
+      "Image",
+      "Header",
+      "Back Extra",
+      "Comments"
+    ],
+    "Islamic_notes": [
+      "Question",
+      "Frontend",
+      "Verse",
+      "Verse_translation"
+    ],
+    "n2a-basic": [
+      "Front",
+      "Back",
+      "MyMedia"
+    ],
+    "Sarf-Book-1": [
+      "Question",
+      "Answer"
+    ],
+    "Tutorial deck": [
+      "Front",
+      "Back"
+    ],
+    "Базовая (обратная по выбору)": [
+      "Лицо",
+      "Оборот",
+      "Добавить обратную"
+    ],
+    "Базовый": [
+      "Лицо",
+      "Оборот"
+    ],
+    "Базовый (ввод ответа)": [
+      "Лицо",
+      "Оборот"
+    ],
+    "Мединский 001": [
+      "Арабский",
+      "Русский",
+      "Аудио"
+    ],
+    "Мединский 2 том": [
+      "Русский",
+      "Арабский",
+      "Аудио"
+    ],
+    "Основная (с обратной карточкой)": [
+      "Лицо",
+      "Оборот"
+    ],
+    "Подсказки для Мединского": [
+      "Арабский",
+      "Русский",
+      "Аудио",
+      "подсказку"
+    ],
+    "Подсказки для Мединского+": [
+      "Арабский",
+      "Русский",
+      "Аудио",
+      "подсказку"
+    ],
+    "С пропусками": [
+      "Текст",
+      "Дополнения к обороту"
+    ]
+  }
+}

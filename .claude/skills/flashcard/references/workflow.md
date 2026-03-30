@@ -27,17 +27,17 @@ Atomic Note → Claude Code → 05-Flashcards/{category}/{topic}.md → Sync →
 ```
 05-Flashcards/
 ├── {category}/
-│   └── {topic}.md → TARGET DECK: Category::Topic
+│   └── {topic}.md → TARGET DECK: System Analyst::{Category}::{Topic}
 ```
 
 **Examples:**
-- `05-Flashcards/java/concurrency.md` → Deck: `Java::Concurrency`
-- `05-Flashcards/networking/tcp.md` → Deck: `Networking::TCP`
+- `05-Flashcards/requirements/user-story.md` → Deck: `System Analyst::Requirements::User Story & INVEST`
+- `05-Flashcards/sdlc/agile-scrum.md` → Deck: `System Analyst::SDLC::Agile & Scrum`
 
 **Naming conventions:**
-- Category folders: lowercase, kebab-case (e.g., `system-design/`)
-- Topic files: lowercase, kebab-case (e.g., `tcp-handshake.md`)
-- Deck mapping in `TARGET DECK:` header: `{Category}::{Topic}` (capitalized)
+- Category folders: lowercase, kebab-case (e.g., `requirements/`)
+- Topic files: lowercase, kebab-case (e.g., `user-story.md`)
+- Deck mapping in `TARGET DECK:` header: `System Analyst::{Category}::{Topic}` (capitalized)
 
 **Suggested categories:** `intro/`, `sdlc/`, `requirements/`, `bpmn/`, `uml/`, `data-modeling/`, `sql/`, `api/`, `architecture/`, `nfr/`, `metrics/`, `monitoring/`, `devops/`
 

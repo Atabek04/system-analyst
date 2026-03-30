@@ -8,11 +8,11 @@ allowed-tools: Read, Write, Bash, Glob
 
 Create teaching presentations using Marp (Markdown to PDF).
 
-**IMPORTANT:** Always read `06-rules/marp.md` and `06-rules/slides.md` first for full styling and content rules.
+**IMPORTANT:** Always read `references/slides.md` and `references/marp.md` first for full styling and content rules.
 
 ## Workflow
 
-1. **Read rules** — `06-rules/marp.md` for styling, `06-rules/slides.md` for content
+1. **Read rules** — `references/marp.md` for styling, `references/slides.md` for content
 2. **Understand the content** — Read source files or use provided topic/outline
 3. **Generate slides** — Follow structure below with user's theme preferences
 4. **Export to PDF** — Run `marp <file>.md -o <file>.pdf`

@@ -22,23 +22,8 @@
               "icon": "lucide-file",
               "title": "Middle System Analyst Roadmap"
             }
-          },
-          {
-            "id": "f721c1647c48bbf3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7-slides/requirements-engineering-c/requirements-engineering-c.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "requirements-engineering-c"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +46,7 @@
                 "autoReveal": true
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Файловый менеджер"
             }
           },
           {
@@ -181,8 +166,7 @@
               "title": "Outline of requirements-engineering-c"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -191,53 +175,54 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "bases:Создать новую базу": false,
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "f721c1647c48bbf3",
+  "active": "b2b67a27d3c4a57d",
   "lastOpenFiles": [
-    "7-slides/requirements-engineering-c/requirements-engineering-c.md.tmp.50048.1771315043678",
-    "7-slides/requirements-engineering-c/requirements-engineering-c.md.tmp.50048.1771314869285",
-    "7-slides/requirements-engineering-c/requirements-engineering-c.md.tmp.50048.1771314525072",
-    "7-slides/requirements-engineering-c/requirements-engineering-c.pdf",
-    "7-slides/requirements-engineering-c/requirements-engineering-c.md",
+    "7-slides/bpmn-b/bpmn-b.html",
+    "7-slides/bpmn-a/bpmn-a.html",
+    "7-slides/bpmn-b/bpmn-b.md",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.25044.1774853612095",
+    "7-slides/bpmn-a/bpmn-a.md",
+    "7-slides/bpmn-a/bpmn-a.md.tmp.25044.1774853390949",
+    "7-slides/bpmn-b",
+    "7-slides/bpmn-a",
+    "CLAUDE.md.tmp.67612.1774851094198",
+    "CLAUDE.md.tmp.67612.1774850815818",
+    "CLAUDE.md.tmp.67612.1774850814130",
+    "CLAUDE.md.tmp.67612.1774850810490",
+    "CLAUDE.md.tmp.67612.1774850807457",
+    "7-slides/requirements-engineering-a/requirements-engineering-a.md",
+    "7-slides/api-basics/api-basics.md",
     "2-MOC/Middle System Analyst Roadmap.md",
     "7-slides/requirements-engineering-b/requirements-engineering-b.md",
-    "7-slides/requirements-engineering-b/requirements-engineering-b.md.tmp.50048.1771313104404",
-    "7-slides/requirements-engineering-b/requirements-engineering-b.md.tmp.50048.1771311965963",
-    "7-slides/requirements-engineering-b/requirements-engineering-b.md.tmp.50048.1771311353848",
-    "7-slides/requirements-engineering-a/requirements-engineering-a.md",
-    "2-MOC/Middle System Analyst Roadmap.md.tmp.50048.1771310515643",
-    "2-MOC/Middle System Analyst Roadmap.md.tmp.50048.1771310513874",
-    "2-MOC/Middle System Analyst Roadmap.md.tmp.50048.1771310512462",
-    "7-slides/requirements-engineering-c/requirements-engineering-c.md.tmp.50048.1771310478660",
-    "3-permanent/Requirements/Requirements-Engineering-Slides.md",
-    "3-permanent/SDLC/Task-Management-Slides.md",
-    "3-permanent/SDLC/Methodologies-Slides.md",
-    "3-permanent/SDLC/SDLC и методологии разработки.md",
-    "5-flashcards/Requirements-Engineering.md",
-    "5-flashcards/Task-Management.md",
-    "06-rules/slides.md",
-    "CLAUDE.md",
-    "4-archive/Methodologies_Chat.md",
-    "TASK.md",
-    "1-inbox/Role-Responsibilities-Kahoot-Questions.md",
-    "1-inbox/IT-Fundamentals-Kahoot-Questions.md",
-    "1-inbox/Learning-Mindset-Kahoot-Questions.md",
-    "3-permanent/How We Learn.md",
-    "3-permanent/Mindset Foundations.md",
-    "3-permanent/Why People Don't Finish.md",
-    "3-permanent/intro/Job market and career entry for SA.md",
-    "3-permanent/intro/SA role and responsibilities.md",
-    "3-permanent/Networking/Как работает Интернет.md",
-    "4-archive/How internet works.md",
-    "5-flashcards/IT-Fundamentals.md",
+    "05-Flashcards/requirements/cjm-and-traceability.md",
+    "05-Flashcards/requirements/acceptance-criteria.md",
+    "05-Flashcards/intro/role-and-responsibilities.md",
+    "05-Flashcards/intro/networking-basics.md",
+    "05-Flashcards/intro/learning-methodology.md",
+    "05-Flashcards/intro/it-fundamentals.md",
+    "05-Flashcards/intro/hardware-to-software.md",
+    "05-Flashcards/intro/computer-architecture.md",
+    "06-rules/FLASHCARD_SYNTAX.md",
+    "05-Flashcards/intro/binary-and-physical-computing.md",
+    "05-Flashcards/requirements/mvp-and-scope-creep.md",
+    "05-Flashcards/requirements/prioritization.md",
+    "05-Flashcards/requirements/user-story-and-invest.md",
+    "05-Flashcards/requirements/elicitation-techniques.md",
+    "05-Flashcards/requirements/types.md",
+    "05-Flashcards/requirements/fundamentals.md",
+    "05-Flashcards/sdlc/jira.md",
+    "05-Flashcards/sdlc/story-points-and-velocity.md",
+    "05-Flashcards/sdlc/task-management.md",
     "image.png"
   ]
 }
