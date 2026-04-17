@@ -98,20 +98,8 @@
 
 ### BPMN (Business Process Model and Notation)
 
-- What is BPMN
-- AS-IS vs TO-BE processes
-- Tasks, Events, Flows
-- Gateways (XOR, OR, AND)
-- Pools and Lanes
-- Subprocess
-- Common BPMN patterns
-- Process optimization
-
-### Process Analysis
-
-- Process cycle time
-- Bottleneck identification
-- Automation opportunities
+- [[7-slides/bpmn-a/bpmn-a|BPMN: Как показать процесс]] — Start/End Events, Tasks, Flows, Timer Event, Message Events; единый сценарий: оформление кредита
+- [[7-slides/bpmn-b/bpmn-b|BPMN: Кто что делает и как улучшить]] — Gateways (XOR, AND, OR, Event-based), Lanes, Pools, Task Types, AS-IS/TO-BE, ESIA, метрики процесса
 
 ---
 
