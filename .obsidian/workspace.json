@@ -38,13 +38,13 @@
             }
           },
           {
-            "id": "24a50e094ce3c0d3",
+            "id": "c79319b9eec1cd04",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "7-slides/bpmn-b/bpmn-b.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -52,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -187,13 +187,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7-slides/bpmn-a/bpmn-a-part2.md",
+                "file": "7-slides/bpmn-b/bpmn-b.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of bpmn-a-part2"
+              "title": "Outline of bpmn-b"
             }
           }
         ],
@@ -215,22 +215,22 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "51f3db79a41e230d",
+  "active": "c79319b9eec1cd04",
   "lastOpenFiles": [
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776428260152",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776428114920",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776428017629",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776428003084",
-    "7-slides/bpmn-b/bpmn-b.md",
-    "7-slides/bpmn-a/bpmn-a-part2.md",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776426736614",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776426724515",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776426610756",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776423445998",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776423434162",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776423424352",
-    "7-slides/bpmn-a/bpmn-a-part2.md.tmp.1157089.1776423414658",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777032416040",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777032405342",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777029832323",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777029476464",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777029354816",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028997419",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028622337",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028590936",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028534051",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028499242",
+    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028482144",
     "7-slides/bpmn-a/bpmn-a.md",
+    "7-slides/bpmn-a/bpmn-a-part2.md",
+    "7-slides/bpmn-b/bpmn-b.md",
     "7-slides/bpmn-a/or-gateway.png",
     "7-slides/bpmn-a/and-gateway.png",
     "2-MOC/Middle System Analyst Roadmap.md",
