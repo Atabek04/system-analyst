@@ -1,5 +1,8 @@
 TARGET DECK: System Analyst::Requirements::Acceptance Criteria
 Tags: requirements acceptance-criteria
+**Related:** [[7-slides/requirements-engineering-b/requirements-engineering-b]]
+
+---
 
 START
 Coding Questions
@@ -10,7 +13,6 @@ Back: **Acceptance Criteria (AC)** — условия, при которых Use
 - Нет споров "готово или нет"
 AC нужно писать ДО начала разработки, покрывая и основной сценарий, и граничные случаи.
 Tags: requirements acceptance-criteria
-<!--ID: 1771417385198-->
 END
 
 START
@@ -29,7 +31,6 @@ Then товар сохраняется в моём списке избранно
   And иконка меняется на закрашенное сердце
 ```
 Tags: requirements acceptance-criteria gwt
-<!--ID: 1771417385200-->
 END
 
 START
@@ -40,7 +41,6 @@ Back:
 - **Edge case** — необычные или граничные сценарии: "Given я задал ценовой диапазон 1000000-2000000, When нажимаю Применить, Then отображается 'Товары не найдены'"
 Хорошие AC всегда покрывают ОБА варианта. Пропуск граничных случаев ведёт к багам на продакшене.
 Tags: requirements acceptance-criteria
-<!--ID: 1771417385201-->
 END
 
 START
@@ -48,5 +48,4 @@ Coding Questions
 Кто несёт ответственность, когда фича "готова", но работает неправильно?
 Back: **Аналитик** несёт ответственность, если Acceptance Criteria отсутствовали или были нечёткими. Разработчик, реализующий "кнопку добавления в избранное" без AC, может создать кнопку, которая работает по клику, но не сохраняется после перезагрузки страницы, не показывает уведомление и позволяет дублирование. AC предотвращают это, определяя точно, что значит "готово".
 Tags: requirements acceptance-criteria
-<!--ID: 1771417385203-->
 END

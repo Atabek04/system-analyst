@@ -1,5 +1,8 @@
 TARGET DECK: System Analyst::SDLC::Task Management
 Tags: sdlc task-management
+**Related:** [[Task-Management-Slides]]
+
+---
 
 START
 Coding Questions
@@ -9,7 +12,6 @@ Back:
 - **Acceptance Criteria** — конкретные условия для ОДНОЙ User Story (например: Given я на странице товара, When нажимаю «Купить», Then товар добавляется в корзину). На уровне истории.
 Story считается «готовой», когда она соответствует И своим Acceptance Criteria, И Definition of Done.
 Tags: sdlc task-management dod
-<!--ID: 1771417385250-->
 END
 
 START
@@ -23,5 +25,4 @@ Back: Техника консенсусной оценки, где:
 5. Повторяют до достижения консенсуса
 Это помогает избежать эффекта якоря (Anchoring Bias) — когда чужие оценки влияют на твою.
 Tags: sdlc task-management estimation
-<!--ID: 1771417385252-->
 END

@@ -64,3 +64,7 @@ Tags: {default-tags}
 - **Don't skip important points** — every key concept, definition, or command becomes a card
 - **No hints in questions** — the answer shouldn't be contained in the question
 - **Audience**: interns with zero IT experience — keep language simple
+- **Only from atomic notes** — never generate cards from general knowledge or MOC bullet points without a `[[]]` linked note
+- **Answer structure** — use the term in the definition; bullet lists for multi-part answers; ≤ 15 words or ≤ 3 bullets — split otherwise
+- **Enumeration trap** — 4+ items in one answer → use Enumeration Split Protocol (count card + numbered atomic cards)
+- **Interference check** — read stems aloud before syncing; if two return the same answer in 5 words, add a distinctive token

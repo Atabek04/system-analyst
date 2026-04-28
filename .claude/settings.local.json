@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nrefactor: reorganize IT Fundamentals into atomic notes\n\n- Move IT Fundamentals from inbox to permanent notes structure\n- Create 15 atomic notes following Zettelkasten principles\n- Update MOC roadmap with links to new permanent notes\n- Archive original IT Fundamentals content\nEOF\n\\)\")",
+      "WebFetch(domain:www.reddit.com)",
+      "Bash(marp:*)",
+      "Skill(marp-slides)",
+      "Bash(python3:*)",
+      "Bash(uv run:*)",
+      "WebFetch(domain:forum.camunda.io)",
+      "WebFetch(domain:docs.camunda.io)",
+      "WebFetch(domain:camunda.com)",
+      "WebFetch(domain:www.flowable.com)",
+      "Read(//mnt/d/obsidian/Knowledge-Base/**)",
+      "Read(//mnt/d/obsidian/Ribaat/**)",
+      "Bash(rm -rf \"/mnt/d/obsidian/System-Analyst/3-permanent/IT-Fundamentals\")",
+      "Bash(rm -f \"/mnt/d/obsidian/System-Analyst/3-permanent/Networking/Как работает Интернет.md\")",
+      "Bash(rmdir \"/mnt/d/obsidian/System-Analyst/3-permanent/Networking\")",
+      "Bash(rm -f \"/mnt/d/obsidian/System-Analyst/3-permanent/How We Learn.md\" \"/mnt/d/obsidian/System-Analyst/3-permanent/Mindset Foundations.md\" \"/mnt/d/obsidian/System-Analyst/3-permanent/Why People Don't Finish.md\" \"/mnt/d/obsidian/System-Analyst/3-permanent/intro/Job market and career entry for SA.md\")",
+      "Bash(rm -f \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/computer-architecture.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/hardware-to-software.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/it-fundamentals.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/learning-methodology.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/networking-basics.md\")"
+    ]
+  }
+}

@@ -1,5 +1,8 @@
 TARGET DECK: System Analyst::Requirements::Prioritization (MoSCoW, Kano)
 Tags: requirements prioritization
+**Related:** [[7-slides/requirements-engineering-c/requirements-engineering-c]]
+
+---
 
 START
 Coding Questions
@@ -11,7 +14,6 @@ Back:
 - **W — Won't have**: хорошая идея, но не сейчас (например, AR-примерка, AI-стилист)
 **Правило**: Must have ≤ 60% от всех требований. Если всё "Must" — ты не приоритизировал.
 Tags: requirements prioritization moscow
-<!--ID: 1771417385192-->
 END
 
 START
@@ -23,7 +25,6 @@ Back:
 - **Attractive (восторг)**: отсутствие — нормально, наличие создаёт WOW. Пример: бесплатный десерт в ресторане, AR-примерка одежды.
 Must-be не создают конкурентного преимущества; Attractive — создают.
 Tags: requirements prioritization kano
-<!--ID: 1771417385194-->
 END
 
 START
@@ -35,5 +36,4 @@ Back:
 Сопоставление: Must have ≈ Must-be + критичные Performance; Should have ≈ Performance; Could have ≈ Attractive; Won't have = всё отложенное.
 Используй Kano, чтобы понять влияние, MoSCoW — чтобы планировать релизы.
 Tags: requirements prioritization moscow kano
-<!--ID: 1771417385195-->
 END

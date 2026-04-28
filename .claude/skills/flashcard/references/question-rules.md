@@ -58,6 +58,80 @@ How would you apply [principle] to [scenario]?
 
 ---
 
+## Answer Writing Style
+
+- **Use the term in the definition** — when defining a concept, use the word itself in the answer. E.g. "**Classifying** input into a discrete category", not "a technique that predicts categories"
+- **Structure answers for readability** — break into bullet lists, use line breaks between distinct ideas, bold key terms. Never write a wall of text in a single line
+- **Answer ≤ 15 words, max 3 bullet points** — if more is needed, split the card
+
+---
+
+## Memory Science Anti-Patterns
+
+These eight anti-patterns cause the majority of Anki failures. Each has a fix.
+
+| # | Anti-Pattern | Why It Fails | Fix |
+|---|--------------|--------------|-----|
+| 1 | **Enumeration trap** — 4+ items in answer | Recall collapses past 3 items; partial retrievals get marked "again" forever | Split into N cards using Enumeration Split Protocol |
+| 2 | **Yes/no stems** | 50% correct by guessing; no real retrieval | Rephrase: "What is...?" / "How does...?" / "Why does...?" |
+| 3 | **Interference (similar stems)** | Two cards with near-identical stems merge in memory | Add a distinctive token to each stem (system name, specific word from answer) |
+| 4 | **Fused concepts** — two facts on one card | Multiple unknowns = can never be marked "good" honestly | One fact = one card |
+| 5 | **Under-specified stem** — "What is an API?" | Too broad; multiple valid answers | Name the specific aspect: "What problem does REST solve over SOAP?" |
+| 6 | **Hidden hints** — answer revealed in question | Trains recognition, not production | Remove descriptive context. Make it a pure retrieval cue. |
+| 7 | **Multi-concept questions** — 5 ideas in one card | Can't isolate what's being tested | Split into atomic cards |
+| 8 | **Orphan cards** — disconnected from knowledge network | "This feels like trivia" — no context | Link to MOC or related concepts |
+
+---
+
+## Enumeration Split Protocol
+
+When a topic has 4+ items (pillars, types, rules, phases), **never list them all in one card**.
+
+**Step 1 — Anchor card (count):** Always create a card asking the total count first.
+**Step 2 — Numbered cards:** Then create one card per item, using ordinal numbers in the stem.
+
+**Why:** Without the count card, numbered cards have no scaffold — the student can't tell if they've recalled all items. The anchor locks the set boundary in memory.
+
+**Template:**
+```
+START
+Coding Questions
+Сколько фаз в SDLC?
+Back: 7 фаз (Planning, Requirements, Design, Implementation, Testing, Deployment, Maintenance)
+Tags: sdlc fundamentals
+END
+
+START
+Coding Questions
+Какова первая фаза SDLC?
+Back: Planning — определение целей проекта, feasibility study, ресурсы
+Tags: sdlc fundamentals
+END
+```
+
+**Rules:**
+- Count card comes first in the file
+- Numbered cards use ordinal: первая / вторая / третья … (or 1st / 2nd / 3rd)
+- Every numbered card stem must name the same distinctive token (topic + source) — prevents interference with other enumerations
+- Do not use cloze for enumerations — atomic numbered cards are always clearer
+
+---
+
+## Interference Check (before syncing a batch)
+
+Run this quick check on any new batch of 5+ cards:
+
+1. Read each stem aloud, one after the other.
+2. If two stems would return the same answer in your head after hearing only the first 5 words, they interfere.
+3. Fix by adding a distinctive token to one of them — topic name, specific term from the answer itself.
+
+**Example interference pair:**
+- Card A: "Что такое REST?"
+- Card B: "Что такое RESTful API?"
+- Fix: Card A → "Что означает аббревиатура REST?" / Card B → "Что делает API RESTful — 6 constraints?"
+
+---
+
 ## Common Pitfalls
 
 | Problem                                                | Fix                                                                                |
@@ -81,6 +155,11 @@ Before adding a card, verify:
 - [ ] **Effortful** — Requires meaningful cognitive work (not trivial, not impossible)
 - [ ] **Right Granularity** — Definition (low), How (mechanism), Why (reasoning), When (application)
 - [ ] **Properly Phrased** — Phrased as a question, not a statement
+- [ ] **Answer ≤ 15 words / max 3 bullet points** — split if more needed
+- [ ] **No enumeration trap** — 4+ items → use Enumeration Split Protocol
+- [ ] **Not yes/no** — rephrase as open question
+- [ ] **No interference** — stem is distinctive from every other stem in the deck
+- [ ] **Extracted from atomic note** — never generated from general knowledge alone
 
 ---
 

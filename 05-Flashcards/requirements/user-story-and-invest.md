@@ -1,67 +1,82 @@
 TARGET DECK: System Analyst::Requirements::User Story & INVEST
 Tags: requirements user-story invest
+**Related:** [[7-slides/requirements-engineering-b/requirements-engineering-b]]
+
+---
 
 START
 Coding Questions
-Что такое User Story и каковы три обязательные части?
-Back: **User Story** описывает фичу с точки зрения пользователя:
-**"As a [роль], I want [действие], so that [ценность]"**
-Три части:
-1. **Роль (Role)** — кто этот пользователь
-2. **Действие (Action)** — что он хочет сделать
-3. **Ценность (Value)** — зачем, какая польза
-Пример: "As a покупатель, I want добавлять товары в избранное, so that я мог быстро их найти потом"
+Что такое User Story и каков её формат?
+Back: **User Story** — описание фичи с точки зрения пользователя: **"As a [роль], I want [действие], so that [ценность]"**. Пример: "As a покупатель, I want добавлять товары в избранное, so that быстро найти их позже."
 Tags: requirements user-story
-<!--ID: 1771417385206-->
 END
 
 START
 Coding Questions
-Почему часть "so that" (ценность) — самая важная в User Story?
-Back: Без части про ценность команда не понимает мотивацию и может построить неправильное решение. Пример:
-- "I want сбросить пароль" → решение неясно
-- "...so that восстановить доступ, если забыл" → сброс через email/SMS
-- "...so that сменить на более безопасный" → сначала проверить старый пароль
-Одно действие — разные решения в зависимости от ЗАЧЕМ.
+Почему часть "so that" — самая важная в User Story?
+Back: Без ценности команда не понимает мотивацию → строит неправильное решение. Пример: "I want сбросить пароль" → решение неясно. "...so that восстановить доступ, если забыл" → сброс через email. "...so that сменить на безопасный" → сначала проверить старый. Одно действие — разные решения.
 Tags: requirements user-story
-<!--ID: 1771417385207-->
 END
 
 START
 Coding Questions
-Что означает каждая буква в INVEST?
-Back:
-- **I — Independent**: можно разрабатывать в любом порядке, нет зависимостей
-- **N — Negotiable**: детали обсуждаются, это не жёсткий контракт
-- **V — Valuable**: приносит ценность пользователю/бизнесу
-- **E — Estimable**: команда может оценить трудозатраты
-- **S — Small**: помещается в один спринт
-- **T — Testable**: есть чёткие критерии для проверки
+Сколько критериев в аббревиатуре INVEST?
+Back: 6 критериев: Independent, Negotiable, Valuable, Estimable, Small, Testable
 Tags: requirements user-story invest
-<!--ID: 1771417385209-->
 END
 
 START
 Coding Questions
-Как исправить User Story, которая нарушает INVEST?
-Back: Типичные исправления:
-- **Не Small** ("управлять всеми пользователями") → разбить: "блокировать пользователей", "создавать пользователей", "назначать роли"
-- **Не Testable** ("красивый дизайн") → сделать конкретным: "показывать крупные фото товаров, чтобы покупатели видели детали"
-- **Не Independent** ("оплатить только после настройки доставки") → убрать зависимость: "оплатить картой для завершения покупки"
-- **Не Valuable** ("интегрировать с 1С") → добавить роль+ценность: "As a бухгалтер, I want автосинхронизацию заказов в 1С, so that не вводить вручную"
+Что означает I в INVEST?
+Back: **I — Independent**: User Story можно разрабатывать в любом порядке, нет жёстких зависимостей от других Stories.
 Tags: requirements user-story invest
-<!--ID: 1771417385211-->
+END
+
+START
+Coding Questions
+Что означает N в INVEST?
+Back: **N — Negotiable**: детали реализации обсуждаются командой, это не жёсткий контракт. Story описывает потребность, а не конкретное решение.
+Tags: requirements user-story invest
+END
+
+START
+Coding Questions
+Что означает V в INVEST?
+Back: **V — Valuable**: Story должна приносить ценность пользователю или бизнесу. Если ценность не очевидна — Story не нужна.
+Tags: requirements user-story invest
+END
+
+START
+Coding Questions
+Что означает E в INVEST?
+Back: **E — Estimable**: команда может оценить трудозатраты на реализацию. Если Story слишком размытая — её нельзя оценить.
+Tags: requirements user-story invest
+END
+
+START
+Coding Questions
+Что означает S в INVEST?
+Back: **S — Small**: Story должна помещаться в один Sprint. Слишком большая Story (Epic) → разбить на несколько меньших.
+Tags: requirements user-story invest
+END
+
+START
+Coding Questions
+Что означает T в INVEST?
+Back: **T — Testable**: у Story есть чёткие критерии для проверки (Acceptance Criteria). Если нельзя написать тест — требование размыто.
+Tags: requirements user-story invest
+END
+
+START
+Coding Questions
+Как исправить User Story, которая нарушает критерий Small в INVEST?
+Back: Разбить на атомарные Stories. Пример: "управлять всеми пользователями" → "блокировать пользователя", "создавать пользователя", "назначать роль пользователю".
+Tags: requirements user-story invest
 END
 
 START
 Coding Questions
 Что такое Job Story и когда она лучше, чем User Story?
-Back: Формат **Job Story**: **"When [ситуация], I want [действие], so that [результат]"**
-Пример: "When я на сайте с телефона в метро, I want упрощённую версию, so that найти товары при плохом интернете"
-Лучше, чем User Story, когда:
-- Контекст важнее роли
-- Один и тот же пользователь ведёт себя по-разному в разных ситуациях
-- Хочешь подчеркнуть КОГДА возникает потребность
+Back: **Job Story**: **"When [ситуация], I want [действие], so that [результат]"**. Лучше User Story когда контекст важнее роли или один пользователь ведёт себя по-разному в разных ситуациях. Пример: "When я в метро с плохим интернетом, I want упрощённую версию, so that найти товар."
 Tags: requirements user-story job-story
-<!--ID: 1771417385212-->
 END

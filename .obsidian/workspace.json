@@ -4,55 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "33365dc55ceeda71",
+        "id": "7d04185eb6796a01",
         "type": "tabs",
         "children": [
           {
-            "id": "f5dd32dcc8430aa8",
+            "id": "d895444bd1f9fbf6",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7-slides/bpmn-a/bpmn-a.md",
+                "file": "05-Flashcards/bpmn/bpmn-a.md",
                 "mode": "source",
                 "source": false
               },
-              "pinned": true,
               "icon": "lucide-file",
               "title": "bpmn-a"
             }
-          },
-          {
-            "id": "51f3db79a41e230d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7-slides/bpmn-a/bpmn-a-part2.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "bpmn-a-part2"
-            }
-          },
-          {
-            "id": "c79319b9eec1cd04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7-slides/bpmn-b/bpmn-b.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "bpmn-b"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "256712633a42c265",
@@ -187,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7-slides/bpmn-b/bpmn-b.md",
+                "file": "05-Flashcards/bpmn/bpmn-a.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of bpmn-b"
+              "title": "Outline of bpmn-a"
             }
           }
         ],
@@ -215,25 +183,34 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "c79319b9eec1cd04",
+  "active": "d895444bd1f9fbf6",
   "lastOpenFiles": [
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777032416040",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777032405342",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777029832323",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777029476464",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777029354816",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028997419",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028622337",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028590936",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028534051",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028499242",
-    "7-slides/bpmn-b/bpmn-b.md.tmp.92963.1777028482144",
+    "2-MOC/Middle System Analyst Roadmap.md",
+    "05-Flashcards/bpmn/bpmn-b.md",
+    "05-Flashcards/bpmn/bpmn-b.md.tmp.82927.1777355475206",
+    "05-Flashcards/bpmn/bpmn-a.md.tmp.82927.1777355441889",
+    "05-Flashcards/bpmn/bpmn-a.md",
+    "05-Flashcards/bpmn/bpmn-a.md.tmp.82927.1777355399405",
+    "05-Flashcards/bpmn",
+    "05-Flashcards/intro/stakeholder-management.md",
+    "05-Flashcards/intro/stakeholder-management.md.tmp.82927.1777355338655",
+    "05-Flashcards/intro/it-roles-and-hierarchy.md",
+    "05-Flashcards/intro/it-roles-and-hierarchy.md.tmp.82927.1777355308082",
+    "05-Flashcards/sdlc/task-management.md.tmp.82927.1777355278481",
+    "05-Flashcards/sdlc/story-points-and-velocity.md.tmp.82927.1777355277167",
+    "05-Flashcards/sdlc/jira.md.tmp.82927.1777355275831",
+    "05-Flashcards/requirements/prioritization.md.tmp.82927.1777355274586",
+    "05-Flashcards/intro/hardware-to-software.md",
+    "05-Flashcards/intro/it-fundamentals.md",
+    "05-Flashcards/intro/role-and-responsibilities.md",
+    "05-Flashcards/intro/networking-basics.md",
+    "05-Flashcards/intro/learning-methodology.md",
+    "05-Flashcards/intro/computer-architecture.md",
     "7-slides/bpmn-a/bpmn-a.md",
     "7-slides/bpmn-a/bpmn-a-part2.md",
     "7-slides/bpmn-b/bpmn-b.md",
     "7-slides/bpmn-a/or-gateway.png",
     "7-slides/bpmn-a/and-gateway.png",
-    "2-MOC/Middle System Analyst Roadmap.md",
     "6-kahoot/kahoot-questions.md",
     "KAHOOT-RULES.md",
     "7-slides/requirements-engineering-a/requirements-engineering-a.md",
@@ -241,20 +218,11 @@
     "7-slides/requirements-engineering-b/requirements-engineering-b.md",
     "05-Flashcards/requirements/cjm-and-traceability.md",
     "05-Flashcards/requirements/acceptance-criteria.md",
-    "05-Flashcards/intro/role-and-responsibilities.md",
-    "05-Flashcards/intro/networking-basics.md",
-    "05-Flashcards/intro/learning-methodology.md",
-    "05-Flashcards/intro/it-fundamentals.md",
-    "05-Flashcards/intro/hardware-to-software.md",
-    "05-Flashcards/intro/computer-architecture.md",
     "06-rules/FLASHCARD_SYNTAX.md",
     "05-Flashcards/intro/binary-and-physical-computing.md",
     "05-Flashcards/requirements/mvp-and-scope-creep.md",
     "05-Flashcards/requirements/prioritization.md",
     "05-Flashcards/requirements/user-story-and-invest.md",
-    "05-Flashcards/requirements/elicitation-techniques.md",
-    "05-Flashcards/requirements/types.md",
-    "05-Flashcards/requirements/fundamentals.md",
     "image.png"
   ]
 }

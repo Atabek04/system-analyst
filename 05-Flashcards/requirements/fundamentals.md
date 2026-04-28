@@ -1,12 +1,14 @@
 TARGET DECK: System Analyst::Requirements::Fundamentals
 Tags: requirements fundamentals
+**Related:** [[7-slides/requirements-engineering-a/requirements-engineering-a]]
+
+---
 
 START
 Coding Questions
 Что такое требование (Requirement) в разработке ПО?
 Back: Требование — это задокументированное описание того, что система должна делать (функциональное) или как она должна работать (нефункциональное), чтобы удовлетворить потребности заинтересованных сторон. Качественные требования — это фундамент: ошибки на этом этапе каскадом разлетаются по проектированию, разработке и тестированию.
 Tags: requirements fundamentals
-<!--ID: 1771417385233-->
 END
 
 START
@@ -19,7 +21,6 @@ Back:
 - **R — Relevant (релевантное)**: соответствует бизнес-целям
 - **T — Time-bound (ограниченное во времени)**: есть дедлайн или целевая версия
 Tags: requirements fundamentals smart
-<!--ID: 1771417385235-->
 END
 
 START
@@ -32,7 +33,6 @@ Back: Требования существуют на разных уровнях
 4. **Non-Functional Requirements (NFR)** — атрибуты качества (например, "страница загружается за < 2 сек")
 Каждый уровень прослеживается к вышестоящему.
 Tags: requirements fundamentals pyramid
-<!--ID: 1771417385237-->
 END
 
 START
@@ -45,5 +45,4 @@ Back:
 - Scope Creep — потому что "что мы имели в виду" никогда не было задокументировано
 - Проекты проваливаются — ~70% провалов проектов связаны с плохими требованиями
 Tags: requirements fundamentals
-<!--ID: 1771417385238-->
 END

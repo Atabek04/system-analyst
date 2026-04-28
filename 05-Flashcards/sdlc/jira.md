@@ -1,5 +1,8 @@
 TARGET DECK: System Analyst::SDLC::Jira
 Tags: sdlc jira
+**Related:** [[Task-Management-Slides]]
+
+---
 
 START
 Coding Questions
@@ -11,7 +14,6 @@ Back:
 - **Sub-task** — декомпозиция Story или Task на более мелкие шаги
 - **Bug** — дефект в существующей функциональности
 Tags: sdlc jira hierarchy
-<!--ID: 1771417385240-->
 END
 
 START
@@ -24,5 +26,4 @@ Back: Доска с колонками, представляющими этап�
 - **Done** — соответствует Definition of Done
 Карточки двигаются слева направо. На колонки можно установить WIP-лимиты. Заблокированные задачи помечаются флагом.
 Tags: sdlc jira board
-<!--ID: 1771417385243-->
 END
