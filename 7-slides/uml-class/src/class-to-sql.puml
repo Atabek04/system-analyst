@@ -1,0 +1,38 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Товар" as P {
+  + id: Integer
+  + название: String
+  + цена: Decimal
+}
+
+class "Категория" as C {
+  + id: Integer
+  + название: String
+}
+
+P "0..*" -- "1" C
+
+entity "products" as TP {
+  * id : INTEGER <<PK>>
+  --
+  название : VARCHAR
+  цена : DECIMAL
+  категория_id : INTEGER <<FK>>
+}
+
+entity "categories" as TC {
+  * id : INTEGER <<PK>>
+  --
+  название : VARCHAR
+}
+
+TP "*" --> "1" TC : FK
+
+P -[#blue,dashed]-> TP
+C -[#blue,dashed]-> TC
+
+note bottom : many-to-1 → FK в таблице "many"
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Пользователь" as U {
+  + id
+  + имя
+  + email
+}
+
+class "Администратор" as A {
+  + управлять()
+}
+
+class "Корзина" as Cart {
+  + добавить()
+  + очистить()
+}
+
+class "СтрокаКорзины" as Line {
+  + количество
+}
+
+class "Товар" as P {
+  + название
+  + цена
+}
+
+class "Категория" as Cat {
+  + название
+}
+
+class "Заказ" as O {
+  + дата
+  + сумма
+}
+
+A --|> U
+U "1" o-- "0..1" Cart
+Cart "1" *-- "1..*" Line
+Line "0..*" -- "1" P
+P "0..*" -- "1" Cat
+U "1" -- "0..*" O
+@enduml

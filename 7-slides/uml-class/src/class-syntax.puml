@@ -1,0 +1,19 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Пользователь" as U {
+  + id: Integer
+  + имя: String
+  - пароль: String
+  --
+  + войти(): Boolean
+  + выйти(): void
+}
+
+note right of U
+  Секция 1: Имя (PascalCase)
+  Секция 2: Атрибуты
+  Секция 3: Методы
+end note
+@enduml

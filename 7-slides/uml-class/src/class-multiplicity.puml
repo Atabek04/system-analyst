@@ -1,0 +1,17 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Покупатель" as B
+class "Заказ" as O
+class "Товар" as P
+class "Категория" as C
+
+B "1" -- "0..*" O
+O "1" -- "1..*" P
+P "0..*" -- "1" C
+
+note bottom of B : 1 Покупатель → 0..* Заказов
+note bottom of P : Заказ содержит ≥ 1 Товар
+note bottom of C : Товар принадлежит 1 Категории
+@enduml

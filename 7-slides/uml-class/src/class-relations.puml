@@ -1,0 +1,25 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Пользователь" as U
+class "Администратор" as A
+A --|> U
+
+class "Студент" as S
+class "Курс" as C
+S -- C
+
+class "Корзина" as B
+class "Товар" as P
+B o-- P
+
+class "Заказ" as O
+class "СтрокаЗаказа" as L
+O *-- L
+
+note right of A : Inheritance ──▷
+note right of C : Association ───
+note right of P : Aggregation ◇──
+note right of L : Composition ◆──
+@enduml
