@@ -1,0 +1,26 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+entity "Книга" as B {
+  * id : INTEGER <<PK>>
+  --
+  название
+}
+
+entity "КнигаЖанр" as BG {
+  * book_id : INTEGER <<FK>>
+  * genre_id : INTEGER <<FK>>
+  --
+  дата_добавления
+}
+
+entity "Жанр" as G {
+  * id : INTEGER <<PK>>
+  --
+  название
+}
+
+B ||--o{ BG
+G ||--o{ BG
+@enduml

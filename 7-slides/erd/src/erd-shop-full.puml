@@ -1,0 +1,47 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+entity "Покупатель" as C {
+  * id : INTEGER <<PK>>
+  --
+  имя
+  email
+}
+
+entity "Заказ" as O {
+  * id : INTEGER <<PK>>
+  --
+  дата
+  сумма
+  customer_id : INTEGER <<FK>>
+}
+
+entity "СтрокаЗаказа" as L {
+  * id : INTEGER <<PK>>
+  --
+  количество
+  цена
+  order_id : INTEGER <<FK>>
+  product_id : INTEGER <<FK>>
+}
+
+entity "Товар" as P {
+  * id : INTEGER <<PK>>
+  --
+  название
+  цена
+  category_id : INTEGER <<FK>>
+}
+
+entity "Категория" as Cat {
+  * id : INTEGER <<PK>>
+  --
+  название
+}
+
+C ||--o{ O
+O ||--|{ L
+P ||--o{ L
+Cat ||--o{ P
+@enduml

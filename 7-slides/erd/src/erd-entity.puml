@@ -1,0 +1,20 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+entity "Книга" as B {
+  * id : INTEGER <<PK>>
+  --
+  название : VARCHAR
+  год_издания : INTEGER
+  isbn : VARCHAR
+  цена : DECIMAL
+}
+
+entity "Автор" as A {
+  * id : INTEGER <<PK>>
+  --
+  имя : VARCHAR
+  страна : VARCHAR
+}
+@enduml
