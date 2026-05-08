@@ -1,0 +1,13 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+actor "Пользователь" as U
+component "Web App\n(Browser)" as W
+component "API\n(Backend)" as A
+database "PostgreSQL" as D
+
+U --> W : HTTPS
+W --> A : HTTP/REST\n(JSON)
+A --> D : JDBC/SQL
+@enduml

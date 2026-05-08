@@ -1,0 +1,10 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+component "Web App" as W
+component "API" as A
+database "Database" as D
+queue "Message Queue" as Q
+component "Cache\n(Redis)" as C
+@enduml

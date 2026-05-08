@@ -1,0 +1,14 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+component "Web App" as W
+component "API" as A
+
+interface "REST" as R
+
+W -( R
+R -- A
+
+note right of R : A предоставляет (lollipop ◯)\nW требует (socket ⊃)
+@enduml

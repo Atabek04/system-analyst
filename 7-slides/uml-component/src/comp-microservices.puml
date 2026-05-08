@@ -1,0 +1,28 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+component "Web / Mobile" as Client
+component "API Gateway" as GW
+
+component "Auth\nService" as Auth
+component "Catalog\nService" as Cat
+component "Order\nService" as Ord
+component "Payment\nService" as Pay
+component "Notification\nService" as Notif
+
+database "auth_db" as ADB
+database "catalog_db" as CDB
+database "order_db" as ODB
+
+Client --> GW : HTTPS
+GW --> Auth
+GW --> Cat
+GW --> Ord
+GW --> Pay
+GW --> Notif
+
+Auth --> ADB
+Cat --> CDB
+Ord --> ODB
+@enduml
