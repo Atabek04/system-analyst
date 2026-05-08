@@ -1,0 +1,20 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Студент" as S
+class "Курс" as C
+S "*" -- "*" C : записан на
+
+class "Машина" as Car
+class "Колесо" as Wheel
+Car "1" o-- "4" Wheel : состоит из
+
+class "Здание" as B
+class "Комната" as R
+B "1" *-- "*" R : содержит
+
+note bottom of C : Association — слабая
+note bottom of Wheel : Aggregation — средняя\n(◇ пустой ромб)
+note bottom of R : Composition — сильная\n(◆ закрашенный ромб)
+@enduml

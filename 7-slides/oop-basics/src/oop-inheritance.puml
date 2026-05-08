@@ -1,0 +1,27 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Транспорт" as T {
+  скорость
+  цвет
+  --
+  двигаться()
+}
+
+class "Машина" as Car {
+  двигатель
+}
+
+class "Электромобиль" as EV {
+  батарея
+}
+
+class "Велосипед" as Bike {
+  педали
+}
+
+Car --|> T
+Bike --|> T
+EV --|> Car
+@enduml

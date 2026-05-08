@@ -1,0 +1,25 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Пользователь" as U {
+  имя: String
+  email: String
+  --
+  опубликовать_пост()
+  поставить_лайк()
+}
+
+object "aizhan : Пользователь" as O1 {
+  имя = "Айжан"
+  email = "aizhan@mail.ru"
+}
+
+object "aibek : Пользователь" as O2 {
+  имя = "Айбек"
+  email = "aibek@mail.ru"
+}
+
+U ..> O1 : экземпляр
+U ..> O2 : экземпляр
+@enduml

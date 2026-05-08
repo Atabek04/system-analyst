@@ -1,0 +1,28 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Пользователь" as Class {
+  id: int
+  имя: String
+  email: String
+  --
+  опубликовать_пост()
+  поставить_лайк()
+}
+
+entity "users" as Table {
+  * id : INTEGER <<PK>>
+  --
+  имя : VARCHAR(100)
+  email : VARCHAR(200)
+}
+
+Class -[#blue,dashed]-> Table : маппинг
+
+note right of Table
+  Атрибуты → колонки
+  Методы → не хранятся
+  Связи → foreign keys
+end note
+@enduml

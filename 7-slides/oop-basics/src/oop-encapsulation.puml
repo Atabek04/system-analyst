@@ -1,0 +1,22 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "ЗаказЕды" as Order {
+  - маршрут: String
+  - алгоритм_назначения: String
+  - комиссия: double
+  --
+  + создать_заказ()
+  + отменить_заказ()
+  + получить_статус()
+}
+
+note right of Order
+  + public — видно снаружи
+  (API, UI)
+
+  - private — скрыто
+  (внутренняя логика)
+end note
+@enduml
