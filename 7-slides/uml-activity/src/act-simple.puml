@@ -1,0 +1,15 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+start
+:Получить заказ;
+:Проверить оплату;
+if (Оплата прошла?) then (да)
+  :Собрать заказ;
+  :Отправить курьеру;
+else (нет)
+  :Отменить заказ;
+endif
+stop
+@enduml
