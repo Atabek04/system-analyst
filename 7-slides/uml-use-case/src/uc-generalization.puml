@@ -1,0 +1,23 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+left to right direction
+
+actor "Пользователь" as U
+actor "Зарегистрированный" as R
+actor "Администратор" as A
+
+R --|> U
+A --|> R
+
+rectangle "Система оплаты" {
+  usecase "Оплатить" as Pay
+  usecase "Оплатить картой" as Card
+  usecase "Оплатить через СБП" as SBP
+}
+
+Card --|> Pay
+SBP --|> Pay
+
+R -- Pay
+@enduml

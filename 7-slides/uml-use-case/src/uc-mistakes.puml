@@ -1,0 +1,22 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+left to right direction
+
+actor "Иван Петров" as Ivan #pink
+actor "Курьер" as Courier
+
+rectangle "Интернет-магазин" {
+  usecase "Нажать кнопку" as Click #pink
+  usecase "Кликнуть по товару" as ClickItem #pink
+  usecase "Подключиться к БД" as DB #pink
+  usecase "Сделать заказ" as Order
+  usecase "Доставить заказ" as Deliver
+}
+
+Ivan -- Click
+Ivan -- ClickItem
+Ivan -- Order
+Order ..> DB : <<include>>
+Courier -- Deliver
+@enduml
