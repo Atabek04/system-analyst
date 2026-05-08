@@ -1,0 +1,29 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+|Покупатель|
+start
+:Положить в корзину;
+:Оформить заказ;
+:Ввести данные оплаты;
+|Order Service|
+:Создать заказ;
+:Запросить оплату;
+|Stripe|
+:Провести платёж;
+if (Успех?) then (да)
+  |Order Service|
+  :Подтвердить заказ;
+  :Передать курьеру;
+  |Покупатель|
+  :Получить email;
+  stop
+else (нет)
+  |Order Service|
+  :Отменить заказ;
+  |Покупатель|
+  :Получить email об ошибке;
+  stop
+endif
+@enduml

@@ -1,0 +1,60 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+entity "customers" as C {
+  * id <<PK>>
+  --
+  name
+  email
+}
+
+entity "orders" as O {
+  * id <<PK>>
+  --
+  customer_id <<FK>>
+  date
+  status
+  total
+}
+
+entity "order_lines" as L {
+  * id <<PK>>
+  --
+  order_id <<FK>>
+  book_id
+  quantity
+  price
+}
+
+entity "payments" as P {
+  * id <<PK>>
+  --
+  order_id <<FK>>
+  stripe_id
+  status
+}
+
+entity "books" as B {
+  * id <<PK>>
+  --
+  title
+}
+
+entity "authors" as A {
+  * id <<PK>>
+  --
+  name
+}
+
+entity "book_authors" as BA {
+  * book_id <<FK>>
+  * author_id <<FK>>
+}
+
+C ||--o{ O
+O ||--|{ L
+O ||--o| P
+B ||--o{ BA
+A ||--o{ BA
+@enduml

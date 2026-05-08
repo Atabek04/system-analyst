@@ -1,0 +1,37 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+actor "Покупатель" as U
+component "Web / Mobile" as Client
+component "API Gateway" as GW
+component "Catalog\nService" as Cat
+component "Order\nService" as Ord
+component "Payment\nService" as Pay
+component "Notification\nService" as Notif
+component "Review\nService" as Rev
+
+database "catalog_db" as CDB
+database "order_db" as ODB
+database "review_db" as RDB
+component "Redis" as Redis
+queue "Kafka" as MQ
+
+cloud "Stripe" as Stripe
+cloud "Email" as Email
+
+U --> Client
+Client --> GW : HTTPS
+GW --> Cat
+GW --> Ord
+GW --> Pay
+GW --> Rev
+Cat --> Redis
+Cat --> CDB
+Ord --> ODB
+Rev --> RDB
+Pay --> Stripe : HTTPS
+Ord --> MQ : OrderPaid
+MQ --> Notif
+Notif --> Email
+@enduml

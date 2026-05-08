@@ -1,0 +1,29 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+actor Customer as C
+participant "Web" as W
+participant "API Gateway" as GW
+participant "Order\nService" as O
+participant "Payment\nService" as P
+participant "Stripe" as S
+queue "Kafka" as K
+participant "Notification" as N
+participant "Email" as E
+
+C -> W : Оформить заказ
+W -> GW : POST /orders
+GW -> O : create(order)
+O -> P : charge(order_id, amount)
+P -> S : POST /charges
+S --> P : succeeded
+P --> O : ok
+O -> K : OrderPaid event
+O --> GW : 201 Created
+GW --> W : ok
+W --> C : "Заказ оплачен"
+K -> N : OrderPaid
+N -> E : send email
+E --> C : письмо
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+
+class "Customer" as C {
+  + id
+  + name
+  + email
+}
+
+class "Order" as O {
+  + id
+  + date
+  + status
+  --
+  + cancel()
+  + markPaid()
+  + totalAmount()
+}
+
+class "OrderLine" as L {
+  + bookId
+  + quantity
+  + price
+}
+
+class "Payment" as P {
+  + id
+  + stripeId
+  + status
+}
+
+class "Address" as A {
+  + city
+  + street
+  + zip
+}
+
+C "1" -- "0..*" O
+O "1" *-- "1..*" L
+O "1" -- "0..1" P
+O "0..*" o-- "1" A
+@enduml
