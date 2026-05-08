@@ -67,40 +67,33 @@
 
 ## UML Diagrams
 
-### UML Overview
-
-- Structural vs Behavioral diagrams
-- When to use which diagram
-
 ### Use Case Diagram
 
-- Actors
-- Use cases
-- Relationships (include, extend, generalization)
-- System boundaries
+- [[7-slides/uml-use-case/uml-use-case|UML: Use Case Diagram]] — Actors, system boundaries, relationships (include, extend, generalization)
 
 ### Sequence Diagram
 
-- Participants/Objects
-- Messages (synchronous, asynchronous)
-- Lifelines
-- Activation boxes
-- Combined fragments
+- [[7-slides/uml-sequence/uml-sequence|UML: Sequence Diagram]] — Participants, sync/async messages, lifelines, activation boxes
+
+### OOP Basics (фундамент для Class Diagram, ERD, SQL)
+
+- [[7-slides/oop-basics/oop-basics|ООП: основы для аналитика]] — Class vs Object, атрибуты и типы, Encapsulation, Inheritance, Association/Aggregation/Composition, Abstraction
 
 ### Class Diagram
 
-- Classes, attributes, methods
-- Relationships (association, aggregation, composition)
-- Inheritance
-- Multiplicity
-- Visibility modifiers
+- [[7-slides/uml-class/uml-class|UML: Class Diagram]] — Классы, атрибуты, методы, связи, Inheritance, Multiplicity, Visibility
 
 ### Activity Diagram
 
-- Activities and actions
-- Decision nodes
-- Fork and join
-- Swimlanes
+- [[7-slides/uml-activity/uml-activity|UML: Activity Diagram]] — Краткий обзор; сравнение с BPMN (swimlanes = Lanes, Decision = Gateway)
+
+### Component Diagram
+
+- [[7-slides/uml-component/uml-component|UML: Component Diagram]] — Сервисы, протоколы, 3-tier, микросервисы, API Gateway, Queue, Cache; сравнение с Class/Deployment
+
+### Capstone — собрать всё вместе
+
+- [[7-slides/capstone-bookstore/capstone-bookstore|Capstone: BookNook]] — Один домен (книжный магазин) через 6 диаграмм: Use Case → BPMN → Component → Class → ERD → Sequence
 
 ---
 
@@ -108,12 +101,7 @@
 
 ### Entity Relationship Diagram (ERD)
 
-- Entities and attributes
-- Relationships (1:1, 1:M, M:M)
-- Primary key
-- Foreign key
-- Surrogate key
-- Cardinality
+- [[7-slides/erd/erd|ERD: Entity-Relationship Diagram]] — Entity, Attribute, PK/FK (Natural vs Surrogate), 1:1/1:N/M:N, Crow's Foot, bridge-таблицы, ERD vs Class Diagram
 
 ### Domain Model
 
