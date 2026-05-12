@@ -4,7 +4,13 @@
 
 Fields: `Front`, `Back`
 
-**Anki setup:** Tools → Manage Note Types → Add → Blank → Name: `Coding Questions` → Fields: Front, Back → Cards: Front `{{Front}}`, Back `{{Back}}`
+**Anki note-type setup:** Tools → Manage Note Types → Add → Blank → Name: `Coding Questions` → Fields: Front, Back → Cards: Front `{{Front}}`, Back `{{Back}}`
+
+**Per-deck setup (one-time, every sub-deck):**
+- Anki → click the deck → ⚙️ → Deck Options → New Cards → **Insertion Order: Sequential (oldest first)**.
+- This makes the order cards appear in the .md file = the order Anki shows them in review. See `workflow.md` § Card order.
+
+**Sub-deck naming:** every leaf deck uses a zero-padded numeric prefix — `01 - `, `02 - `, … — to fix Anki's alphabetic deck-tree sort. Use `00 - Введение` for prefatory material. See `workflow.md` § Sub-Deck Ordering.
 
 ---
 
@@ -153,7 +159,7 @@ System Analyst::DevOps::Cloud Basics
 ## File Header
 
 ```markdown
-TARGET DECK: System Analyst::Requirements::User Story & INVEST
+TARGET DECK: System Analyst::Requirements::04 - User Story & INVEST
 Tags: requirements user-story
 **Related:** [[User Story формат и INVEST]]
 ```
