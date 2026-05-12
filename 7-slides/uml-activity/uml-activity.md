@@ -111,7 +111,8 @@ style: |
   }
 ---
 
-<!-- _class: title _paginate: skip -->
+<!-- _class: title -->
+<!-- _paginate: skip -->
 
 <div class="course">SYSTEM ANALYST</div>
 <div class="author">presented by Ayub</div>
@@ -353,4 +354,4 @@ Teacher Notes:
 - **Нормализация** — убираем дублирование данных
 
 > Всё что изучили в UML — поможет понять структуру данных:
-> Action → таблица, Swimlane → схема, Decision → связь между таблицами.
+> умение читать потоки и условия напрямую переносится на понимание того, как данные меняются в системе.

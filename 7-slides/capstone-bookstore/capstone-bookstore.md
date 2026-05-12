@@ -360,9 +360,9 @@ Teacher Notes:
 Через несколько недель — **Capstone 2: SkillSpot** (онлайн-курсы).
 
 Тогда добавим:
-- Activity Diagram (поток обучения студента)
 - State Diagram (состояния курса)
 - API Spec (Swagger / OpenAPI)
 - NFR (Performance, Security)
+- Deployment Diagram (где живут компоненты)
 
 > Каждый capstone — на новый домен, чтобы навык переноса работал в любой задаче.
