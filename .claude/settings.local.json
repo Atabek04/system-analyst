@@ -19,7 +19,14 @@
       "Bash(rm -f \"/mnt/d/obsidian/System-Analyst/3-permanent/Networking/Как работает Интернет.md\")",
       "Bash(rmdir \"/mnt/d/obsidian/System-Analyst/3-permanent/Networking\")",
       "Bash(rm -f \"/mnt/d/obsidian/System-Analyst/3-permanent/How We Learn.md\" \"/mnt/d/obsidian/System-Analyst/3-permanent/Mindset Foundations.md\" \"/mnt/d/obsidian/System-Analyst/3-permanent/Why People Don't Finish.md\" \"/mnt/d/obsidian/System-Analyst/3-permanent/intro/Job market and career entry for SA.md\")",
-      "Bash(rm -f \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/computer-architecture.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/hardware-to-software.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/it-fundamentals.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/learning-methodology.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/networking-basics.md\")"
+      "Bash(rm -f \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/computer-architecture.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/hardware-to-software.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/it-fundamentals.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/learning-methodology.md\" \"/mnt/d/obsidian/System-Analyst/05-Flashcards/intro/networking-basics.md\")",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:svgicons.com)",
+      "Bash(curl -s \"https://api.iconify.design/bpmn.json\")",
+      "WebFetch(domain:forums.ankiweb.net)",
+      "Bash(git pull *)",
+      "Bash(npx @marp-team/marp-cli --version)",
+      "Bash(git commit *)"
     ]
   }
 }

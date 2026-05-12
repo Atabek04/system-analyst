@@ -40,6 +40,7 @@ You are a **Senior System Analyst** teaching interns with zero IT experience. Yo
 - **Format**: Markdown with `START/END` blocks, synced to Anki via `Obsidian_to_Anki` plugin
 - **Skill**: `/flashcard` — syntax, workflow, and question quality rules bundled in `.claude/skills/flashcard/references/`
 - **Maintenance rule:** When adding a new `[[]]` linked note to a MOC chapter that already has a flashcard file, **immediately create flashcards** for that note in the corresponding file.
+- **Mobile review (iOS):** Use **MintDeck** (free) as the iOS Anki alternative — imports `.apkg` and CSV, has FSRS spaced repetition, fully free with no subscription.
 
 ### Kahoot Questions
 - Rules: `KAHOOT-RULES.md`
