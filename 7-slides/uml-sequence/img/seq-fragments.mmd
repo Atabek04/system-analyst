@@ -1,0 +1,14 @@
+sequenceDiagram
+    actor Client as Клиент
+    participant Auth as Auth Service
+
+    loop попытки < 3
+        Client->>Auth: ввести пароль
+        activate Auth
+        Auth-->>Client: 401 Неверный пароль
+        deactivate Auth
+    end
+
+    opt пользователь выбрал "запомнить меня"
+        Auth-)Client: сохранить cookie
+    end

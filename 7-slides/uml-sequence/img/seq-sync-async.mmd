@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant Client
+    participant Server
+
+    rect rgb(220, 240, 255)
+        Note over Client,Server: SYNC — клиент блокируется и ждёт
+        Client->>Server: запрос
+        activate Client
+        activate Server
+        Server-->>Client: ответ
+        deactivate Server
+        deactivate Client
+    end
+
+    rect rgb(220, 255, 220)
+        Note over Client,Server: ASYNC — клиент отправил и продолжает работу
+        Client-)Server: запрос
+        Note left of Client: не ждёт ответа
+    end

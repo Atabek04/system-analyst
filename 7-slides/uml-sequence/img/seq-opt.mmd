@@ -1,0 +1,11 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Приложение
+    participant Push as Push Service
+
+    App->>App: вход выполнен успешно
+
+    opt пользователь включил push-уведомления
+        App-)Push: отправить уведомление "новый вход"
+        Push-)User: 🔔 Новый вход в аккаунт
+    end

@@ -1,0 +1,18 @@
+sequenceDiagram
+    actor Client as Клиент
+    participant Auth as Auth Service
+    participant DB as БД
+
+    Client->>Auth: логин + пароль
+    activate Auth
+    Auth->>DB: найти пользователя
+    activate DB
+    DB-->>Auth: результат
+    deactivate DB
+
+    alt пароль верный
+        Auth-->>Client: JWT токен ✓
+    else пароль неверный
+        Auth-->>Client: 401 Неверные данные ✗
+    end
+    deactivate Auth

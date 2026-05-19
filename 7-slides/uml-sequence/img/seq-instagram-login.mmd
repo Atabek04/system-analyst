@@ -1,0 +1,42 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Instagram App
+    participant Auth as Auth Service
+    participant DB as БД Users
+    participant Push as Push Service
+
+    User->>App: ввести логин + пароль
+    activate App
+
+    App->>App: validateInput(email, password)
+    Note right of App: проверить формат email,<br/>поля не пустые
+
+    App->>Auth: POST /auth/login {email, password}
+    activate Auth
+
+    loop попытки < 3
+
+        Auth->>DB: найти пользователя по email
+        activate DB
+        DB-->>Auth: user record
+        deactivate DB
+
+        alt пароль верный
+            Auth->>Auth: generateJWT(userId)
+            Auth-->>App: 200 OK {token, expiresIn}
+            deactivate Auth
+            App-->>User: главная страница
+            deactivate App
+            Auth-)Push: новый вход с устройства
+            Note right of Push: async — не блокирует вход
+        else пароль неверный
+            Auth-->>App: 401 Неверный пароль<br/>(осталось попыток: N)
+            App-->>User: ошибка входа
+        end
+
+    end
+
+    Auth-->>App: 403 Аккаунт заблокирован
+    deactivate Auth
+    App-->>User: слишком много попыток.<br/>Проверьте email для разблокировки.
+    deactivate App

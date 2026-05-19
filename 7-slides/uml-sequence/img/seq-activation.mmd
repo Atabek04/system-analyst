@@ -1,0 +1,9 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Wolt App
+
+    User->>App: оформить заказ
+    activate App
+    Note right of App: Activation Box —<br/>обрабатывает запрос
+    App-->>User: заказ принят
+    deactivate App

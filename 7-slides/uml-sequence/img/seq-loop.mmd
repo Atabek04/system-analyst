@@ -1,0 +1,15 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Приложение
+    participant Auth as Auth Service
+
+    loop попытки < 3
+        User->>App: ввести пароль
+        App->>Auth: проверить пароль
+        activate Auth
+        Auth-->>App: 401 Неверный пароль
+        deactivate Auth
+        App-->>User: ошибка, попробуй снова
+    end
+
+    App-->>User: аккаунт заблокирован

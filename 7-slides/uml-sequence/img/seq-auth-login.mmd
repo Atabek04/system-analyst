@@ -1,0 +1,28 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Mobile App
+    participant Auth as Auth Service
+    participant DB as Database
+    participant Push as Push Service
+
+    User->>App: ввести email + пароль
+    App->>App: validateInput(email, password)
+    App->>Auth: POST /api/v1/auth/login {email, password}
+
+    loop attempts < 3
+        Auth->>DB: GET /users?email={email}
+        DB-->>Auth: user record
+
+        alt пароль верный
+            Auth->>Auth: generateJWT(userId, roles)
+            Auth-->>App: 200 OK {token, expiresIn: 3600}
+            App-->>User: главная страница 🏠
+            Auth-)Push: POST /push/notify — новый вход с устройства
+        else пароль неверный
+            Auth-->>App: 401 Unauthorized — осталось попыток: N
+            App-->>User: неверный пароль
+        end
+    end
+
+    Auth-->>App: 403 Forbidden — account locked
+    App-->>User: аккаунт заблокирован.<br/>Письмо для разблокировки отправлено.

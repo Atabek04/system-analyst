@@ -1,0 +1,25 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Mobile App
+    participant Auth as Auth Service
+    participant DB as Database
+    participant Email as Email Service
+
+    User->>App: заполнить форму регистрации
+    App->>App: validateInput(email, password, name)
+
+    App->>Auth: POST /api/v1/auth/register {email, password, name}
+    Auth->>DB: GET /users?email={email}
+    DB-->>Auth: результат
+
+    alt email уже занят
+        Auth-->>App: 409 Conflict
+        App-->>User: этот email уже зарегистрирован
+    else email свободен
+        Auth->>Auth: hashPassword(password, salt)
+        Auth->>DB: POST /users {email, hash, name}
+        DB-->>Auth: 201 {userId}
+        Auth-)Email: POST /email/send-verification {userId}
+        Auth-->>App: 201 Created {userId}
+        App-->>User: аккаунт создан — проверьте email ✉️
+    end

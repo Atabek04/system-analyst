@@ -1,0 +1,18 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant Shop as Магазин
+    participant Pay as Payment Service
+    participant Courier as Courier Service
+
+    User->>Shop: оформить заказ
+    activate Shop
+
+    Shop->>Pay: списать деньги
+    activate Pay
+    Pay-->>Shop: успех
+    deactivate Pay
+
+    Shop-)Courier: передать в доставку
+
+    Shop-->>User: заказ принят ✓
+    deactivate Shop

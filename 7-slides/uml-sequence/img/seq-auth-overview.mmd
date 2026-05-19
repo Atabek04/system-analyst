@@ -1,0 +1,16 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Mobile App
+    participant Auth as Auth Service
+
+    rect rgb(220, 230, 255)
+        Note over User,Auth: ref: seq-auth-register
+        User->>Auth: регистрация
+        Auth-->>User: аккаунт создан
+    end
+
+    rect rgb(220, 245, 220)
+        Note over User,Auth: ref: seq-auth-login
+        User->>Auth: вход
+        Auth-->>User: JWT токен
+    end

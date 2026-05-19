@@ -1,0 +1,11 @@
+sequenceDiagram
+    actor Client as Клиент
+    participant Waiter as Официант
+    participant Barista as Бариста
+
+    Client->>Waiter: "капучино, пожалуйста"
+    Waiter->>Barista: заказ: капучино
+    activate Barista
+    Barista-->>Waiter: готово ☕
+    deactivate Barista
+    Waiter-->>Client: подаёт кофе

@@ -1,0 +1,21 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant API as Order Service
+    participant Pay as Payment Service
+
+    User->>API: оформить заказ (items, promo)
+    activate API
+
+    API->>API: calculateTotal(items, promo)
+    Note right of API: скидка, налог, итог — внутренняя логика
+
+    API->>API: validateStock(items)
+    Note right of API: проверить наличие на складе
+
+    API->>Pay: списать сумму
+    activate Pay
+    Pay-->>API: успех
+    deactivate Pay
+
+    API-->>User: заказ принят, сумма: 4200₸
+    deactivate API

@@ -1,0 +1,16 @@
+sequenceDiagram
+    actor User as Пользователь
+    participant Shop as Магазин
+    participant Pay as Payment Service
+
+    User->>Shop: оформить заказ
+    activate Shop
+
+    rect rgb(230, 230, 250)
+        Note over Shop,Pay: ref: seq-payment-flow
+        Shop->>Pay: процесс оплаты
+        Pay-->>Shop: результат
+    end
+
+    Shop-->>User: заказ подтверждён
+    deactivate Shop
