@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "980f1e3827f86912",
+            "id": "151749106934797a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7-slides/uml-use-case/uml-use-case.md",
-                "mode": "source",
+                "file": "7-slides/oop-basics/oop-basics.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "uml-use-case"
+              "title": "oop-basics"
             }
           }
         ],
@@ -56,7 +56,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2-MOC/Middle System Analyst Roadmap.md",
+                "file": "7-slides/oop-basics/oop-basics.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Middle System Analyst Roadmap"
+              "title": "Backlinks for oop-basics"
             }
           },
           {
@@ -170,17 +170,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7-slides/uml-use-case/uml-use-case.md",
+                "file": "7-slides/oop-basics/oop-basics.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of uml-use-case"
+              "title": "Outline of oop-basics"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -198,23 +197,41 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "980f1e3827f86912",
+  "active": "151749106934797a",
   "lastOpenFiles": [
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.fec20f7a58bc",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.0660c3e554c6",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.00f3ac83ed00",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.0f74e237cc41",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.705fab4336d5",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.ff5fcfbcb224",
+    "7-slides/oop-basics/img/oop-class-structure.png",
+    "7-slides/oop-basics/img/oop-class-structure.mmd",
+    "7-slides/oop-basics/img/oop-class-structure.mmd.tmp.96576.db6b7cfab0a0",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.168ba7607cf7",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.0e7e46eaa051",
+    "7-slides/oop-basics/oop-basics.md.tmp.96576.87f508819637",
     "2-MOC/Middle System Analyst Roadmap.md",
+    "7-slides/uml-sequence/img/seq-sync-async.png",
+    "7-slides/uml-sequence/uml-sequence.md",
+    "7-slides/uml-sequence/img/seq-auth-login.png",
+    "7-slides/uml-sequence/img/seq-auth-register.png",
+    "7-slides/uml-sequence/img/seq-auth-overview.png",
+    "7-slides/uml-sequence/img/seq-auth-full.png",
+    "7-slides/uml-sequence/img/seq-self-call.png",
+    "7-slides/uml-sequence/img/seq-ref.png",
+    "7-slides/uml-sequence/img/seq-opt.png",
+    "7-slides/uml-sequence/img/seq-loop.png",
+    "7-slides/oop-basics/oop-basics.md",
+    "Untitled.canvas",
+    "7-slides/uml-component/uml-component.md",
+    "7-slides/uml-class/uml-class.md",
+    "7-slides/uml-activity/uml-activity.md",
+    "7-slides/uml-use-case/uml-use-case.md",
     "05-Flashcards/bpmn/bpmn-b.md",
     "05-Flashcards/bpmn/bpmn-a.md",
-    "05-Flashcards/bpmn/bpmn-b.md.tmp.82927.1777355475206",
-    "05-Flashcards/bpmn/bpmn-a.md.tmp.82927.1777355441889",
-    "05-Flashcards/bpmn/bpmn-a.md.tmp.82927.1777355399405",
-    "05-Flashcards/bpmn",
     "05-Flashcards/intro/stakeholder-management.md",
-    "05-Flashcards/intro/stakeholder-management.md.tmp.82927.1777355338655",
     "05-Flashcards/intro/it-roles-and-hierarchy.md",
-    "05-Flashcards/intro/it-roles-and-hierarchy.md.tmp.82927.1777355308082",
-    "05-Flashcards/sdlc/task-management.md.tmp.82927.1777355278481",
-    "05-Flashcards/sdlc/story-points-and-velocity.md.tmp.82927.1777355277167",
-    "05-Flashcards/sdlc/jira.md.tmp.82927.1777355275831",
-    "05-Flashcards/requirements/prioritization.md.tmp.82927.1777355274586",
     "05-Flashcards/intro/hardware-to-software.md",
     "05-Flashcards/intro/it-fundamentals.md",
     "05-Flashcards/intro/role-and-responsibilities.md",
@@ -224,20 +241,10 @@
     "7-slides/bpmn-a/bpmn-a.md",
     "7-slides/bpmn-a/bpmn-a-part2.md",
     "7-slides/bpmn-b/bpmn-b.md",
-    "7-slides/bpmn-a/or-gateway.png",
-    "7-slides/bpmn-a/and-gateway.png",
     "6-kahoot/kahoot-questions.md",
     "KAHOOT-RULES.md",
     "7-slides/requirements-engineering-a/requirements-engineering-a.md",
     "7-slides/api-basics/api-basics.md",
-    "7-slides/requirements-engineering-b/requirements-engineering-b.md",
-    "05-Flashcards/requirements/cjm-and-traceability.md",
-    "05-Flashcards/requirements/acceptance-criteria.md",
-    "06-rules/FLASHCARD_SYNTAX.md",
-    "05-Flashcards/intro/binary-and-physical-computing.md",
-    "05-Flashcards/requirements/mvp-and-scope-creep.md",
-    "05-Flashcards/requirements/prioritization.md",
-    "05-Flashcards/requirements/user-story-and-invest.md",
-    "image.png"
+    "7-slides/requirements-engineering-b/requirements-engineering-b.md"
   ]
 }

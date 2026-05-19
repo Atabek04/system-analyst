@@ -26,7 +26,8 @@
       "WebFetch(domain:forums.ankiweb.net)",
       "Bash(git pull *)",
       "Bash(npx @marp-team/marp-cli --version)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(/home/ayub/.npm-global/bin/mmdc -i __TRACKED_VAR__.mmd -o __TRACKED_VAR__.png)"
     ]
   }
 }
