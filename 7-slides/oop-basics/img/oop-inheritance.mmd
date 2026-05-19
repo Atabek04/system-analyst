@@ -1,0 +1,26 @@
+classDiagram
+    class Notification {
+        +recipient: String
+        +message: String
+        +sent_at: DateTime
+        +status: String
+        +send()
+        +cancel()
+    }
+    class EmailNotification {
+        +recipient_email: String
+    }
+    class PushNotification {
+        +device_token: String
+    }
+    class SMSNotification {
+        +phone_number: String
+    }
+    class TelegramNotification {
+        +chat_id: String
+    }
+
+    Notification <|-- EmailNotification
+    Notification <|-- PushNotification
+    Notification <|-- SMSNotification
+    Notification <|-- TelegramNotification
