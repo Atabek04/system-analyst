@@ -34,6 +34,18 @@
               "icon": "lucide-file",
               "title": "oop-basics"
             }
+          },
+          {
+            "id": "a849d3a8fef4032f",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "7-slides/oop-basics/img/oop-composition.png"
+              },
+              "icon": "lucide-image",
+              "title": "oop-composition"
+            }
           }
         ],
         "currentTab": 1
@@ -179,7 +191,8 @@
               "title": "Outline of oop-basics"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -199,30 +212,30 @@
   },
   "active": "151749106934797a",
   "lastOpenFiles": [
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.fec20f7a58bc",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.0660c3e554c6",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.00f3ac83ed00",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.0f74e237cc41",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.705fab4336d5",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.ff5fcfbcb224",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.bf8f5101c51e",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.16be87947106",
+    "7-slides/oop-basics/img/oop-decision-tree.png",
+    "7-slides/oop-basics/img/oop-composition.png",
+    "7-slides/oop-basics/oop-basics.md",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.74a7dfe3fddc",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.34d10fde7446",
+    "CLAUDE.md.tmp.90886.b68d0d95097e",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.73342aa89cf7",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.2a00214aa140",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.148ae2730541",
+    "7-slides/oop-basics/img/oop-aggregation.png",
+    "7-slides/oop-basics/img/oop-association.png",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.a017250a750b",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.5eb654f0c5c4",
+    "7-slides/oop-basics/oop-basics.md.tmp.90886.b1a0ea10d858",
+    "7-slides/oop-basics/img/oop-inheritance-problem.png",
     "7-slides/oop-basics/img/oop-class-structure.png",
-    "7-slides/oop-basics/img/oop-class-structure.mmd",
-    "7-slides/oop-basics/img/oop-class-structure.mmd.tmp.96576.db6b7cfab0a0",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.168ba7607cf7",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.0e7e46eaa051",
-    "7-slides/oop-basics/oop-basics.md.tmp.96576.87f508819637",
     "2-MOC/Middle System Analyst Roadmap.md",
     "7-slides/uml-sequence/img/seq-sync-async.png",
     "7-slides/uml-sequence/uml-sequence.md",
     "7-slides/uml-sequence/img/seq-auth-login.png",
     "7-slides/uml-sequence/img/seq-auth-register.png",
     "7-slides/uml-sequence/img/seq-auth-overview.png",
-    "7-slides/uml-sequence/img/seq-auth-full.png",
-    "7-slides/uml-sequence/img/seq-self-call.png",
-    "7-slides/uml-sequence/img/seq-ref.png",
-    "7-slides/uml-sequence/img/seq-opt.png",
-    "7-slides/uml-sequence/img/seq-loop.png",
-    "7-slides/oop-basics/oop-basics.md",
     "Untitled.canvas",
     "7-slides/uml-component/uml-component.md",
     "7-slides/uml-class/uml-class.md",
