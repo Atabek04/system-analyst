@@ -86,6 +86,47 @@ System-Analyst/
 
 ---
 
+## Diagram Generation
+
+### UML Class Diagrams — use `graphviz` (Python)
+
+**Library:** `graphviz` (Python wrapper around the `dot` engine — already installed)
+
+**When to use:**
+- Any UML class diagram showing classes with attributes + methods
+- Any relationship diagram: Association, Aggregation, Composition, Inheritance
+- Whenever a slide needs a visual class structure (not just a table or text)
+
+**Never use:** ASCII art, HTML tables, or plain text to simulate UML boxes in slides.
+
+**How:**
+```python
+import graphviz
+
+def make_label(name, attrs, methods):
+    # HTML-like label: dark header + attrs section + HR + methods section
+    # Use FONT FACE="Courier New", POINT-SIZE="11", COLOR="#2C3E50"
+    # Header: BGCOLOR="#2C3E50", white bold text, POINT-SIZE="13"
+    ...
+
+g = graphviz.Digraph(engine='dot')
+g.attr(bgcolor='#F9F5F0', pad='0.5', rankdir='LR', dpi='150', nodesep='1.2')
+g.attr('node', shape='none', margin='0')
+
+# Relationship arrows:
+# Association:  dir='none', arrowhead='none', arrowtail='none'
+# Aggregation:  dir='back', arrowtail='odiamond', arrowhead='none'
+# Composition:  dir='back', arrowtail='diamond',  arrowhead='none'
+# Inheritance:  dir='forward', arrowhead='empty'
+
+with open('img/diagram.png', 'wb') as f:
+    f.write(g.pipe(format='png'))
+```
+
+**Output:** PNG saved to `7-slides/{topic}/img/`. Reference in slide as `![w:820](img/diagram.png)`.
+
+---
+
 ## Workflow
 
 1. **Analyze** — learning objectives, atomic concepts, prerequisites
