@@ -1,6 +1,6 @@
 ---
 name: excalidraw-diagram
-description: Create Excalidraw JSON files — single diagrams that make visual arguments, OR multi-frame lecture/presentation slide decks (bullet text + diagrams per slide). Use when the user wants to visualize workflows, architectures, or concepts, or build slides/decks/lectures.
+description: Create Excalidraw (.excalidraw) files — single diagrams that argue visually, OR multi-frame slide decks (bullet text + a diagram per slide). Reach for this for any standalone "draw me…", "diagram of…", "visualize the…", "show X vs Y", "make an excalidraw…", or "turn this outline into slides" request — especially technical visuals: software/system architecture, microservices, API/auth/OAuth flows, network topology, load balancers, caching layers, data pipelines, workflows, state machines, comparisons; also hand-drawn-style visuals for a blog/doc/single slide, and building Excalidraw decks/lectures/presentations from an outline. If the user wants a NEW visual created, use this. Do NOT use it for the System Analyst Bootcamp lesson pipeline (MOC chapter → notes → flashcards → slides — that's curriculum-production), nor to edit/fix an existing .excalidraw file, export to PNG, make Figma or other non-Excalidraw mockups, or answer pure design/aspect-ratio questions.
 ---
 
 # Excalidraw Diagram & Slide Creator
