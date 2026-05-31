@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7d04185eb6796a01",
+        "id": "7be35f8caa0cb598",
         "type": "tabs",
         "children": [
           {
-            "id": "d895444bd1f9fbf6",
+            "id": "a8fa6820b88342f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,35 +20,8 @@
               "icon": "lucide-file",
               "title": "Middle System Analyst Roadmap"
             }
-          },
-          {
-            "id": "151749106934797a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "7-slides/oop-basics/oop-basics.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "oop-basics"
-            }
-          },
-          {
-            "id": "a849d3a8fef4032f",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "7-slides/oop-basics/img/oop-composition.png"
-              },
-              "icon": "lucide-image",
-              "title": "oop-composition"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -182,13 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7-slides/oop-basics/oop-basics.md",
+                "file": "2-MOC/Middle System Analyst Roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of oop-basics"
+              "title": "Outline of Middle System Analyst Roadmap"
             }
           }
         ],
@@ -210,13 +183,22 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "151749106934797a",
+  "active": "a8fa6820b88342f0",
   "lastOpenFiles": [
+    "6-docs/competitor-analysis.pdf",
+    "6-docs/competitor-analysis.html",
+    "6-docs/enrollment-contract-ijarah.md",
+    "6-docs/pricing-strategy.md",
+    "6-docs/sales-partnership-strategy.md",
+    "6-docs/TODO.md",
+    "3-permanent/intro/SA role and responsibilities.md",
+    "2-MOC/Middle System Analyst Roadmap.md",
+    "7-slides/sql-basics/sql-basics.pdf",
+    "7-slides/oop-basics/img/oop-composition.png",
+    "7-slides/oop-basics/oop-basics.md",
     "7-slides/oop-basics/oop-basics.md.tmp.90886.bf8f5101c51e",
     "7-slides/oop-basics/oop-basics.md.tmp.90886.16be87947106",
     "7-slides/oop-basics/img/oop-decision-tree.png",
-    "7-slides/oop-basics/img/oop-composition.png",
-    "7-slides/oop-basics/oop-basics.md",
     "7-slides/oop-basics/oop-basics.md.tmp.90886.74a7dfe3fddc",
     "7-slides/oop-basics/oop-basics.md.tmp.90886.34d10fde7446",
     "CLAUDE.md.tmp.90886.b68d0d95097e",
@@ -225,12 +207,8 @@
     "7-slides/oop-basics/oop-basics.md.tmp.90886.148ae2730541",
     "7-slides/oop-basics/img/oop-aggregation.png",
     "7-slides/oop-basics/img/oop-association.png",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.a017250a750b",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.5eb654f0c5c4",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.b1a0ea10d858",
     "7-slides/oop-basics/img/oop-inheritance-problem.png",
     "7-slides/oop-basics/img/oop-class-structure.png",
-    "2-MOC/Middle System Analyst Roadmap.md",
     "7-slides/uml-sequence/img/seq-sync-async.png",
     "7-slides/uml-sequence/uml-sequence.md",
     "7-slides/uml-sequence/img/seq-auth-login.png",
@@ -253,11 +231,6 @@
     "05-Flashcards/intro/computer-architecture.md",
     "7-slides/bpmn-a/bpmn-a.md",
     "7-slides/bpmn-a/bpmn-a-part2.md",
-    "7-slides/bpmn-b/bpmn-b.md",
-    "6-kahoot/kahoot-questions.md",
-    "KAHOOT-RULES.md",
-    "7-slides/requirements-engineering-a/requirements-engineering-a.md",
-    "7-slides/api-basics/api-basics.md",
-    "7-slides/requirements-engineering-b/requirements-engineering-b.md"
+    "7-slides/bpmn-b/bpmn-b.md"
   ]
 }
