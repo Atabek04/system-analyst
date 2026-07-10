@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7be35f8caa0cb598",
+        "id": "bf701c89b5c94dd2",
         "type": "tabs",
         "children": [
           {
-            "id": "a8fa6820b88342f0",
+            "id": "135026b5d969c356",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-MOC/Middle System Analyst Roadmap.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Middle System Analyst Roadmap"
+              "title": "New tab"
             }
           }
         ]
@@ -155,13 +151,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2-MOC/Middle System Analyst Roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Middle System Analyst Roadmap"
+              "title": "Outline"
             }
           }
         ],
@@ -169,7 +164,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 302.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,37 +178,38 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "a8fa6820b88342f0",
+  "active": "135026b5d969c356",
   "lastOpenFiles": [
-    "6-docs/competitor-analysis.pdf",
-    "6-docs/competitor-analysis.html",
+    "7-slides/vibecoding/vibecoding.pdf",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.87206f0ac0c6",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.a707b42dd644",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.5d4699bc3a58",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.e20ac2390597",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.d88a4189ce00",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.ea0b9b4cd2ca",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.c214527bf694",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.5c3c87804b00",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.b7f0e03af5bb",
+    "7-slides/vibecoding/vibecoding.md.tmp.19569.018f92cbb732",
+    "8-notion/api-fundamentals/api-fundamentals.md",
+    "8-notion/api-fundamentals/assets/07-api-contract.png",
+    "8-notion/api-fundamentals/assets/07-api-restaurant.png",
+    "8-notion/api-fundamentals/assets/06-sync-async.png",
+    "8-notion/api-fundamentals/assets/05-protocols.png",
+    "8-notion/api-fundamentals/assets/04-figma-design.jpg",
+    "8-notion/api-fundamentals/assets/03-client-server-gov.png",
+    "8-notion/api-fundamentals/assets/02-frontend-backend.png",
+    "8-notion/api-fundamentals/assets/01-client-api-server.png",
+    "2-MOC/Middle System Analyst Roadmap.md",
     "6-docs/enrollment-contract-ijarah.md",
     "6-docs/pricing-strategy.md",
     "6-docs/sales-partnership-strategy.md",
     "6-docs/TODO.md",
     "3-permanent/intro/SA role and responsibilities.md",
-    "2-MOC/Middle System Analyst Roadmap.md",
-    "7-slides/sql-basics/sql-basics.pdf",
     "7-slides/oop-basics/img/oop-composition.png",
     "7-slides/oop-basics/oop-basics.md",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.bf8f5101c51e",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.16be87947106",
     "7-slides/oop-basics/img/oop-decision-tree.png",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.74a7dfe3fddc",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.34d10fde7446",
-    "CLAUDE.md.tmp.90886.b68d0d95097e",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.73342aa89cf7",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.2a00214aa140",
-    "7-slides/oop-basics/oop-basics.md.tmp.90886.148ae2730541",
-    "7-slides/oop-basics/img/oop-aggregation.png",
-    "7-slides/oop-basics/img/oop-association.png",
-    "7-slides/oop-basics/img/oop-inheritance-problem.png",
-    "7-slides/oop-basics/img/oop-class-structure.png",
-    "7-slides/uml-sequence/img/seq-sync-async.png",
     "7-slides/uml-sequence/uml-sequence.md",
-    "7-slides/uml-sequence/img/seq-auth-login.png",
-    "7-slides/uml-sequence/img/seq-auth-register.png",
-    "7-slides/uml-sequence/img/seq-auth-overview.png",
     "Untitled.canvas",
     "7-slides/uml-component/uml-component.md",
     "7-slides/uml-class/uml-class.md",
@@ -230,7 +226,6 @@
     "05-Flashcards/intro/learning-methodology.md",
     "05-Flashcards/intro/computer-architecture.md",
     "7-slides/bpmn-a/bpmn-a.md",
-    "7-slides/bpmn-a/bpmn-a-part2.md",
-    "7-slides/bpmn-b/bpmn-b.md"
+    "7-slides/bpmn-a/bpmn-a-part2.md"
   ]
 }

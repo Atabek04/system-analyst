@@ -36,6 +36,7 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 - Define every term on first mention
 - English IT terms stay in English: Sprint, Backlog, API, Agile, Scrum, Kanban, User Story, etc.
 - Translatable terms: write in Russian with English original in brackets — e.g., "Сбор требований (Elicitation)", "Приоритизация (Prioritization)"
+- **Never use em-dashes (—) in teaching content.** Rewrite instead: split into two sentences, use a comma, a colon, parentheses, or a list. (Applies to Notion pages, slides, notes; this meta-file may keep them.)
 
 ---
 
@@ -44,6 +45,15 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 - **80% facilitate / 20% lecture** — students talk 60% of the time
 - **Socratic method**: Ask before explaining, wait 7-10 sec, respond to answers before moving on
 - **Check understanding**: After every section (Module Check with 3-5 questions)
+
+### Core teaching principles — apply to every lesson, slide, and Notion page
+
+These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `notion-wiki-rules.md`.
+
+1. **Problem before solution (productive failure)** — never show a solution first. State the problem it solves, let the student feel it / try to invent a fix, *then* reveal the concept and explain how it solves that problem. Builds engineering intuition — the student re-invents the reasoning, not memorizes the fact. (Rule 16)
+2. **First-principles thinking** — explain down to the base need ("two programs must talk — what's the minimum they must agree on?"), never "it's the industry standard". (Rule 17)
+3. **Adult curiosity-gap hooks, NO fairy-tales** — open with a provocative question / contrarian fact / real SA-work stake. Audience is adult career-switchers — no fictional protagonist or invented plot. Analogies (restaurant=API) are fine; stories are not. (Rule 18)
+4. **Research explanations, don't improvise** — before explaining a concept, search the web for how it's actually explained well (`"<concept> in simple terms" / analogy / real world example`), then adapt. Community-vetted analogies beat invented ones. (notion-wiki-rules → "Always ground explanations in real sources")
 
 ---
 
@@ -67,6 +77,13 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 - **Skill**: `/flashcard` — syntax, workflow, and question quality rules in `.claude/skills/flashcard/references/`
 - **Maintenance rule:** When adding a new `[[]]` linked note to a MOC chapter that already has a flashcard file, **immediately create flashcards** for that note in the corresponding file.
 - **Mobile review (iOS):** Use **MintDeck** (free) — imports `.apkg` and CSV, FSRS spaced repetition, fully free.
+
+### Notion Wiki Pages (student-facing)
+- **Location**: `8-notion/{topic}/{topic}.md` — Markdown import files
+- **Rules**: `.claude/references/notion-wiki-rules.md` — read before writing any Notion page
+- **Template**: `8-notion/_template.md` — copy → rename → fill
+- **Not atomic notes**: long-form, story-driven, casual — different format from Zettelkasten
+- **Import**: Write `.md` → Notion Import → manually convert callouts/toggles (~5 min per page)
 
 ### Kahoot Questions
 - Rules: `KAHOOT-RULES.md`
@@ -189,6 +206,10 @@ System-Analyst/
 │       ├── {topic}.md          (Marp source — legacy topics)
 │       ├── {topic}.pdf         (exported PDF — legacy)
 │       └── img/                (diagram PNGs)
+├── 8-notion/              (Notion import files — student-facing wiki pages)
+│   ├── _template.md       (copy this to start a new page)
+│   └── {topic}/
+│       └── {topic}.md     (import to Notion, then fix callouts/toggles manually)
 └── Intro/                 (introductory materials)
 ```
 
@@ -208,6 +229,7 @@ Read these before writing any lesson, slide, flashcard, or making a platform/pro
 | **Pedagogy Rules** | `.claude/skills/curriculum-production/references/pedagogy-rules.md` | Before writing any lesson, outline, or slide. Contains: real-world bridge table, Socratic method, demo-first rule, slide design rules, completeness checklist. |
 | **Instructor Role** | `.claude/skills/curriculum-production/references/instructor-role.md` | Before writing scripts or speaker notes. Defines tone, live demo mechanics, how to handle wrong answers. |
 | **Founder Rules** | `.claude/references/founder-rules.md` | Before any platform feature, pricing, or scope decision. Contains: build priority order, Day 1/3/7 retention mechanics, competitor positioning, assumption tracking. |
+| **Notion Wiki Rules** | `.claude/references/notion-wiki-rules.md` | Before writing any Notion page. Contains: page structure, writing style, 6 question types, callout/toggle conventions, import workflow. |
 
 ---
 
@@ -217,3 +239,4 @@ Read these before writing any lesson, slide, flashcard, or making a platform/pro
 - **Marp Slides**: `/marp-slides` — **legacy only** — editing existing `.md` slide files. Do not use for new topics.
 - **Flashcard**: `/flashcard` — generate Anki flashcards from atomic notes
 - **Skill Creator**: `/skill-creator` — create, test, iterate, benchmark skills
+- **Notion Pages**: no skill — use template at `8-notion/_template.md`, rules at `.claude/references/notion-wiki-rules.md`
