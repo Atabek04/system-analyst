@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bf701c89b5c94dd2",
+        "id": "b7757f31501ed0a3",
         "type": "tabs",
         "children": [
           {
-            "id": "135026b5d969c356",
+            "id": "d70361dccf8f833d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "8-notion/http-fundamentals/http-fundamentals.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "http-fundamentals"
             }
           }
         ]
@@ -151,12 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "8-notion/http-fundamentals/http-fundamentals.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of http-fundamentals"
             }
           }
         ],
@@ -164,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.5
+    "width": 302.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,54 +184,54 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "135026b5d969c356",
+  "active": "d70361dccf8f833d",
   "lastOpenFiles": [
-    "7-slides/vibecoding/vibecoding.pdf",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.87206f0ac0c6",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.a707b42dd644",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.5d4699bc3a58",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.e20ac2390597",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.d88a4189ce00",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.ea0b9b4cd2ca",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.c214527bf694",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.5c3c87804b00",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.b7f0e03af5bb",
-    "7-slides/vibecoding/vibecoding.md.tmp.19569.018f92cbb732",
+    "mock-interview/~$nior-SA-Interview_WORKSHEET.docx",
+    "mock-interview/build_pdf.py.tmp.48648.3b919fdcf188",
+    "mock-interview/ak_05.png",
+    "mock-interview/ak_03.png",
+    "mock-interview/ak_02.png",
+    "mock-interview/ak_01.png",
+    "mock-interview/ak_00.png",
+    "mock-interview/node_modules/@types/node/timers/promises.d.ts",
+    "mock-interview/node_modules/@types/node/timers",
+    "mock-interview/node_modules/@types/node/test/reporters.d.ts",
+    "mock-interview/node_modules/@types/node/test",
+    "mock-interview/Senior-SA-Interview_WORKSHEET.docx",
+    "mock-interview/node_modules/xml/test/xml.test.js",
+    "mock-interview/node_modules/xml/test",
+    "mock-interview/node_modules/lie/lib/index.js",
+    "mock-interview/node_modules/lie/lib/browser.js",
+    "mock-interview/node_modules/docx/README.md",
+    "mock-interview/node_modules/@types/node/README.md",
+    "mock-interview/node_modules/jszip/graph.svg",
+    "mock-interview/node_modules/jszip/sponsors.md",
+    "mock-interview/node_modules/jszip/CHANGES.md",
+    "mock-interview/node_modules/readable-stream/README.md",
+    "mock-interview/node_modules/xml/readme.md",
+    "mock-interview/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
+    "mock-interview/node_modules/xml-js/README.md",
+    "mock-interview/node_modules/lie/README.md",
+    "mock-interview/node_modules/nanoid/README.md",
+    "mock-interview/node_modules/sax/README.md",
+    "mock-interview/node_modules/sax/LICENSE.md",
+    "mock-interview/node_modules/core-util-is/README.md",
+    "mock-interview/node_modules/util-deprecate/History.md",
+    "mock-interview/node_modules/inherits/README.md",
+    "mock-interview/node_modules/util-deprecate/README.md",
+    "8-notion/_template.md",
     "8-notion/api-fundamentals/api-fundamentals.md",
     "8-notion/api-fundamentals/assets/07-api-contract.png",
     "8-notion/api-fundamentals/assets/07-api-restaurant.png",
     "8-notion/api-fundamentals/assets/06-sync-async.png",
     "8-notion/api-fundamentals/assets/05-protocols.png",
-    "8-notion/api-fundamentals/assets/04-figma-design.jpg",
-    "8-notion/api-fundamentals/assets/03-client-server-gov.png",
-    "8-notion/api-fundamentals/assets/02-frontend-backend.png",
-    "8-notion/api-fundamentals/assets/01-client-api-server.png",
     "2-MOC/Middle System Analyst Roadmap.md",
     "6-docs/enrollment-contract-ijarah.md",
     "6-docs/pricing-strategy.md",
     "6-docs/sales-partnership-strategy.md",
     "6-docs/TODO.md",
     "3-permanent/intro/SA role and responsibilities.md",
-    "7-slides/oop-basics/img/oop-composition.png",
     "7-slides/oop-basics/oop-basics.md",
-    "7-slides/oop-basics/img/oop-decision-tree.png",
-    "7-slides/uml-sequence/uml-sequence.md",
-    "Untitled.canvas",
-    "7-slides/uml-component/uml-component.md",
-    "7-slides/uml-class/uml-class.md",
-    "7-slides/uml-activity/uml-activity.md",
-    "7-slides/uml-use-case/uml-use-case.md",
-    "05-Flashcards/bpmn/bpmn-b.md",
-    "05-Flashcards/bpmn/bpmn-a.md",
-    "05-Flashcards/intro/stakeholder-management.md",
-    "05-Flashcards/intro/it-roles-and-hierarchy.md",
-    "05-Flashcards/intro/hardware-to-software.md",
-    "05-Flashcards/intro/it-fundamentals.md",
-    "05-Flashcards/intro/role-and-responsibilities.md",
-    "05-Flashcards/intro/networking-basics.md",
-    "05-Flashcards/intro/learning-methodology.md",
-    "05-Flashcards/intro/computer-architecture.md",
-    "7-slides/bpmn-a/bpmn-a.md",
-    "7-slides/bpmn-a/bpmn-a-part2.md"
+    "Untitled.canvas"
   ]
 }

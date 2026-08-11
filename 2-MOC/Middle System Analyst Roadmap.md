@@ -402,11 +402,13 @@
 ## API & Integration
 
 ### API Fundamentals
+**Notion:** [[8-notion/api-fundamentals/api-fundamentals|API Fundamentals]]
 - What is API
 - API types (Web API, Library API)
 - Client-Server model *(spiral return — introduced in SDLC; here: full request/response cycle, statelessness, how APIs are the interface between client and server)*
 
 ### Communication Protocols
+**Notion:** [[8-notion/real-time-protocols/real-time-protocols|Real-time Protocols: Polling, Long Polling, SSE, WebSocket]]
 - REST
 - SOAP
 - WebSocket — when to specify, how to write the NFR (vs polling)
@@ -415,17 +417,26 @@
 - GraphQL — REST vs GraphQL trade-offs, what SA specifies differently
 
 ### HTTP Protocol
+**Notion:** [[8-notion/http-fundamentals/http-fundamentals|HTTP Fundamentals]]
 - HTTP methods (GET, POST, PUT, DELETE, PATCH)
 - HTTP status codes (2xx, 3xx, 4xx, 5xx)
 - Request/Response structure
 - Idempotency
 
 ### Data Formats
+**Notion:** [[8-notion/data-formats/data-formats|Data Formats: JSON & XML]]
 - JSON
-- XML
+- XML (SOAP, ШЭП / Smart Bridge, XSD, WSDL, ЭЦП)
 - YAML
 
+### Endpoint → JSON → UI *(мостик: собирает HTTP + Data Formats в одну картину)*
+**Notion:** [[8-notion/endpoint-to-ui/endpoint-to-ui|Endpoint → JSON → UI]]
+- Главная идея: UI = JSON, нарисованный на экране (запрос → JSON → раскладка по элементам)
+- Список = массив, деталь = объект; форма/POST разворачивает направление (UI → сервер, 201 назад)
+- Коротко: лайк-кнопка, поиск/query-параметры, пагинация «показать ещё»
+
 ### API Design
+**Notion:** [[8-notion/api-design/api-design|API Design]]
 - RESTful principles
 - Resource naming & endpoint design
 - Versioning

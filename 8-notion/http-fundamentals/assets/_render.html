@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #ffffff; }
+    #root { display: inline-block; }
+    #root svg { display: block; }
+    #status { font-family: monospace; padding: 8px; color: #b91c1c; }
+  </style>
+</head>
+<body>
+  <div id="status">loading…</div>
+  <div id="root"></div>
+  <script type="module">
+    import { exportToSvg } from "https://esm.sh/@excalidraw/excalidraw@0.18.0?bundle";
+    try {
+      const data = await (await fetch("./http-visuals.excalidraw")).json();
+      const svg = await exportToSvg({
+        elements: data.elements || [],
+        appState: { ...(data.appState||{}), viewBackgroundColor: "#ffffff", exportBackground: true, exportWithDarkMode: false },
+        files: data.files || {},
+      });
+      const root = document.getElementById("root");
+      root.innerHTML = "";
+      root.appendChild(svg);
+      document.getElementById("status").textContent = "ok " + svg.getAttribute("width") + "x" + svg.getAttribute("height");
+      document.getElementById("status").style.color = "#047857";
+      window.__done = true;
+    } catch (e) {
+      document.getElementById("status").textContent = "ERROR: " + e.message;
+      window.__done = true;
+    }
+  </script>
+</body>
+</html>
