@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizza Napoli — Tamak</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand"><span class="logo">🍴</span> Tamak</div>
+    <div class="city">Город: <b>Алматы</b> ▾</div>
+    <div class="search">🔍 <input placeholder="Поиск блюд и ресторанов"></div>
+  </div>
+</div>
+
+<div class="wrap page">
+  <a class="h-back" href="index.html">← Все рестораны</a>
+
+  <div class="hero">
+    <div class="emoji" style="background:#fff1ea">🍕</div>
+    <div>
+      <h1 class="title">Pizza Napoli</h1>
+      <div class="meta">
+        <span class="rating">⭐ 4.8</span><span class="dot"></span>
+        <span>1240 оценок</span><span class="dot"></span>
+        <span>Пицца, Паста, Итальянская кухня</span>
+      </div>
+      <div class="hero-meta">
+        <span class="pill">🛵 25–35 мин</span>
+        <span class="pill">📦 Бесплатная доставка</span>
+        <span class="pill">💳 Мин. заказ 2500 ₸</span>
+        <span class="pill">🟢 Открыто до 23:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="catnav">
+    <a href="#pizza">Пицца</a>
+    <a href="#pasta">Паста</a>
+    <a href="#drinks">Напитки</a>
+  </div>
+
+  <h2 class="section-title" id="pizza">Пицца</h2>
+
+  <div class="menu-item">
+    <div class="mi-emoji" style="background:#fff1ea">🍕</div>
+    <div class="mi-body">
+      <h4>Маргарита</h4>
+      <p>Томатный соус, моцарелла, свежий базилик. 30 см.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">2900 ₸</div>
+      <button class="add-btn" onclick="addItem()">+</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="mi-emoji" style="background:#fef3c7">🍕</div>
+    <div class="mi-body">
+      <h4>Пепперони</h4>
+      <p>Острая пепперони, моцарелла, томатный соус. 30 см.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">3400 ₸</div>
+      <button class="add-btn" onclick="addItem()">+</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="mi-emoji" style="background:#dcfce7">🍕</div>
+    <div class="mi-body">
+      <h4>Четыре сыра</h4>
+      <p>Моцарелла, горгонзола, пармезан, чеддер. 30 см.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">3800 ₸</div>
+      <button class="add-btn" onclick="addItem()">+</button>
+    </div>
+  </div>
+
+  <div class="menu-item disabled">
+    <div class="mi-emoji" style="background:#e0f2fe">🍕</div>
+    <div class="mi-body">
+      <h4>Гавайская</h4>
+      <p>Ветчина, ананас, моцарелла. 30 см.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">3600 ₸</div>
+      <span class="soldout">Нет в наличии</span>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="pasta">Паста</h2>
+
+  <div class="menu-item">
+    <div class="mi-emoji" style="background:#fef3c7">🍝</div>
+    <div class="mi-body">
+      <h4>Карбонара</h4>
+      <p>Спагетти, бекон, сливочный соус, пармезан.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">3200 ₸</div>
+      <button class="add-btn" onclick="addItem()">+</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="mi-emoji" style="background:#fee2e2">🍝</div>
+    <div class="mi-body">
+      <h4>Болоньезе</h4>
+      <p>Спагетти, говяжий фарш, томатный соус.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">3000 ₸</div>
+      <button class="add-btn" onclick="addItem()">+</button>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="drinks">Напитки</h2>
+
+  <div class="menu-item">
+    <div class="mi-emoji" style="background:#e0f2fe">🥤</div>
+    <div class="mi-body">
+      <h4>Кола 0.5 л</h4>
+      <p>Охлаждённая.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">600 ₸</div>
+      <button class="add-btn" onclick="addItem()">+</button>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="mi-emoji" style="background:#dcfce7">🧃</div>
+    <div class="mi-body">
+      <h4>Сок апельсиновый 0.3 л</h4>
+      <p>Свежевыжатый.</p>
+    </div>
+    <div class="mi-right">
+      <div class="mi-price">900 ₸</div>
+      <button class="add-btn" onclick="addItem()">+</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="cartbar">
+  <div class="cartbar-inner">
+    <a href="checkout.html"><button class="cart-btn">
+      <span>Корзина <span class="cart-count" id="count">2</span></span>
+      <span>Перейти к оформлению →</span>
+    </button></a>
+  </div>
+</div>
+
+<script>
+  let n = 2;
+  function addItem() {
+    n++;
+    document.getElementById('count').textContent = n;
+  }
+</script>
+</body>
+</html>

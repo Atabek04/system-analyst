@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Оформление заказа — Tamak</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand"><span class="logo">🍴</span> Tamak</div>
+    <div class="city">Город: <b>Алматы</b> ▾</div>
+    <div class="search">🔍 <input placeholder="Поиск блюд и ресторанов"></div>
+  </div>
+</div>
+
+<div class="wrap page">
+  <a class="h-back" href="restaurant.html">← Назад в меню</a>
+  <h1 class="title">Оформление заказа</h1>
+
+  <form action="order.html" class="cols">
+    <div>
+      <div class="panel">
+        <h3>Адрес доставки</h3>
+        <div class="field">
+          <label>Улица и дом</label>
+          <input value="ул. Абая 150" required>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>Квартира</label>
+            <input value="42">
+          </div>
+          <div class="field">
+            <label>Подъезд / этаж</label>
+            <input value="2 / 5">
+          </div>
+        </div>
+        <div class="field">
+          <label>Телефон</label>
+          <input value="+7 707 123 45 67" required>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Способ оплаты</h3>
+        <div class="radio-group">
+          <label class="radio sel"><input type="radio" name="pay" checked> 💳 Картой онлайн</label>
+          <label class="radio"><input type="radio" name="pay"> 💵 Наличными курьеру</label>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Время доставки</h3>
+        <div class="radio-group">
+          <label class="radio sel"><input type="radio" name="time" checked> 🛵 Как можно скорее (25–35 мин)</label>
+          <label class="radio"><input type="radio" name="time"> 🕐 Ко времени</label>
+        </div>
+        <div class="field" style="margin-top:16px">
+          <label>Комментарий курьеру</label>
+          <textarea rows="2" placeholder="Например: код домофона 42В">Позвонить за 10 минут</textarea>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <h3>Ваш заказ · Pizza Napoli</h3>
+        <div class="summary-row"><span><span class="q">1 ×</span> Маргарита</span><span>2900 ₸</span></div>
+        <div class="summary-row"><span><span class="q">1 ×</span> Пепперони</span><span>3400 ₸</span></div>
+        <div class="summary-row"><span class="muted">Доставка</span><span class="muted">Бесплатно</span></div>
+        <div class="summary-total"><span>Итого</span><span>6300 ₸</span></div>
+        <button type="submit" class="btn-primary">Оформить заказ · 6300 ₸</button>
+        <p class="muted" style="font-size:12px;text-align:center;margin:12px 0 0">Нажимая кнопку, вы отправляете заказ ресторану</p>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

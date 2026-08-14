@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "b7757f31501ed0a3",
+        "id": "e037483c7aa15623",
         "type": "tabs",
         "children": [
           {
-            "id": "d70361dccf8f833d",
+            "id": "173c473d76385aa8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "8-notion/http-fundamentals/http-fundamentals.md",
-                "mode": "source",
-                "source": false
+                "file": "9-exercises/case-a-food-delivery/assets/scr-list.png"
               },
-              "icon": "lucide-file",
-              "title": "http-fundamentals"
+              "icon": "lucide-image",
+              "title": "scr-list"
             }
           }
         ]
@@ -155,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8-notion/http-fundamentals/http-fundamentals.md",
+                "file": "9-exercises/case-a-food-delivery/assets/scr-list.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of http-fundamentals"
+              "title": "Outline of scr-list"
             }
           }
         ],
@@ -169,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.5,
-    "collapsed": true
+    "width": 302.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,27 +181,34 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "d70361dccf8f833d",
+  "active": "173c473d76385aa8",
   "lastOpenFiles": [
-    "mock-interview/~$nior-SA-Interview_WORKSHEET.docx",
-    "mock-interview/build_pdf.py.tmp.48648.3b919fdcf188",
-    "mock-interview/ak_05.png",
-    "mock-interview/ak_03.png",
-    "mock-interview/ak_02.png",
-    "mock-interview/ak_01.png",
-    "mock-interview/ak_00.png",
-    "mock-interview/node_modules/@types/node/timers/promises.d.ts",
-    "mock-interview/node_modules/@types/node/timers",
-    "mock-interview/node_modules/@types/node/test/reporters.d.ts",
-    "mock-interview/node_modules/@types/node/test",
-    "mock-interview/Senior-SA-Interview_WORKSHEET.docx",
-    "mock-interview/node_modules/xml/test/xml.test.js",
-    "mock-interview/node_modules/xml/test",
-    "mock-interview/node_modules/lie/lib/index.js",
-    "mock-interview/node_modules/lie/lib/browser.js",
+    "9-exercises/case-a-food-delivery/assets/scr-order.png",
+    "9-exercises/case-a-food-delivery/assets/scr-restaurant.png",
+    "9-exercises/case-a-food-delivery/assets/scr-list.png",
+    "9-exercises/case-a-food-delivery/assets/scr-checkout.png",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md",
+    "8-notion/endpoint-to-ui/Untitled",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.16940.04b00bd1e719",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.feb1b6146f0d",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.25fd02aa1151",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.eabb2cfc3c1f",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.0bb73c55388c",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.aa9bdae10d3f",
+    "8-notion/endpoint-to-ui/assets/scr-04-meeting.jpg",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.4c1933b30f5d",
+    "8-notion/endpoint-to-ui/assets/scr-03-form.jpg",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.56910fa15faa",
+    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.8419dd05d432",
+    "8-notion/endpoint-to-ui/assets/scr-kaspi-reviews.png",
+    "8-notion/endpoint-to-ui/assets/scr-kaspi-product.png",
+    "8-notion/endpoint-to-ui/assets/scr-kaspi-catalog.png",
+    "8-notion/data-formats/assets/product_reviews.png",
+    "8-notion/data-formats/assets/product_page.png",
+    "8-notion/data-formats/data-formats.md",
+    "8-notion/http-fundamentals/http-fundamentals.md",
     "mock-interview/node_modules/docx/README.md",
     "mock-interview/node_modules/@types/node/README.md",
-    "mock-interview/node_modules/jszip/graph.svg",
     "mock-interview/node_modules/jszip/sponsors.md",
     "mock-interview/node_modules/jszip/CHANGES.md",
     "mock-interview/node_modules/readable-stream/README.md",
@@ -221,17 +225,10 @@
     "mock-interview/node_modules/util-deprecate/README.md",
     "8-notion/_template.md",
     "8-notion/api-fundamentals/api-fundamentals.md",
-    "8-notion/api-fundamentals/assets/07-api-contract.png",
-    "8-notion/api-fundamentals/assets/07-api-restaurant.png",
-    "8-notion/api-fundamentals/assets/06-sync-async.png",
-    "8-notion/api-fundamentals/assets/05-protocols.png",
     "2-MOC/Middle System Analyst Roadmap.md",
     "6-docs/enrollment-contract-ijarah.md",
     "6-docs/pricing-strategy.md",
     "6-docs/sales-partnership-strategy.md",
-    "6-docs/TODO.md",
-    "3-permanent/intro/SA role and responsibilities.md",
-    "7-slides/oop-basics/oop-basics.md",
     "Untitled.canvas"
   ]
 }

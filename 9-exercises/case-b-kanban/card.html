@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Исправить вход по номеру — TaskFlow</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="logo">✔</span> TaskFlow</div>
+    <span class="sep">/</span>
+    <span class="board-name">Релиз мобильного приложения</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <a class="h-back" href="board.html">← К доске</a>
+
+  <div class="detail-head">
+    <div>
+      <div class="labels"><span class="label wide c-red">Баг</span></div>
+      <h1>Исправить вход по номеру телефона</h1>
+      <div class="detail-sub">В колонке <b>In Progress</b> · создано 12 авг 2026</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="kv">
+      <div>
+        <div class="k">Исполнитель</div>
+        <div class="tag"><span class="mini-avatar c-blue">АБ</span> Арман Б.</div>
+      </div>
+      <div>
+        <div class="k">Срок</div>
+        <div class="tag"><span class="due">⏰ 15 авг 2026</span></div>
+      </div>
+      <div>
+        <div class="k">Приоритет</div>
+        <div class="tag">🔴 Высокий</div>
+      </div>
+      <div>
+        <div class="k">Метки</div>
+        <div class="tag"><span class="label wide c-red">Баг</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Описание</h3>
+    <p class="desc">При входе по номеру телефона SMS-код иногда не приходит на номера оператора Tele2. Нужно проверить логику отправки на стороне бэкенда и таймаут ожидания кода.</p>
+  </div>
+
+  <div class="panel">
+    <h3>Чек-лист · 2 из 5</h3>
+    <div class="progress"><i style="width:40%"></i></div>
+    <div class="check done"><span class="box">✓</span><span>Воспроизвести баг на Tele2</span></div>
+    <div class="check done"><span class="box">✓</span><span>Проверить логи SMS-провайдера</span></div>
+    <div class="check"><span class="box"></span><span>Увеличить таймаут ожидания кода</span></div>
+    <div class="check"><span class="box"></span><span>Добавить кнопку «Отправить повторно»</span></div>
+    <div class="check"><span class="box"></span><span>Протестировать на всех операторах</span></div>
+  </div>
+
+  <div class="panel">
+    <h3>Комментарии · 5</h3>
+    <div class="comment">
+      <span class="mini-avatar c-green">МК</span>
+      <div class="body"><span class="who">Мадина К.</span><span class="when">14 авг, 10:24</span><br>Проверила у себя, на Beeline код приходит нормально.</div>
+    </div>
+    <div class="comment">
+      <span class="mini-avatar c-blue">АБ</span>
+      <div class="body"><span class="who">Арман Б.</span><span class="when">14 авг, 11:02</span><br>Значит проблема точечная. Смотрю таймаут.</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn-primary">Переместить в Review</button>
+    <button class="btn-ghost">Редактировать</button>
+    <button class="btn-danger">🗑 Удалить</button>
+  </div>
+</div>
+</body>
+</html>

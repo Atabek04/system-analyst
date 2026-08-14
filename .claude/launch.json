@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "excalidraw-render",
+      "name": "exercises",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["8-notion/http-fundamentals/assets/server.js"],
-      "port": 8797
+      "runtimeArgs": ["9-exercises/serve.js"],
+      "port": 8778
     }
   ]
 }
