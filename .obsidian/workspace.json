@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e037483c7aa15623",
+        "id": "aac1f9e69345182c",
         "type": "tabs",
         "children": [
           {
-            "id": "173c473d76385aa8",
+            "id": "d4413df6fcd1560a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "9-exercises/case-a-food-delivery/assets/scr-list.png"
+                "file": "8-notion/real-time-protocols/real-time-protocols.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "scr-list"
+              "icon": "lucide-file",
+              "title": "real-time-protocols"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -153,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9-exercises/case-a-food-delivery/assets/scr-list.png",
+                "file": "8-notion/real-time-protocols/real-time-protocols.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of scr-list"
+              "title": "Outline"
             }
           }
         ],
@@ -181,11 +185,12 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "173c473d76385aa8",
+  "active": "d4413df6fcd1560a",
   "lastOpenFiles": [
+    "9-exercises/case-a-food-delivery/solution.md",
+    "9-exercises/case-a-food-delivery/assets/scr-list.png",
     "9-exercises/case-a-food-delivery/assets/scr-order.png",
     "9-exercises/case-a-food-delivery/assets/scr-restaurant.png",
-    "9-exercises/case-a-food-delivery/assets/scr-list.png",
     "9-exercises/case-a-food-delivery/assets/scr-checkout.png",
     "8-notion/endpoint-to-ui/endpoint-to-ui.md",
     "8-notion/endpoint-to-ui/Untitled",
@@ -204,7 +209,6 @@
     "8-notion/endpoint-to-ui/assets/scr-kaspi-product.png",
     "8-notion/endpoint-to-ui/assets/scr-kaspi-catalog.png",
     "8-notion/data-formats/assets/product_reviews.png",
-    "8-notion/data-formats/assets/product_page.png",
     "8-notion/data-formats/data-formats.md",
     "8-notion/http-fundamentals/http-fundamentals.md",
     "mock-interview/node_modules/docx/README.md",
