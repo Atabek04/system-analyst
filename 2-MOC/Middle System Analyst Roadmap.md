@@ -408,11 +408,13 @@
 - Client-Server model *(spiral return — introduced in SDLC; here: full request/response cycle, statelessness, how APIs are the interface between client and server)*
 
 ### Communication Protocols
-**Notion:** [[8-notion/real-time-protocols/real-time-protocols|Real-time Protocols: Polling, Long Polling, SSE, WebSocket]]
+**Notion:** [[8-notion/real-time-protocols/real-time-protocols|Real-time: Polling, Long Polling, SSE, WebSocket]]
 - REST
 - SOAP
 - WebSocket — when to specify, how to write the NFR (vs polling)
-- Long Polling & SSE — three real-time options: polling, SSE, WebSocket — when to use which
+- Long Polling & SSE — three real-time options: polling, SSE, WebSocket — when to use which; Long Polling trade-offs (overhead, gap between requests, ordering, no auto-reconnect)
+- Terminology note: only WebSocket is a separate protocol; polling / long polling / SSE are techniques over HTTP
+- Gov examples: ЦОН queue board & service status (SSE), госзакупки auction & ЭЦП signing (WebSocket)
 - gRPC — what it is, when backend teams choose it, what SA needs to document differently
 - GraphQL — REST vs GraphQL trade-offs, what SA specifies differently
 
@@ -448,7 +450,10 @@
 - 🔵 Traffic Sniffers — Charles, Proxyman: intercepting and inspecting real HTTP/HTTPS traffic (API Tools badge)
 
 ### Integration Patterns
+**Notion:** [[8-notion/async-integration/async-integration|Асинхронные интеграции и Callback]]
 - Synchronous vs Asynchronous
+- Callback & Webhook — `202 Accepted`, `correlationId`, идемпотентность, таймаут + fallback polling, подпись callback
+- Кейс: банк → ШЭП → ГЦВП (endpoints + изменения в БД по шагам)
 - Message queues
 - Event-driven architecture *(here as an integration pattern — returns in System Architecture as an architectural style)*
 - ESB (Enterprise Service Bus)
