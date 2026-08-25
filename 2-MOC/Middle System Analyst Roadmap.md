@@ -450,11 +450,11 @@
 - 🔵 Traffic Sniffers — Charles, Proxyman: intercepting and inspecting real HTTP/HTTPS traffic (API Tools badge)
 
 ### Integration Patterns
-**Notion:** [[8-notion/async-integration/async-integration|Асинхронные интеграции и Callback]]
+**Notion:** [[8-notion/async-integration/async-integration|Асинхронные интеграции: Callback и Message Queue]]
 - Synchronous vs Asynchronous
 - Callback & Webhook — `202 Accepted`, `correlationId`, идемпотентность, таймаут + fallback polling, подпись callback
 - Кейс: банк → ШЭП → ГЦВП (endpoints + изменения в БД по шагам)
-- Message queues
+- Message queues — Producer/Queue/Consumer, decoupling, at-least-once delivery, Dead Letter Queue *(Kafka/RabbitMQ deep dive deferred to Message Brokers module)*
 - Event-driven architecture *(here as an integration pattern — returns in System Architecture as an architectural style)*
 - ESB (Enterprise Service Bus)
 
