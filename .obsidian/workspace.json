@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "8-notion/real-time-protocols/real-time-protocols.md",
+                "file": "8-notion/async-integration/async-integration.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "real-time-protocols"
+              "title": "async-integration"
             }
           }
         ]
@@ -157,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "8-notion/real-time-protocols/real-time-protocols.md",
+                "file": "8-notion/async-integration/async-integration.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -187,6 +187,17 @@
   },
   "active": "d4413df6fcd1560a",
   "lastOpenFiles": [
+    "8-notion/api-design/api-design.md",
+    "2-MOC/Middle System Analyst Roadmap.md.tmp.11876.d2711eb7be68",
+    "8-notion/async-integration/async-integration.md.tmp.11876.d41782d04e4e",
+    "8-notion/async-integration/async-integration.md.tmp.11876.05f781713e24",
+    "8-notion/async-integration/async-integration.md.tmp.11876.4965b4decc6b",
+    "8-notion/async-integration/async-integration.md.tmp.11876.8c1039953c90",
+    "8-notion/integration-patterns/integration-patterns.md",
+    "8-notion/integration-patterns/integration-patterns.md.tmp.11876.1efe7e541dc9",
+    "8-notion/integration-patterns",
+    "8-notion/async-integration/async-integration.md",
+    "8-notion/real-time-protocols/real-time-protocols.md",
     "9-exercises/case-a-food-delivery/solution.md",
     "9-exercises/case-a-food-delivery/assets/scr-list.png",
     "9-exercises/case-a-food-delivery/assets/scr-order.png",
@@ -196,15 +207,8 @@
     "8-notion/endpoint-to-ui/Untitled",
     "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.16940.04b00bd1e719",
     "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.feb1b6146f0d",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.25fd02aa1151",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.eabb2cfc3c1f",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.0bb73c55388c",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.aa9bdae10d3f",
     "8-notion/endpoint-to-ui/assets/scr-04-meeting.jpg",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.4c1933b30f5d",
     "8-notion/endpoint-to-ui/assets/scr-03-form.jpg",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.56910fa15faa",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.8419dd05d432",
     "8-notion/endpoint-to-ui/assets/scr-kaspi-reviews.png",
     "8-notion/endpoint-to-ui/assets/scr-kaspi-product.png",
     "8-notion/endpoint-to-ui/assets/scr-kaspi-catalog.png",
@@ -229,10 +233,6 @@
     "mock-interview/node_modules/util-deprecate/README.md",
     "8-notion/_template.md",
     "8-notion/api-fundamentals/api-fundamentals.md",
-    "2-MOC/Middle System Analyst Roadmap.md",
-    "6-docs/enrollment-contract-ijarah.md",
-    "6-docs/pricing-strategy.md",
-    "6-docs/sales-partnership-strategy.md",
     "Untitled.canvas"
   ]
 }
