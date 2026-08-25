@@ -1,0 +1,170 @@
+<meta charset="utf-8">
+<title>Теоретические вопросы</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm 18mm 18mm;
+    @bottom-center {
+      content: "Системный аналитик · Теоретические вопросы · стр. " counter(page) " из " counter(pages);
+      font-family: "DejaVu Sans", sans-serif;
+      font-size: 8pt;
+      color: #9a9a9a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #1f2328;
+    margin: 0;
+  }
+  h1 {
+    font-size: 22pt;
+    color: #14532d;
+    margin: 0 0 2mm 0;
+    letter-spacing: -0.3px;
+  }
+  .subtitle {
+    font-size: 10pt;
+    color: #6b7280;
+    margin-bottom: 8mm;
+    padding-bottom: 4mm;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  h2 {
+    font-size: 13pt;
+    color: #166534;
+    margin: 9mm 0 3mm 0;
+    padding: 2.5mm 3mm;
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    border-radius: 2px;
+    break-after: avoid;
+  }
+  h2 .num {
+    display: inline-block;
+    color: #22c55e;
+    font-weight: 700;
+    margin-right: 2mm;
+  }
+  ol {
+    margin: 0;
+    padding-left: 9mm;
+  }
+  li {
+    margin: 1.6mm 0;
+    padding-left: 1mm;
+    break-inside: avoid;
+  }
+  li::marker { color: #16a34a; font-weight: 700; }
+  code {
+    font-family: "DejaVu Sans Mono", monospace;
+    font-size: 9pt;
+    background: #f3f4f6;
+    padding: 0.5mm 1.2mm;
+    border-radius: 2px;
+    color: #b91c1c;
+  }
+  .count {
+    margin-top: 10mm;
+    padding-top: 4mm;
+    border-top: 2px solid #e5e7eb;
+    font-size: 9pt;
+    color: #9ca3af;
+    text-align: center;
+  }
+</style>
+
+<h1>Теоретические вопросы</h1>
+<div class="subtitle">Системный аналитик · пройденные темы: Архитектура систем, HTTP, Форматы данных, API Design, Real-time, Endpoint → UI</div>
+
+<h2><span class="num">1.</span>Архитектура IT-системы (Frontend, Backend, Client, Server, API)</h2>
+<ol>
+  <li>За что отвечает Frontend, а за что Backend?</li>
+  <li>Чем отличается UI/UX-дизайн (макет в Figma) от Frontend?</li>
+  <li>Что такое база данных (Database) в системе?</li>
+  <li>Кто такой клиент (Client) и кто такой сервер (Server)?</li>
+  <li>Почему один и тот же Backend может быть и клиентом, и сервером?</li>
+  <li>Что такое API?</li>
+  <li>Что такое контракт (Contract) и что он гарантирует?</li>
+  <li>Что такое протокол (Protocol) и какие бывают?</li>
+  <li>Чем синхронный (Sync) режим отличается от асинхронного (Async)?</li>
+  <li>По какому правилу выбирают между Sync и Async?</li>
+</ol>
+
+<h2><span class="num">2.</span>HTTP и HTTPS</h2>
+<ol>
+  <li>В чём разница между понятиями «протокол», «HTTP», «API» и «REST»?</li>
+  <li>Что такое HTTP и как работает схема request-response?</li>
+  <li>Что значит, что HTTP stateless?</li>
+  <li>Кто всегда начинает общение первым в HTTP?</li>
+  <li>Чем HTTPS отличается от HTTP?</li>
+  <li>Из каких четырёх частей состоит HTTP-запрос?</li>
+  <li>Что делают методы <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code>?</li>
+  <li>Чем <code>PUT</code> отличается от <code>PATCH</code>?</li>
+  <li>Что такое endpoint, path и query-параметры?</li>
+  <li>Что говорит path, а что уточняет query?</li>
+  <li>Что такое status code и на какие группы делятся коды?</li>
+  <li>Что означает правило «4xx это клиент, 5xx это сервер»?</li>
+  <li>Чем отличаются коды <code>401</code> и <code>403</code>?</li>
+  <li>Зачем нужны headers <code>Content-Type</code>, <code>Authorization</code>, <code>Accept</code>?</li>
+  <li>Что такое body и у каких методов оно есть?</li>
+  <li>Что такое REST и в чём его главная идея?</li>
+  <li>Что такое идемпотентность (idempotency)?</li>
+  <li>Какие методы идемпотентны, а какие нет?</li>
+</ol>
+
+<h2><span class="num">3.</span>Форматы данных (JSON, XML, SOAP, YAML)</h2>
+<ol>
+  <li>Зачем нужен формат данных вместо «просто текста»?</li>
+  <li>Что такое JSON и как в нём записываются данные?</li>
+  <li>Какие типы значений бывают в JSON?</li>
+  <li>Почему число с ведущим нулём (ИИН, индекс, телефон) пишут строкой?</li>
+  <li>Что такое XML и чем он отличается от JSON?</li>
+  <li>Когда в реальности встречается XML, а не JSON?</li>
+  <li>Что такое SOAP и почему он всегда использует XML?</li>
+  <li>Что такое XSD и что такое WSDL?</li>
+  <li>Что такое ШЭП и Smart Bridge?</li>
+  <li>Чем логин/пароль отличается от ЭЦП по назначению?</li>
+  <li>Что такое YAML и где он встречается?</li>
+</ol>
+
+<h2><span class="num">4.</span>API Design</h2>
+<ol>
+  <li>В чём главный RESTful-принцип именования (ресурс vs метод)?</li>
+  <li>Какие четыре правила resource naming?</li>
+  <li>Почему коллекции называют во множественном числе?</li>
+  <li>Почему фильтры и сортировку делают через query, а не новыми путями?</li>
+  <li>Что такое версионирование (versioning) API?</li>
+  <li>Что такое ломающее изменение (breaking change) и когда поднимают версию?</li>
+  <li>Что такое OpenAPI и что такое Swagger?</li>
+  <li>Чем OpenAPI/Swagger лучше текстовой документации?</li>
+</ol>
+
+<h2><span class="num">5.</span>Real-time протоколы</h2>
+<ol>
+  <li>Почему обычный HTTP не может сам прислать данные клиенту?</li>
+  <li>Что такое Polling и в чём его недостатки?</li>
+  <li>Что такое Long Polling и чем он лучше обычного Polling?</li>
+  <li>Что такое SSE и в какую сторону идёт поток данных?</li>
+  <li>Что такое WebSocket и что значит full-duplex?</li>
+  <li>Чем WebSocket отличается от SSE по направлению связи?</li>
+  <li>По какому признаку выбирают между SSE и WebSocket?</li>
+</ol>
+
+<h2><span class="num">6.</span>Endpoint → UI (как Frontend получает данные)</h2>
+<ol>
+  <li>Что такое endpoint?</li>
+  <li>В каком виде сервер отдаёт список и как длина массива связана с числом карточек?</li>
+  <li>В каком виде сервер отдаёт одну деталь (объект)?</li>
+  <li>Почему список это <code>/products</code>, а один элемент <code>/products/5</code>?</li>
+  <li>Что такое вложенный ресурс (например, отзывы товара)?</li>
+  <li>Чем <code>POST</code>-форма отличается по направлению от <code>GET</code>-запроса?</li>
+  <li>Где лежат данные формы при отправке?</li>
+  <li>Почему сервер никогда не возвращает пароль в ответе?</li>
+  <li>Как поиск и фильтры превращаются в query-параметры?</li>
+  <li>Как работает пагинация (кнопка «Показать ещё»)?</li>
+</ol>
+
+<div class="count">Всего 64 вопроса · 6 тем</div>
