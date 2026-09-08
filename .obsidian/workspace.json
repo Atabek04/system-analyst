@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "aac1f9e69345182c",
+        "id": "b23a9cafbeb487e9",
         "type": "tabs",
         "children": [
           {
-            "id": "d4413df6fcd1560a",
+            "id": "ecc20cd848ce30cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -185,8 +185,13 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "d4413df6fcd1560a",
+  "active": "ecc20cd848ce30cb",
   "lastOpenFiles": [
+    "8-notion/real-time-protocols/real-time-protocols.md",
+    "8-notion/async-integration/async-integration-notion.zip",
+    "8-notion/api-design/api-design-notion.zip",
+    "8-notion/real-time-protocols/real-time-protocols-notion.zip",
+    "8-notion/async-integration/async-integration.md",
     "8-notion/api-design/api-design.md",
     "2-MOC/Middle System Analyst Roadmap.md.tmp.11876.d2711eb7be68",
     "8-notion/async-integration/async-integration.md.tmp.11876.d41782d04e4e",
@@ -196,17 +201,12 @@
     "8-notion/integration-patterns/integration-patterns.md",
     "8-notion/integration-patterns/integration-patterns.md.tmp.11876.1efe7e541dc9",
     "8-notion/integration-patterns",
-    "8-notion/async-integration/async-integration.md",
-    "8-notion/real-time-protocols/real-time-protocols.md",
     "9-exercises/case-a-food-delivery/solution.md",
     "9-exercises/case-a-food-delivery/assets/scr-list.png",
     "9-exercises/case-a-food-delivery/assets/scr-order.png",
     "9-exercises/case-a-food-delivery/assets/scr-restaurant.png",
     "9-exercises/case-a-food-delivery/assets/scr-checkout.png",
     "8-notion/endpoint-to-ui/endpoint-to-ui.md",
-    "8-notion/endpoint-to-ui/Untitled",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.16940.04b00bd1e719",
-    "8-notion/endpoint-to-ui/endpoint-to-ui.md.tmp.18844.feb1b6146f0d",
     "8-notion/endpoint-to-ui/assets/scr-04-meeting.jpg",
     "8-notion/endpoint-to-ui/assets/scr-03-form.jpg",
     "8-notion/endpoint-to-ui/assets/scr-kaspi-reviews.png",
@@ -232,7 +232,6 @@
     "mock-interview/node_modules/inherits/README.md",
     "mock-interview/node_modules/util-deprecate/README.md",
     "8-notion/_template.md",
-    "8-notion/api-fundamentals/api-fundamentals.md",
     "Untitled.canvas"
   ]
 }
