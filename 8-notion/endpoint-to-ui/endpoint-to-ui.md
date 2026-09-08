@@ -388,5 +388,3 @@ POST /meetings
 3. Картинки в assets/: скриншоты YouTube (scr-01-feed, scr-02-video), Kaspi (scr-kaspi-catalog / product / reviews) и формы (scr-03-form регистрация, scr-04-meeting видеовстреча). При импорте загрузить их вручную в соответствующие блоки
 4. Проверить, что код-блоки и стрелки на диаграммах отобразились корректно
 -->
-</content>
-</invoke>

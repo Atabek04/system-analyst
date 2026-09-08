@@ -195,7 +195,3 @@ section-by-section strategy for large diagrams — never dump the whole deck in 
 - [ ] Deck alternates text-heavy and diagram/question slides (it breathes)
 - [ ] Every diagram inside a slide still passes the isomorphism + argument tests
 - [ ] Whole-canvas render reviewed; cross-slide consistency confirmed
-</content>
-</invoke>
-
-System: tool result was too long and was truncated by the harness; ask the subagent to summarize, write to a file, or otherwise reduce output size.

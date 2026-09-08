@@ -92,8 +92,3 @@ enough hierarchy — increase size/color contrast and whitespace on the importan
 - [ ] Everything aligned to a grid; equal gaps between siblings
 - [ ] Generous whitespace around the most important element
 - [ ] Composition balanced, near 16:9, passes the squint test
-</content>
-</invoke>
-
-File created successfully at: /Users/salahaddin/Documents/obsidian/system-analyst/.claude/skills/excalidraw-diagram/references/aesthetics.md
-
