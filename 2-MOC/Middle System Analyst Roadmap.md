@@ -463,6 +463,7 @@
 ## System Architecture
 
 ### Architecture Patterns
+**Slides:** [[7-slides/architecture-patterns-a/architecture-patterns-a|Урок A: Почему систему разрезают на части]]
 - Monolithic
 - Microservices *(spiral return from Component Diagram awareness — now the full concept)*
 - SOA (Service-Oriented Architecture)
