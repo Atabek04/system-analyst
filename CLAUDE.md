@@ -67,11 +67,6 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `les
 - **Diagrams**: draw directly in Excalidraw using Claude Code (see Excalidraw Tools below)
 - **After creating:** link in `2-MOC/Middle System Analyst Roadmap.md`
 
-### Marp Slides (legacy — existing topics only)
-- **Location**: `7-slides/` — `.md` + `.pdf` pairs already exist for past topics
-- **Skill**: `/marp-slides` — all content and styling rules in `.claude/skills/marp-slides/references/`
-- **New topics**: use Excalidraw instead
-
 ### Flashcards (Obsidian → Anki)
 - **Location**: `05-Flashcards/{category}/{topic}.md`
 - **Format**: Markdown with `START/END` blocks, synced to Anki via `Obsidian_to_Anki` plugin
@@ -93,9 +88,6 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `les
 - **Local preview**: `cd site && npm run dev` → `http://localhost:8123/system-analyst/` (`site/sync.mjs` copies the vault into `site/content/`, never edit that folder)
 - **Reader mode** (book icon) hides both sidebars and centres the text
 
-### Kahoot Questions
-- Rules: `KAHOOT-RULES.md`
-
 ---
 
 ## Writing Philosophy (Zettelkasten)
@@ -109,55 +101,14 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `les
 
 ## Excalidraw Tools (for Claude Code)
 
-Two complementary tools for building Excalidraw diagrams and slides programmatically:
-
-### 1. Excalidraw Diagram Skill — `coleam00/excalidraw-diagram-skill`
-- **What**: Claude Code skill for concept-to-diagram generation
-- **How**: describe a diagram concept → skill generates semantically-arranged Excalidraw JSON → validates via Playwright
-- **Strengths**: semantic layout (fan-outs, timelines, converging lines), visual argument design, brand-consistent color palette, one-shot generation
-- **Setup**: copy skill to `.claude/skills/excalidraw-diagram/`
-- **Use for**: generating diagrams from scratch based on a concept description
-
-### 2. MCP Excalidraw Server — `yctimlin/mcp_excalidraw`
+### MCP Excalidraw Server — `yctimlin/mcp_excalidraw`
 - **What**: MCP server exposing 26 tools for real-time canvas control
 - **Key tools**: `create_element`, `update_element`, `align_elements`, `distribute_elements`, `describe_scene`, `get_canvas_screenshot`, `export_to_excalidraw_url`
 - **Strengths**: iterative refinement, element-level control, inspect-then-adjust loops, pixel-precise positioning
 - **Setup**: two processes — Node canvas server + MCP stdio server
 - **Use for**: refining diagrams, repositioning elements, adding frames/structure after initial generation
 
-### How to use them together
-1. **Diagram Skill** → generate the initial diagram (concept → valid Excalidraw JSON, ~80% done)
-2. **MCP Server** → load and refine: reposition, align, add frames, adjust styling (~20% polish)
-3. **Export** via `export_to_excalidraw_url` for sharing or embedding
-
 > **Note**: MCP server uses in-memory storage — export before restarting.
-
----
-
-## Diagram Generation (legacy — for Marp slides)
-
-### UML Class Diagrams — use `graphviz` (Python)
-
-**Library:** `graphviz` (Python wrapper around the `dot` engine — already installed)
-
-**When to use:** UML class diagrams, relationship diagrams (Association, Aggregation, Composition, Inheritance) inside Marp slides.
-
-**Never use:** ASCII art, HTML tables, or plain text to simulate UML boxes.
-
-```python
-import graphviz
-
-g = graphviz.Digraph(engine='dot')
-g.attr(bgcolor='#F9F5F0', pad='0.5', rankdir='LR', dpi='150', nodesep='1.2')
-g.attr('node', shape='none', margin='0')
-
-# Arrows: Association dir='none' | Aggregation arrowtail='odiamond' | Composition arrowtail='diamond' | Inheritance arrowhead='empty'
-
-with open('img/diagram.png', 'wb') as f:
-    f.write(g.pipe(format='png'))
-```
-
-**Output:** PNG to `7-slides/{topic}/img/`. Reference as `![w:820](img/diagram.png)`.
 
 ---
 
@@ -190,15 +141,12 @@ The path is **relative to the KB vault root** above (prefix `KB:` = that root). 
 ```
 System-Analyst/
 ├── CLAUDE.md              (this file — global rules)
-├── KAHOOT-RULES.md        (Kahoot question rules)
-├── 1-inbox/               (temporary ideas)
 ├── 2-MOC/                 (Maps of Content, navigation)
 │   └── Middle System Analyst Roadmap.md
 ├── 3-permanent/           (atomic notes + lesson pages — Zettelkasten; rendered as the wiki sidebar)
 │   └── {NN-chapter}/      (one folder per roadmap chapter, e.g. 10-api-integration/)
 │       ├── {Название}.md  (atomic note or lesson page)
 │       └── assets/{topic}/ (images for that topic)
-├── 4-archive/             (outdated/superseded)
 ├── 05-Flashcards/         (Anki flashcards, synced via Obsidian_to_Anki)
 ├── .claude/
 │   ├── references/        (project-wide reference docs — always available)
@@ -209,9 +157,8 @@ System-Analyst/
 │       │   └── references/
 │       │       ├── pedagogy-rules.md
 │       │       └── instructor-role.md
-│       ├── marp-slides/   (legacy slide creation — /marp-slides)
 │       ├── flashcard/     (flashcard generation — /flashcard)
-│       └── excalidraw-diagram/ (diagram generation skill — coleam00)
+│       └── excalidraw-diagram/ (Excalidraw deck/diagram generation, used by curriculum-production)
 ├── 7-slides/              (presentations + assets)
 │   └── {topic}/
 │       ├── {topic}.excalidraw  (Excalidraw source — new topics)
@@ -224,14 +171,12 @@ System-Analyst/
 │   ├── chapters.json      (NN-slug → Russian chapter title)
 │   ├── sync.mjs           (copies 2-MOC + 3-permanent into content/ before build)
 │   └── content/           (generated, git-ignored — never edit)
-├── .github/workflows/deploy.yml  (builds site/ and publishes to GitHub Pages on push)
-└── Intro/                 (introductory materials)
+└── .github/workflows/deploy.yml  (builds site/ and publishes to GitHub Pages on push)
 ```
 
 ### Roadmap
 - `2-MOC/Middle System Analyst Roadmap.md` — master navigation
 - Bullet points = topics to research → replace with `[[wiki-links]]` as atomic notes are created
-- Work-in-progress stays in `1-inbox/`, processed → `3-permanent/`
 
 ---
 
@@ -251,7 +196,5 @@ Read these before writing any lesson, slide, flashcard, or making a platform/pro
 ## Skills
 
 - **Curriculum Production**: `/curriculum-production` — full pipeline: MOC chapter → atomic notes → Excalidraw slides → save → link → flashcards. Use for all new lessons.
-- **Marp Slides**: `/marp-slides` — **legacy only** — editing existing `.md` slide files. Do not use for new topics.
 - **Flashcard**: `/flashcard` — generate Anki flashcards from atomic notes
-- **Skill Creator**: `/skill-creator` — create, test, iterate, benchmark skills
 - **Lesson Pages**: no skill — follow `.claude/references/lesson-page-rules.md`

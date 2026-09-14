@@ -2,12 +2,6 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "exercises",
-      "runtimeExecutable": "node",
-      "runtimeArgs": ["9-exercises/serve.js"],
-      "port": 8778
-    },
-    {
       "name": "quartz",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--", "--port", "8123"],
