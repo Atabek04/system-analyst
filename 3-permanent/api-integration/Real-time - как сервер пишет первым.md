@@ -1,7 +1,7 @@
 ---
 title: "Real-time: как сервер пишет первым"
 type: lesson
-chapter: 10-api-integration
+chapter: api-integration
 order: 7
 source: real-time-protocols
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Асинхронные интеграции: Callback и Message Queue"
 type: lesson
-chapter: 10-api-integration
+chapter: api-integration
 order: 6
 source: async-integration
 ---

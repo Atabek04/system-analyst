@@ -1,7 +1,7 @@
 ---
 title: "Форматы данных: JSON и XML"
 type: lesson
-chapter: 10-api-integration
+chapter: api-integration
 order: 3
 source: data-formats
 ---

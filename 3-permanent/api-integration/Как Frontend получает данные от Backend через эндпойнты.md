@@ -1,7 +1,7 @@
 ---
 title: "Как Frontend получает данные от Backend через эндпойнты"
 type: lesson
-chapter: 10-api-integration
+chapter: api-integration
 order: 4
 source: endpoint-to-ui
 ---

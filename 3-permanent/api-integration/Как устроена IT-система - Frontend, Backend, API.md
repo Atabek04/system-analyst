@@ -1,7 +1,7 @@
 ---
 title: "Как устроена IT-система: Frontend, Backend, API"
 type: lesson
-chapter: 10-api-integration
+chapter: api-integration
 order: 1
 source: api-fundamentals
 ---

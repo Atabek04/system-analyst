@@ -17,7 +17,7 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 ```
 
 1. **Research** — read, explore, ask questions; fill all gaps
-2. **Atomic notes** — write to `3-permanent/{NN-chapter}/` (Zettelkasten, one concept per note)
+2. **Atomic notes** — write to `3-permanent/{chapter}/` (Zettelkasten, one concept per note)
 3. **Link in MOC** — add `[[wiki-links]]` to `2-MOC/Middle System Analyst Roadmap.md`
 4. **Generate flashcards** — use `/flashcard` after each new note batch
 5. **Build Excalidraw presentation** — key bullets, rules, diagrams, images/GIFs per frame
@@ -75,15 +75,15 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `les
 - **Mobile review (iOS):** Use **MintDeck** (free) — imports `.apkg` and CSV, FSRS spaced repetition, fully free.
 
 ### Lesson Pages (student-facing, long-form)
-- **Location**: `3-permanent/{NN-chapter}/{Название урока}.md` — frontmatter `type: lesson`, `chapter`, `order`
+- **Location**: `3-permanent/{chapter}/{Название урока}.md` — frontmatter `type: lesson`, `chapter`, `order`
 - **Rules**: `.claude/references/lesson-page-rules.md` — read before writing any lesson page (structure, callouts, Module Check)
 - **Not atomic notes**: long-form, problem-first, casual — but they live in the same chapter tree so the wiki shows them next to the atomic notes
-- **Images**: `3-permanent/{NN-chapter}/assets/{topic}/` — referenced as `assets/{topic}/NN-name.png`
+- **Images**: `3-permanent/{chapter}/assets/{topic}/` — referenced as `assets/{topic}/NN-name.png`
 
 ### Student Wiki (GitHub Pages)
 - **URL**: `https://atabek04.github.io/system-analyst/` — built by Quartz from `site/`
 - **Home page** = `2-MOC/Middle System Analyst Roadmap.md`; **sidebar** = folder tree of `3-permanent/` (chapter titles from `site/chapters.json`)
-- **Chapter folders**: `3-permanent/{NN-slug}/` — `NN` = roadmap order; add the Russian label to `site/chapters.json` when creating a new chapter
+- **Chapter folders**: `3-permanent/{chapter-slug}/` (e.g. `api-integration`); when creating one, add it to `site/chapters.json` — its position there = sidebar order, its value = Russian title
 - **Deploy**: push to `master` → `.github/workflows/deploy.yml` runs `npm run build` and publishes `site/public`
 - **Local preview**: `cd site && npm run dev` → `http://localhost:8123/system-analyst/` (`site/sync.mjs` copies the vault into `site/content/`, never edit that folder)
 - **Reader mode** (book icon) hides both sidebars and centres the text
@@ -144,7 +144,7 @@ System-Analyst/
 ├── 2-MOC/                 (Maps of Content, navigation)
 │   └── Middle System Analyst Roadmap.md
 ├── 3-permanent/           (atomic notes + lesson pages — Zettelkasten; rendered as the wiki sidebar)
-│   └── {NN-chapter}/      (one folder per roadmap chapter, e.g. 10-api-integration/)
+│   └── {chapter}/         (one folder per roadmap chapter, e.g. api-integration/)
 │       ├── {Название}.md  (atomic note or lesson page)
 │       └── assets/{topic}/ (images for that topic)
 ├── 05-Flashcards/         (Anki flashcards, synced via Obsidian_to_Anki)
@@ -168,7 +168,7 @@ System-Analyst/
 ├── site/                  (Quartz static site → GitHub Pages; `npm run dev` to preview)
 │   ├── quartz.config.ts   (site title, base URL, plugins)
 │   ├── quartz.layout.ts   (sidebar / explorer / reader-mode layout)
-│   ├── chapters.json      (NN-slug → Russian chapter title)
+│   ├── chapters.json      (chapter slug → Russian title; key order = sidebar order)
 │   ├── sync.mjs           (copies 2-MOC + 3-permanent into content/ before build)
 │   └── content/           (generated, git-ignored — never edit)
 └── .github/workflows/deploy.yml  (builds site/ and publishes to GitHub Pages on push)

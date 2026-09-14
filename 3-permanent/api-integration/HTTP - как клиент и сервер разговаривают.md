@@ -1,7 +1,7 @@
 ---
 title: "HTTP: как клиент и сервер реально разговаривают"
 type: lesson
-chapter: 10-api-integration
+chapter: api-integration
 order: 2
 source: http-fundamentals
 ---

@@ -46,13 +46,20 @@ for (const dir of fs.readdirSync(content, { withFileTypes: true })) {
 }
 
 // 3. chapter folder → index.md with its Russian title (explorer, breadcrumbs, folder page)
+//    `order` = position in chapters.json; the explorer sorts chapters by it.
+const chapterOrder = Object.keys(CHAPTERS)
 for (const dir of fs.readdirSync(content, { withFileTypes: true })) {
-  if (!dir.isDirectory()) continue
+  if (!dir.isDirectory() || dir.name === "assets") continue
   const idx = path.join(content, dir.name, "index.md")
   if (fs.existsSync(idx)) continue
   const title = CHAPTERS[dir.name]
-  if (!title) console.warn(`chapters.json has no title for "${dir.name}" — add one`)
-  fs.writeFileSync(idx, `---\ntitle: "${title ?? dir.name.replace(/^\d+-/, "")}"\n---\n`, "utf8")
+  if (!title) console.warn(`chapters.json has no entry for "${dir.name}" — add one (title + position = order)`)
+  const order = chapterOrder.indexOf(dir.name)
+  fs.writeFileSync(
+    idx,
+    `---\ntitle: "${title ?? dir.name}"\norder: ${order === -1 ? 999 : order + 1}\n---\n`,
+    "utf8",
+  )
 }
 
 // 4. MOC → index.md (strip leading H1, add frontmatter title)

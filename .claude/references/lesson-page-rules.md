@@ -1,7 +1,7 @@
 # Lesson Pages — Rules
 
 ## Location
-`3-permanent/{NN-chapter}/{Название урока}.md` — one file per lesson, next to the chapter's atomic notes.
+`3-permanent/{chapter}/{Название урока}.md` — one file per lesson, next to the chapter's atomic notes.
 Long-form student-facing content (`type: lesson` in frontmatter). Not an atomic note, but lives in the same tree so the wiki explorer shows it under its chapter.
 
 Frontmatter (required):
@@ -10,7 +10,7 @@ Frontmatter (required):
 ---
 title: "HTTP: как клиент и сервер реально разговаривают"   # shown as page title (emoji allowed)
 type: lesson
-chapter: 10-api-integration     # folder name; Russian label lives in site/chapters.json
+chapter: api-integration        # folder name; Russian label + order live in site/chapters.json
 order: 2                        # position inside the chapter in the explorer
 ---
 ```

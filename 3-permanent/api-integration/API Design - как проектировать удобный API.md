@@ -1,7 +1,7 @@
 ---
 title: "API Design: как проектировать API, чтобы им было приятно пользоваться"
 type: lesson
-chapter: 10-api-integration
+chapter: api-integration
 order: 5
 source: api-design
 ---

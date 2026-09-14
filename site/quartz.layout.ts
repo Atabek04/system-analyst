@@ -1,8 +1,8 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// Chapter folders in 3-permanent/ are named `NN-slug` for ordering; their Russian
-// titles come from chapters.json via the index.md that sync.mjs generates per folder.
+// Chapter folders in 3-permanent/ get their Russian title and their `order` (= position
+// in chapters.json) from the index.md that sync.mjs generates per folder.
 // NOTE: sortFn/filterFn are serialized to the browser — keep them self-contained.
 const explorer = Component.Explorer({
   title: "Оглавление",
@@ -11,11 +11,8 @@ const explorer = Component.Explorer({
   useSavedState: true,
   filterFn: (node) => node.slugSegment !== "tags" && node.slugSegment !== "assets",
   sortFn: (a, b) => {
-    // folders first (by NN- prefix), then notes by frontmatter `order`, then by title
+    // folders first, both folders and notes by frontmatter `order`, then by title
     if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
-    if (a.isFolder && b.isFolder) {
-      return a.slugSegment.localeCompare(b.slugSegment, undefined, { numeric: true })
-    }
     const ao = a.data?.order ?? Number.MAX_SAFE_INTEGER
     const bo = b.data?.order ?? Number.MAX_SAFE_INTEGER
     if (ao !== bo) return ao - bo
