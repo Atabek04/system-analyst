@@ -11,3 +11,7 @@
 
 # MS Office temporary lock files
 ~$*
+
+# Quartz site: content/ is synced from the vault by site/sync.mjs, public/ is the build output
+site/content/
+site/public/

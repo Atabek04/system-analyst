@@ -1,0 +1,21 @@
+@use "./base.scss";
+
+// Reader mode: hide the explorer and the right sidebar, keep the small
+// search / dark-mode / reader-mode toolbar so the user can toggle back.
+// The grid stays symmetric, so the text column remains centered.
+:root[reader-mode="on"] {
+  & .sidebar.left > :not(.flex-component),
+  & .sidebar.right > * {
+    display: none;
+  }
+
+  & .sidebar.left,
+  & .sidebar.right {
+    opacity: 1;
+  }
+}
+
+// Slightly larger, more readable Cyrillic body text
+body {
+  font-size: 1.05rem;
+}

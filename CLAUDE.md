@@ -17,11 +17,12 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 ```
 
 1. **Research** — read, explore, ask questions; fill all gaps
-2. **Atomic notes** — write to `3-permanent/` (Zettelkasten, one concept per note)
+2. **Atomic notes** — write to `3-permanent/{NN-chapter}/` (Zettelkasten, one concept per note)
 3. **Link in MOC** — add `[[wiki-links]]` to `2-MOC/Middle System Analyst Roadmap.md`
 4. **Generate flashcards** — use `/flashcard` after each new note batch
 5. **Build Excalidraw presentation** — key bullets, rules, diagrams, images/GIFs per frame
 6. **Record lesson** — screen-record the Excalidraw presentation slideshow
+7. **Publish** — push to `master`; GitHub Actions rebuilds the student wiki (see "Student Wiki" below)
 
 > **Why Excalidraw for slides?**
 > Excalidraw supports frames (slides), free-form diagrams, images, GIFs, and handwritten-feel visuals — ideal for teaching. Frames can be combined into a presentation and recorded directly.
@@ -36,7 +37,7 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 - Define every term on first mention
 - English IT terms stay in English: Sprint, Backlog, API, Agile, Scrum, Kanban, User Story, etc.
 - Translatable terms: write in Russian with English original in brackets — e.g., "Сбор требований (Elicitation)", "Приоритизация (Prioritization)"
-- **Never use em-dashes (—) in teaching content.** Rewrite instead: split into two sentences, use a comma, a colon, parentheses, or a list. (Applies to Notion pages, slides, notes; this meta-file may keep them.)
+- **Never use em-dashes (—) in teaching content.** Rewrite instead: split into two sentences, use a comma, a colon, parentheses, or a list. (Applies to lesson pages, slides, notes; this meta-file may keep them.)
 
 ---
 
@@ -46,14 +47,14 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 - **Socratic method**: Ask before explaining, wait 7-10 sec, respond to answers before moving on
 - **Check understanding**: After every section (Module Check with 3-5 questions)
 
-### Core teaching principles — apply to every lesson, slide, and Notion page
+### Core teaching principles — apply to every lesson, slide, and wiki page
 
-These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `notion-wiki-rules.md`.
+These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `lesson-page-rules.md`.
 
 1. **Problem before solution (productive failure)** — never show a solution first. State the problem it solves, let the student feel it / try to invent a fix, *then* reveal the concept and explain how it solves that problem. Builds engineering intuition — the student re-invents the reasoning, not memorizes the fact. (Rule 16)
 2. **First-principles thinking** — explain down to the base need ("two programs must talk — what's the minimum they must agree on?"), never "it's the industry standard". (Rule 17)
 3. **Adult curiosity-gap hooks, NO fairy-tales** — open with a provocative question / contrarian fact / real SA-work stake. Audience is adult career-switchers — no fictional protagonist or invented plot. Analogies (restaurant=API) are fine; stories are not. (Rule 18)
-4. **Research explanations, don't improvise** — before explaining a concept, search the web for how it's actually explained well (`"<concept> in simple terms" / analogy / real world example`), then adapt. Community-vetted analogies beat invented ones. (notion-wiki-rules → "Always ground explanations in real sources")
+4. **Research explanations, don't improvise** — before explaining a concept, search the web for how it's actually explained well (`"<concept> in simple terms" / analogy / real world example`), then adapt. Community-vetted analogies beat invented ones. (lesson-page-rules → "Always ground explanations in real sources")
 
 ---
 
@@ -78,12 +79,19 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `not
 - **Maintenance rule:** When adding a new `[[]]` linked note to a MOC chapter that already has a flashcard file, **immediately create flashcards** for that note in the corresponding file.
 - **Mobile review (iOS):** Use **MintDeck** (free) — imports `.apkg` and CSV, FSRS spaced repetition, fully free.
 
-### Notion Wiki Pages (student-facing)
-- **Location**: `8-notion/{topic}/{topic}.md` — Markdown import files
-- **Rules**: `.claude/references/notion-wiki-rules.md` — read before writing any Notion page
-- **Template**: `8-notion/_template.md` — copy → rename → fill
-- **Not atomic notes**: long-form, story-driven, casual — different format from Zettelkasten
-- **Import**: Write `.md` → Notion Import → manually convert callouts/toggles (~5 min per page)
+### Lesson Pages (student-facing, long-form)
+- **Location**: `3-permanent/{NN-chapter}/{Название урока}.md` — frontmatter `type: lesson`, `chapter`, `order`
+- **Rules**: `.claude/references/lesson-page-rules.md` — read before writing any lesson page (structure, callouts, Module Check)
+- **Not atomic notes**: long-form, problem-first, casual — but they live in the same chapter tree so the wiki shows them next to the atomic notes
+- **Images**: `3-permanent/{NN-chapter}/assets/{topic}/` — referenced as `assets/{topic}/NN-name.png`
+
+### Student Wiki (GitHub Pages)
+- **URL**: `https://atabek04.github.io/system-analyst/` — built by Quartz from `site/`
+- **Home page** = `2-MOC/Middle System Analyst Roadmap.md`; **sidebar** = folder tree of `3-permanent/` (chapter titles from `site/chapters.json`)
+- **Chapter folders**: `3-permanent/{NN-slug}/` — `NN` = roadmap order; add the Russian label to `site/chapters.json` when creating a new chapter
+- **Deploy**: push to `master` → `.github/workflows/deploy.yml` runs `npm run build` and publishes `site/public`
+- **Local preview**: `cd site && npm run dev` → `http://localhost:8123/system-analyst/` (`site/sync.mjs` copies the vault into `site/content/`, never edit that folder)
+- **Reader mode** (book icon) hides both sidebars and centres the text
 
 ### Kahoot Questions
 - Rules: `KAHOOT-RULES.md`
@@ -186,12 +194,16 @@ System-Analyst/
 ├── 1-inbox/               (temporary ideas)
 ├── 2-MOC/                 (Maps of Content, navigation)
 │   └── Middle System Analyst Roadmap.md
-├── 3-permanent/           (atomic notes — Zettelkasten)
+├── 3-permanent/           (atomic notes + lesson pages — Zettelkasten; rendered as the wiki sidebar)
+│   └── {NN-chapter}/      (one folder per roadmap chapter, e.g. 10-api-integration/)
+│       ├── {Название}.md  (atomic note or lesson page)
+│       └── assets/{topic}/ (images for that topic)
 ├── 4-archive/             (outdated/superseded)
 ├── 05-Flashcards/         (Anki flashcards, synced via Obsidian_to_Anki)
 ├── .claude/
 │   ├── references/        (project-wide reference docs — always available)
-│   │   └── founder-rules.md  (EdTech startup operating principles)
+│   │   ├── founder-rules.md      (EdTech startup operating principles)
+│   │   └── lesson-page-rules.md  (long-form lesson page structure + callouts)
 │   └── skills/            (task-specific skills)
 │       ├── curriculum-production/  (full lesson pipeline — /curriculum-production)
 │       │   └── references/
@@ -206,10 +218,13 @@ System-Analyst/
 │       ├── {topic}.md          (Marp source — legacy topics)
 │       ├── {topic}.pdf         (exported PDF — legacy)
 │       └── img/                (diagram PNGs)
-├── 8-notion/              (Notion import files — student-facing wiki pages)
-│   ├── _template.md       (copy this to start a new page)
-│   └── {topic}/
-│       └── {topic}.md     (import to Notion, then fix callouts/toggles manually)
+├── site/                  (Quartz static site → GitHub Pages; `npm run dev` to preview)
+│   ├── quartz.config.ts   (site title, base URL, plugins)
+│   ├── quartz.layout.ts   (sidebar / explorer / reader-mode layout)
+│   ├── chapters.json      (NN-slug → Russian chapter title)
+│   ├── sync.mjs           (copies 2-MOC + 3-permanent into content/ before build)
+│   └── content/           (generated, git-ignored — never edit)
+├── .github/workflows/deploy.yml  (builds site/ and publishes to GitHub Pages on push)
 └── Intro/                 (introductory materials)
 ```
 
@@ -229,7 +244,7 @@ Read these before writing any lesson, slide, flashcard, or making a platform/pro
 | **Pedagogy Rules** | `.claude/skills/curriculum-production/references/pedagogy-rules.md` | Before writing any lesson, outline, or slide. Contains: real-world bridge table, Socratic method, demo-first rule, slide design rules, completeness checklist. |
 | **Instructor Role** | `.claude/skills/curriculum-production/references/instructor-role.md` | Before writing scripts or speaker notes. Defines tone, live demo mechanics, how to handle wrong answers. |
 | **Founder Rules** | `.claude/references/founder-rules.md` | Before any platform feature, pricing, or scope decision. Contains: build priority order, Day 1/3/7 retention mechanics, competitor positioning, assumption tracking. |
-| **Notion Wiki Rules** | `.claude/references/notion-wiki-rules.md` | Before writing any Notion page. Contains: page structure, writing style, 6 question types, callout/toggle conventions, import workflow. |
+| **Lesson Page Rules** | `.claude/references/lesson-page-rules.md` | Before writing any long-form lesson page. Contains: frontmatter, page structure, writing style, 6 question types, Obsidian callout conventions. |
 
 ---
 
@@ -239,4 +254,4 @@ Read these before writing any lesson, slide, flashcard, or making a platform/pro
 - **Marp Slides**: `/marp-slides` — **legacy only** — editing existing `.md` slide files. Do not use for new topics.
 - **Flashcard**: `/flashcard` — generate Anki flashcards from atomic notes
 - **Skill Creator**: `/skill-creator` — create, test, iterate, benchmark skills
-- **Notion Pages**: no skill — use template at `8-notion/_template.md`, rules at `.claude/references/notion-wiki-rules.md`
+- **Lesson Pages**: no skill — follow `.claude/references/lesson-page-rules.md`
