@@ -93,7 +93,9 @@ for (const line of roadmap) {
     chapter = { heading: ru ?? line.slice(3).trim(), sections: [{ heading: null, links: [] }] }
     chapters.push(chapter)
   } else if (line.startsWith("### ") && chapter) {
-    chapter.sections.push({ heading: line.slice(4).trim(), links: [] })
+    // drop trailing italic asides like "*(мостик: ...)*" — they are notes for the author
+    const heading = line.slice(4).replace(/\s*\*\(.*?\)\*\s*$/, "").trim()
+    chapter.sections.push({ heading, links: [] })
   } else if (chapter) {
     for (const m of line.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]/g)) {
       const target = m[1].trim().split("/").pop()

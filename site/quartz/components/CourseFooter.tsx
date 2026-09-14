@@ -15,7 +15,7 @@ export default ((userOpts?: Partial<Options>) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
-          © {year} {opts.author} · System Analyst Bootcamp
+          System Analyst Bootcamp, {year}. Автор: {opts.author}
         </p>
         <ul>
           {Object.entries(opts.links).map(([text, link]) => (

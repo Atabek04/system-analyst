@@ -354,6 +354,12 @@ export async function handleBuild(argv) {
 
     await build(clientRefresh)
     const server = http.createServer(async (req, res) => {
+      // site is served under baseDir (mirrors GitHub Pages); send the bare root there
+      if (argv.baseDir && (req.url === "/" || req.url === "")) {
+        res.writeHead(302, { Location: argv.baseDir + "/" })
+        res.end()
+        return
+      }
       if (argv.baseDir && !req.url?.startsWith(argv.baseDir)) {
         console.log(
           styleText(
