@@ -1,17 +1,184 @@
+@use "sass:map";
 @use "./base.scss";
+@use "./variables.scss" as *;
 
-// Reader mode: hide the explorer and the right sidebar, keep the small
-// search / dark-mode / reader-mode toolbar so the user can toggle back.
-// The grid stays symmetric, so the text column remains centered.
-:root[reader-mode="on"] {
-  & .sidebar.left > :not(.flex-component),
-  & .sidebar.right > * {
-    display: none;
+// ---------------------------------------------------------------------------
+// Layout: left sidebar flush to the screen edge, article centred in the rest.
+// (Quartz's default centres a fixed 3-column page, which wastes the left margin
+// and squeezes the explorer into 320px.)
+// ---------------------------------------------------------------------------
+$sidebarWidth: 24rem;
+$articleWidth: 52rem;
+
+.page {
+  max-width: 100%;
+}
+
+@media all and (min-width: #{map-get($breakpoints, mobile)}) {
+  .page > #quartz-body {
+    grid-template-columns: $sidebarWidth minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "grid-sidebar-left grid-header"
+      "grid-sidebar-left grid-center"
+      "grid-sidebar-left grid-footer";
+
+    & .sidebar.left {
+      padding: 2.5rem 1.25rem 2rem 1.5rem;
+      gap: 1rem;
+      border-right: 1px solid var(--lightgray);
+    }
+
+    & .center,
+    & footer {
+      min-width: 0;
+      max-width: $articleWidth;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
+    }
+  }
+}
+
+// Sidebar contents: compact so titles fit on one line
+.sidebar.left {
+  & .page-title {
+    font-size: 1.35rem;
+    margin: 0;
+  }
+  & .explorer {
+    font-size: 0.88rem;
+    & .folder-title,
+    & li > a {
+      line-height: 1.35;
+    }
+    & .folder-container,
+    & li {
+      margin: 0.15rem 0;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Reader mode: collapse the sidebar to a slim icon rail (search / theme / reader)
+// so the article takes the centre and the user can still toggle back.
+// ---------------------------------------------------------------------------
+@media all and (min-width: #{map-get($breakpoints, mobile)}) {
+  :root[reader-mode="on"] .page > #quartz-body {
+    grid-template-columns: 4rem minmax(0, 1fr);
+
+    & .sidebar.left {
+      padding: 2.5rem 0.75rem;
+      border-right: none;
+      opacity: 1;
+      & > :not(.flex-component) {
+        display: none;
+      }
+      & .flex-component {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      & .search .search-button p {
+        display: none;
+      }
+      & .search .search-button {
+        width: 2rem;
+        padding: 0.4rem;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Home page (index): no sidebar, a slim toolbar, the MOC in the centre.
+// ---------------------------------------------------------------------------
+body[data-slug="index"] {
+  & .page > #quartz-body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-footer";
+
+    & .sidebar {
+      display: none;
+    }
+    & .center,
+    & footer {
+      max-width: 56rem;
+    }
   }
 
-  & .sidebar.left,
-  & .sidebar.right {
-    opacity: 1;
+  // toolbar row (title · search · theme)
+  & .center > .flex-component {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--lightgray);
+    & .page-title {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+    & .search {
+      max-width: 16rem;
+    }
+  }
+
+  & .article-title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  & article {
+    & h2 {
+      margin-top: 2.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--lightgray);
+    }
+    & h3 {
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+      color: var(--gray);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    & ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    & li {
+      margin: 0.35rem 0;
+      font-size: 1.08rem;
+    }
+    & em {
+      color: var(--gray);
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Footer
+// ---------------------------------------------------------------------------
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lightgray);
+  font-size: 0.9rem;
+  opacity: 0.75;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  & p {
+    margin: 0;
+  }
+  & ul {
+    margin: 0;
   }
 }
 

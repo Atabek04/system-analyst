@@ -62,15 +62,62 @@ for (const dir of fs.readdirSync(content, { withFileTypes: true })) {
   )
 }
 
-// 4. MOC → index.md (strip leading H1, add frontmatter title)
-let moc = stripBom(fs.readFileSync(MOC_FILE, "utf8"))
-const h1 = moc.match(/^# (.+)\r?\n/)
-const title = h1 ? h1[1].trim() : "Middle System Analyst Roadmap"
-if (h1) moc = moc.replace(/^# .+\r?\n(\r?\n)?/, "")
-if (!moc.startsWith("---")) {
-  moc = `---\ntitle: "${title}"\n---\n\n` + moc
+// 4. Roadmap → index.md (home MOC)
+//    Keeps only the skeleton: `##` chapters (renamed via chapters.json, same order),
+//    `###` sections, and [[links]] to notes that actually exist. Plain bullets, blockquotes
+//    and links to slides are dropped — the home page is a table of contents, not the plan.
+const noteTitles = new Map() // basename (no .md) → frontmatter title
+const walk = (dir) => {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name)
+    if (e.isDirectory()) walk(p)
+    else if (e.name.endsWith(".md") && e.name !== "index.md") {
+      const fm = stripBom(fs.readFileSync(p, "utf8")).match(/^---\r?\n[\s\S]*?\btitle:\s*"?([^"\r\n]+)"?/)
+      noteTitles.set(e.name.slice(0, -3), fm ? fm[1].trim() : e.name.slice(0, -3))
+    }
+  }
 }
-fs.writeFileSync(path.join(content, "index.md"), moc, "utf8")
+walk(content)
+
+const roadmap = stripBom(fs.readFileSync(MOC_FILE, "utf8")).split(/\r?\n/)
+const h1 = roadmap.find((l) => l.startsWith("# "))
+const title = h1 ? h1.slice(2).trim() : "Middle System Analyst Roadmap"
+const out = [`---`, `title: "${title}"`, `---`, ``]
+let chapterIdx = -1
+let chapter = null // { heading, sections: [{ heading, links: [] }] }
+const chapters = []
+for (const line of roadmap) {
+  if (line.startsWith("## ")) {
+    chapterIdx++
+    const ru = Object.values(CHAPTERS)[chapterIdx]
+    chapter = { heading: ru ?? line.slice(3).trim(), sections: [{ heading: null, links: [] }] }
+    chapters.push(chapter)
+  } else if (line.startsWith("### ") && chapter) {
+    chapter.sections.push({ heading: line.slice(4).trim(), links: [] })
+  } else if (chapter) {
+    for (const m of line.matchAll(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]/g)) {
+      const target = m[1].trim().split("/").pop()
+      const t = noteTitles.get(target)
+      if (t) chapter.sections.at(-1).links.push(`- [[${target}|${t}]]`)
+    }
+  }
+}
+if (chapterIdx + 1 !== Object.keys(CHAPTERS).length) {
+  console.warn(`roadmap has ${chapterIdx + 1} chapters but chapters.json has ${Object.keys(CHAPTERS).length}`)
+}
+for (const c of chapters) {
+  const filled = c.sections.filter((s) => s.links.length)
+  if (!filled.length) {
+    out.push(`## ${c.heading}`, ``, `*скоро*`, ``)
+    continue
+  }
+  out.push(`## ${c.heading}`, ``)
+  for (const s of filled) {
+    if (s.heading) out.push(`### ${s.heading}`, ``)
+    out.push(...s.links, ``)
+  }
+}
+fs.writeFileSync(path.join(content, "index.md"), out.join("\n"), "utf8")
 
 const count = fs.readdirSync(content, { recursive: true }).filter((f) => f.endsWith(".md")).length
 console.log(`synced ${count} markdown files → ${path.relative(vault, content)}`)

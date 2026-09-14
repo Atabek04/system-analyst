@@ -1,6 +1,9 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+const isHome = (page: { fileData: { slug?: string } }) => page.fileData.slug === "index"
+const notHome = (page: { fileData: { slug?: string } }) => !isHome(page)
+
 // Chapter folders in 3-permanent/ get their Russian title and their `order` (= position
 // in chapters.json) from the index.md that sync.mjs generates per folder.
 // NOTE: sortFn/filterFn are serialized to the browser — keep them self-contained.
@@ -20,68 +23,60 @@ const explorer = Component.Explorer({
   },
 })
 
+const toolbar = Component.Flex({
+  components: [
+    { Component: Component.Search(), grow: true },
+    { Component: Component.Darkmode() },
+    { Component: Component.ReaderMode() },
+  ],
+})
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-  footer: Component.Footer({
+  footer: Component.CourseFooter({
+    author: "Atabek",
     links: {
       GitHub: "https://github.com/Atabek04/system-analyst",
     },
   }),
 }
 
-// components for pages that display a single page (e.g. a single note)
+// Home page (index): no sidebars — just the MOC in the centre with a slim toolbar above it.
+// Note pages: left sidebar (title, toolbar, explorer); no right sidebar.
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
+      component: Component.Flex({
+        components: [
+          { Component: Component.PageTitle(), grow: true },
+          { Component: Component.Search() },
+          { Component: Component.Darkmode() },
+        ],
+      }),
+      condition: isHome,
     }),
+    Component.ConditionalRender({ component: Component.Breadcrumbs(), condition: notHome }),
     Component.ArticleTitle(),
-    Component.ContentMeta({ showReadingTime: true, showComma: true }),
-    Component.TagList(),
+    Component.ConditionalRender({
+      component: Component.ContentMeta({ showReadingTime: true, showComma: true }),
+      condition: notHome,
+    }),
   ],
   left: [
-    Component.PageTitle(),
+    Component.ConditionalRender({ component: Component.PageTitle(), condition: notHome }),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    explorer,
+    Component.ConditionalRender({ component: toolbar, condition: notHome }),
+    Component.ConditionalRender({ component: explorer, condition: notHome }),
   ],
-  right: [
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-    Component.Graph(),
-  ],
+  right: [],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    explorer,
-  ],
+  left: [Component.PageTitle(), Component.MobileOnly(Component.Spacer()), toolbar, explorer],
   right: [],
 }
