@@ -6,7 +6,10 @@ interface Options {
   author: string
 }
 
-export default ((opts: Options) => {
+const defaultOptions: Options = { links: {}, author: "" }
+
+export default ((userOpts?: Partial<Options>) => {
+  const opts: Options = { ...defaultOptions, ...userOpts }
   const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
     const year = new Date().getFullYear()
     return (
