@@ -24,37 +24,38 @@ const config: QuartzConfig = {
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
-      // all three have full Cyrillic coverage on Google Fonts
+      // "header" is the UI sans (sidebar, breadcrumbs, toolbar); article headings are
+      // set in the serif via custom.scss. All three have full Cyrillic coverage.
       typography: {
-        header: { name: "Manrope", weights: [600, 700, 800] },
-        body: { name: "Source Serif 4", weights: [400, 600], includeItalic: true },
+        header: { name: "Manrope", weights: [500, 600, 700] },
+        body: { name: "Source Serif 4", weights: [400, 600, 700], includeItalic: true },
         code: { name: "JetBrains Mono", weights: [400, 500] },
       },
-      // Cool paper + ink with one teal accent. Quartz roles: light=page bg ·
-      // lightgray=rules/code bg · gray=muted · darkgray=body text · dark=headings ·
-      // secondary=links/accent · tertiary=hover
+      // Warm off-white paper + near-black ink, no coloured accent (links are ink,
+      // underlined). Quartz roles: light=page bg · lightgray=rules/panels ·
+      // gray=muted · darkgray=body text · dark=headings · secondary=links · tertiary=hover
       colors: {
         lightMode: {
-          light: "#f6f7f5",
-          lightgray: "#d9dde1",
-          gray: "#767d85",
-          darkgray: "#3b4046",
-          dark: "#16181b",
-          secondary: "#0e6c6f",
-          tertiary: "#0a4f52",
-          highlight: "rgba(14, 108, 111, 0.08)",
-          textHighlight: "#ffe58a99",
+          light: "#faf9f5",
+          lightgray: "#e6e4dd",
+          gray: "#6f6d67",
+          darkgray: "#2a2926",
+          dark: "#141413",
+          secondary: "#141413",
+          tertiary: "#5c5a54",
+          highlight: "rgba(20, 20, 19, 0.06)",
+          textHighlight: "#f3e7b3",
         },
         darkMode: {
-          light: "#121417",
-          lightgray: "#2a2f36",
-          gray: "#7f8792",
-          darkgray: "#d5d9de",
-          dark: "#f2f4f6",
-          secondary: "#62d6c9",
-          tertiary: "#9fe8df",
-          highlight: "rgba(98, 214, 201, 0.10)",
-          textHighlight: "#8a6d1a99",
+          light: "#1c1b19",
+          lightgray: "#33312d",
+          gray: "#8f8d85",
+          darkgray: "#d8d6ce",
+          dark: "#f5f4ef",
+          secondary: "#f5f4ef",
+          tertiary: "#b8b6ae",
+          highlight: "rgba(245, 244, 239, 0.08)",
+          textHighlight: "#6b5a1e",
         },
       },
     },
