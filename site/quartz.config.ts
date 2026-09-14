@@ -24,10 +24,11 @@ const config: QuartzConfig = {
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
+      // all three have full Cyrillic coverage on Google Fonts
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: { name: "Manrope", weights: [600, 700, 800] },
+        body: { name: "Source Sans 3", weights: [400, 600, 700], includeItalic: true },
+        code: { name: "JetBrains Mono", weights: [400, 500] },
       },
       colors: {
         lightMode: {

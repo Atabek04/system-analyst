@@ -38,6 +38,16 @@ $articleWidth: 52rem;
       padding: 0 2rem;
     }
   }
+
+  // tablet: narrower rail so the article keeps a readable measure
+  @media all and (max-width: #{map.get($breakpoints, desktop)}) {
+    .page > #quartz-body {
+      grid-template-columns: 17rem minmax(0, 1fr);
+      & .sidebar.left {
+        padding: 2rem 1rem 2rem 1.1rem;
+      }
+    }
+  }
 }
 
 // Sidebar contents: compact so titles fit on one line
@@ -182,7 +192,106 @@ footer {
   }
 }
 
-// Slightly larger, more readable Cyrillic body text
+// ---------------------------------------------------------------------------
+// Typography: bigger, airier article text; headings on a clear scale;
+// code slightly smaller than prose so JetBrains Mono doesn't shout.
+// ---------------------------------------------------------------------------
+html {
+  font-size: 17px;
+}
+
 body {
-  font-size: 1.05rem;
+  font-size: 1rem;
+}
+
+article {
+  font-size: 1.1rem;
+
+  & p,
+  & li,
+  & tbody {
+    line-height: 1.75;
+  }
+  & p {
+    margin: 0 0 1.1em;
+  }
+  & ul,
+  & ol {
+    margin: 0 0 1.1em;
+  }
+  & li {
+    margin: 0.25em 0;
+  }
+
+  & h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin: 2.5rem 0 1rem;
+  }
+  & h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 2.6rem 0 1rem;
+  }
+  & h3 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0.8rem;
+  }
+  & h4,
+  & h5,
+  & h6 {
+    font-size: 1.05rem;
+    margin: 1.6rem 0 0.6rem;
+  }
+
+  & code {
+    font-size: 0.82em;
+    padding: 0.12em 0.35em;
+    font-weight: 500;
+  }
+  & pre > code {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+  & pre {
+    margin: 1.2em 0;
+  }
+
+  & blockquote {
+    font-size: 1em;
+    line-height: 1.7;
+  }
+  & .callout {
+    font-size: 0.98em;
+    margin: 1.4em 0;
+  }
+  & .callout-title {
+    font-size: 1em;
+  }
+
+  & img {
+    display: block;
+    margin: 1.5em auto;
+    border-radius: 6px;
+  }
+  & table {
+    font-size: 0.95em;
+  }
+  & hr {
+    margin: 2.5rem 0;
+  }
+}
+
+.article-title {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin: 1.2rem 0 0.4rem;
+}
+.content-meta {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.breadcrumb-container {
+  font-size: 0.9rem;
 }
