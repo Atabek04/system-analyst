@@ -99,7 +99,7 @@
 ---
 
 ## SDLC
-**Урок:** [[SDLC и методологии разработки]]
+**Урок:** [[sdlc-methodologies|SDLC и методологии разработки]]
 **Slides:** [[7-slides/sdlc-methodologies/methodologies-slides|Методологии]] · [[7-slides/task-management/task-management-slides|Управление задачами]]
 
 ### SDLC Stages
@@ -403,13 +403,13 @@
 ## API & Integration
 
 ### API Fundamentals
-**Урок:** [[Как устроена IT-система - Frontend, Backend, API]]
+**Урок:** [[api-fundamentals|Как устроена IT-система: Frontend, Backend, API]]
 - What is API
 - API types (Web API, Library API)
 - Client-Server model *(spiral return — introduced in SDLC; here: full request/response cycle, statelessness, how APIs are the interface between client and server)*
 
 ### Communication Protocols
-**Урок:** [[Real-time - как сервер пишет первым]]
+**Урок:** [[real-time-protocols|Real-time: как сервер пишет первым]]
 - REST
 - SOAP
 - WebSocket — when to specify, how to write the NFR (vs polling)
@@ -420,26 +420,26 @@
 - GraphQL — REST vs GraphQL trade-offs, what SA specifies differently
 
 ### HTTP Protocol
-**Урок:** [[HTTP - как клиент и сервер разговаривают]]
+**Урок:** [[http-fundamentals|HTTP: как клиент и сервер реально разговаривают]]
 - HTTP methods (GET, POST, PUT, DELETE, PATCH)
 - HTTP status codes (2xx, 3xx, 4xx, 5xx)
 - Request/Response structure
 - Idempotency
 
 ### Data Formats
-**Урок:** [[Форматы данных - JSON и XML]]
+**Урок:** [[data-formats|Форматы данных: JSON и XML]]
 - JSON
 - XML (SOAP, ШЭП / Smart Bridge, XSD, WSDL, ЭЦП)
 - YAML
 
 ### Endpoint → JSON → UI *(мостик: собирает HTTP + Data Formats в одну картину)*
-**Урок:** [[Как Frontend получает данные от Backend через эндпойнты]]
+**Урок:** [[endpoint-to-ui|Как Frontend получает данные от Backend через эндпойнты]]
 - Главная идея: UI = JSON, нарисованный на экране (запрос → JSON → раскладка по элементам)
 - Список = массив, деталь = объект; форма/POST разворачивает направление (UI → сервер, 201 назад)
 - Коротко: лайк-кнопка, поиск/query-параметры, пагинация «показать ещё»
 
 ### API Design
-**Урок:** [[API Design - как проектировать удобный API]]
+**Урок:** [[api-design|API Design: как проектировать API, чтобы им было приятно пользоваться]]
 - RESTful principles
 - Resource naming & endpoint design
 - Versioning
@@ -451,7 +451,7 @@
 - 🔵 Traffic Sniffers — Charles, Proxyman: intercepting and inspecting real HTTP/HTTPS traffic (API Tools badge)
 
 ### Integration Patterns
-**Урок:** [[Асинхронные интеграции - Callback и Message Queue]]
+**Урок:** [[async-integration|Асинхронные интеграции: Callback и Message Queue]]
 - Synchronous vs Asynchronous
 - Callback & Webhook — `202 Accepted`, `correlationId`, идемпотентность, таймаут + fallback polling, подпись callback
 - Кейс: банк → ШЭП → ГЦВП (endpoints + изменения в БД по шагам)
@@ -464,7 +464,7 @@
 ## System Architecture
 
 ### Architecture Patterns
-**Урок:** [[Почему систему разрезают на части]]
+**Урок:** [[monolith-vs-microservices|Почему систему разрезают на части]]
 **Slides:** [[7-slides/architecture-patterns-a/architecture-patterns-a|Урок A]]
 - Monolithic
 - Microservices *(spiral return from Component Diagram awareness — now the full concept)*

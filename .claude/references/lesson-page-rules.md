@@ -1,7 +1,8 @@
 # Lesson Pages — Rules
 
 ## Location
-`3-permanent/{chapter}/{Название урока}.md` — one file per lesson, next to the chapter's atomic notes.
+`3-permanent/{chapter}/{slug}.md` — one file per lesson, next to the chapter's atomic notes.
+The filename is a short English kebab-case slug (`http-fundamentals`, `async-integration`): it becomes the URL and the `[[link]]` target. The Russian name lives in `title:`; link as `[[http-fundamentals|HTTP: как клиент и сервер разговаривают]]`.
 Long-form student-facing content (`type: lesson` in frontmatter). Not an atomic note, but lives in the same tree so the wiki explorer shows it under its chapter.
 
 Frontmatter (required):

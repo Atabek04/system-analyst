@@ -3,7 +3,6 @@ title: "Как Frontend получает данные от Backend через э
 type: lesson
 chapter: api-integration
 order: 4
-source: endpoint-to-ui
 ---
 
 **Endpoint** это конкретный адрес на сервере, по которому фронтенд забирает или отправляет данные (например `/products` или `/videos/42`). Вы уже знаете API и HTTP, теперь соберём всё вместе.
