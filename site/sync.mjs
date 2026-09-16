@@ -115,16 +115,17 @@ const HOME_LEDE =
   "раскрывает одну идею. Откройте главу, пройдите её разделы сверху вниз, а в боковой панели " +
   "найдёте соседние заметки той же главы."
 // Card: number (learning order) + title + blurb + the chapter's notes in reading order.
+// data-no-popover: no hover previews on the home page (they stay on inside notes).
 const card = (c, i) => {
   const num = `<span class="chapter-num">${i + 1}</span>`
   const title = c.hasNotes
-    ? `<a class="chapter-title" href="./${c.slug}/">${c.title}</a>`
+    ? `<a class="chapter-title" href="./${c.slug}/" data-no-popover="true">${c.title}</a>`
     : `<span class="chapter-title">${c.title}</span>`
   const notes = c.sections
     .flatMap((s) => s.links)
     .map((l) => l.match(/^- \[\[([^\]|]+)\|([^\]]+)\]\]$/))
     .filter(Boolean)
-    .map(([, slug, t]) => `<li><a href="./${c.slug}/${slug}">${t}</a></li>`)
+    .map(([, slug, t]) => `<li><a href="./${c.slug}/${slug}" data-no-popover="true">${t}</a></li>`)
   const list = notes.length ? `<ul class="chapter-notes">${notes.join("")}</ul>` : ""
   return `<div class="chapter${c.hasNotes ? "" : " chapter-soon"}">${num}<div class="chapter-body">${title}<span class="chapter-blurb">${c.blurb}</span>${list}</div></div>`
 }
