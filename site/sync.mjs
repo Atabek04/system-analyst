@@ -114,10 +114,20 @@ const HOME_LEDE =
   "Каждая глава ниже это **карта содержания**: порядок чтения по заметкам, где одна заметка " +
   "раскрывает одну идею. Откройте главу, пройдите её разделы сверху вниз, а в боковой панели " +
   "найдёте соседние заметки той же главы."
-const card = (c) =>
-  c.hasNotes
-    ? `<a class="chapter" href="./${c.slug}/"><span class="chapter-title">${c.title}</span><span class="chapter-blurb">${c.blurb}</span></a>`
-    : `<div class="chapter chapter-soon"><span class="chapter-title">${c.title}</span><span class="chapter-blurb">${c.blurb}</span></div>`
+// Card: number (learning order) + title + blurb + the chapter's notes in reading order.
+const card = (c, i) => {
+  const num = `<span class="chapter-num">${i + 1}</span>`
+  const title = c.hasNotes
+    ? `<a class="chapter-title" href="./${c.slug}/">${c.title}</a>`
+    : `<span class="chapter-title">${c.title}</span>`
+  const notes = c.sections
+    .flatMap((s) => s.links)
+    .map((l) => l.match(/^- \[\[([^\]|]+)\|([^\]]+)\]\]$/))
+    .filter(Boolean)
+    .map(([, slug, t]) => `<li><a href="./${c.slug}/${slug}">${t}</a></li>`)
+  const list = notes.length ? `<ul class="chapter-notes">${notes.join("")}</ul>` : ""
+  return `<div class="chapter${c.hasNotes ? "" : " chapter-soon"}">${num}<div class="chapter-body">${title}<span class="chapter-blurb">${c.blurb}</span>${list}</div></div>`
+}
 const home = [
   `---`,
   `title: "${HOME_TITLE}"`,

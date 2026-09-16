@@ -446,11 +446,11 @@ body[data-slug="index"] {
     }
   }
 
-  // chapter grid
+  // chapter grid: number · title · blurb · notes in reading order
   & .chapter-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 3.5rem;
+    column-gap: 2.5rem;
     border-top: 1px solid var(--lightgray);
     @media all and (max-width: #{map.get($breakpoints, mobile)}) {
       grid-template-columns: minmax(0, 1fr);
@@ -458,38 +458,76 @@ body[data-slug="index"] {
     }
   }
   & .chapter {
+    display: grid;
+    grid-template-columns: 1.6rem minmax(0, 1fr);
+    column-gap: 0.4rem;
+    padding: 1.3rem 0 1.4rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+  & .chapter-num {
+    font-family: var(--bodyFont);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-top: 0.35rem; // sits on the title's x-height line
+    color: var(--gray);
+  }
+  & .chapter-body {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
-    padding: 1.4rem 0.75rem 1.4rem 0;
-    border-bottom: 1px solid var(--lightgray);
-    text-decoration: none;
-    color: inherit;
+    gap: 0.3rem;
+    min-width: 0;
   }
   & .chapter-title {
     font-family: var(--bodyFont);
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.25;
     letter-spacing: -0.01em;
     color: var(--dark);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
   }
   & .chapter-blurb {
     font-family: var(--headerFont);
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     line-height: 1.5;
     color: var(--gray);
   }
-  & a.chapter:hover .chapter-title {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.18em;
+  & .chapter-notes {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    & li {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.45;
+      padding: 0.22rem 0 0.22rem 0.75rem;
+      border-left: 1px solid var(--lightgray);
+    }
+    & a {
+      color: var(--darkgray);
+      text-decoration: none;
+      &:hover {
+        color: var(--dark);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.18em;
+      }
+    }
   }
   // not published yet: same place in the sequence, quieter voice
   & .chapter-soon {
     & .chapter-title {
       color: var(--gray);
       font-weight: 500;
+    }
+    & .chapter-num {
+      opacity: 0.6;
     }
   }
 }
