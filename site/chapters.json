@@ -1,24 +1,90 @@
 {
-  "course-orientation": "Ориентация в курсе",
-  "intro-system-analysis": "Введение в системный анализ",
-  "sdlc": "SDLC",
-  "strategy-analysis": "Стратегический анализ",
-  "business-process-modeling": "Бизнес-процессы (BPMN)",
-  "requirements-engineering": "Требования",
-  "uml-diagrams": "UML диаграммы",
-  "ux-ui-prototyping": "UX/UI и прототипы",
-  "data-modeling": "Моделирование данных",
-  "sql": "SQL",
-  "api-integration": "API и интеграции",
-  "system-architecture": "Архитектура систем",
-  "message-brokers": "Message Brokers",
-  "non-functional-requirements": "Нефункциональные требования",
-  "testing-qa": "Тестирование и QA",
-  "business-metrics": "Бизнес-метрики",
-  "monitoring-observability": "Мониторинг",
-  "devops-deployment": "DevOps и деплой",
-  "documentation-tools": "Документация",
-  "analyst-tooling": "Инструменты аналитика",
-  "career-preparation": "Карьера",
-  "bonus-tracks": "Бонус-треки"
+  "course-orientation": {
+    "title": "Ориентация в курсе",
+    "blurb": "Что такое курс, для кого он, как устроен и как учиться эффективно"
+  },
+  "intro-system-analysis": {
+    "title": "Введение в системный анализ",
+    "blurb": "Зачем нужна профессия, роль и обязанности, типы компаний, стейкхолдеры"
+  },
+  "sdlc": {
+    "title": "SDLC",
+    "blurb": "Этапы разработки, методологии (Waterfall, Agile, Scrum, Kanban), управление задачами"
+  },
+  "strategy-analysis": {
+    "title": "Стратегический анализ",
+    "blurb": "Бизнес-цели, оценка решений, работа с вендорами"
+  },
+  "business-process-modeling": {
+    "title": "Бизнес-процессы",
+    "blurb": "BPMN: события, задачи, шлюзы, пулы и дорожки, моделирование as-is и to-be"
+  },
+  "requirements-engineering": {
+    "title": "Требования",
+    "blurb": "Сбор, анализ, спецификация, приоритизация и управление требованиями"
+  },
+  "uml-diagrams": {
+    "title": "UML диаграммы",
+    "blurb": "Use Case, Sequence, Class, Activity, Component; основы ООП для аналитика"
+  },
+  "ux-ui-prototyping": {
+    "title": "UX/UI и прототипы",
+    "blurb": "Пользовательские сценарии, wireframes, прототипы в Figma"
+  },
+  "data-modeling": {
+    "title": "Моделирование данных",
+    "blurb": "Сущности и связи, ERD, нормализация, доменная модель"
+  },
+  "sql": {
+    "title": "SQL",
+    "blurb": "SELECT, JOIN, GROUP BY, подзапросы; типовые запросы аналитика"
+  },
+  "api-integration": {
+    "title": "API и интеграции",
+    "blurb": "HTTP, REST, форматы данных, проектирование API, асинхронные интеграции, real-time"
+  },
+  "system-architecture": {
+    "title": "Архитектура систем",
+    "blurb": "Монолит и микросервисы, компоненты, распределённые системы, масштабирование"
+  },
+  "message-brokers": {
+    "title": "Message Brokers",
+    "blurb": "Очереди сообщений, Kafka и RabbitMQ, гарантии доставки"
+  },
+  "non-functional-requirements": {
+    "title": "Нефункциональные требования",
+    "blurb": "Производительность, надёжность, безопасность, как их формулировать и измерять"
+  },
+  "testing-qa": {
+    "title": "Тестирование и QA",
+    "blurb": "Виды тестирования, тест-кейсы, приёмка (UAT), работа с QA"
+  },
+  "business-metrics": {
+    "title": "Бизнес-метрики",
+    "blurb": "DAU/MAU, конверсия, retention, unit-экономика для аналитика"
+  },
+  "monitoring-observability": {
+    "title": "Мониторинг",
+    "blurb": "Логи, метрики, трейсы, алерты; что аналитик закладывает в требования"
+  },
+  "devops-deployment": {
+    "title": "DevOps и деплой",
+    "blurb": "Окружения, CI/CD, релизы, feature flags"
+  },
+  "documentation-tools": {
+    "title": "Документация",
+    "blurb": "SRS, Confluence, шаблоны артефактов, версионирование"
+  },
+  "analyst-tooling": {
+    "title": "Инструменты аналитика",
+    "blurb": "Jira, Confluence, Postman, Draw.io, Mermaid, Excalidraw"
+  },
+  "career-preparation": {
+    "title": "Карьера",
+    "blurb": "Резюме, собеседования, тестовые задания, рост от Junior к Senior"
+  },
+  "bonus-tracks": {
+    "title": "Бонус-треки",
+    "blurb": "Дополнительные темы и специализации со значками"
+  }
 }

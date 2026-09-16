@@ -45,27 +45,9 @@ for (const dir of fs.readdirSync(content, { withFileTypes: true })) {
   fs.rmSync(chapterAssets, { recursive: true })
 }
 
-// 3. chapter folder → index.md with its Russian title (explorer, breadcrumbs, folder page)
-//    `order` = position in chapters.json; the explorer sorts chapters by it.
-const chapterOrder = Object.keys(CHAPTERS)
-for (const dir of fs.readdirSync(content, { withFileTypes: true })) {
-  if (!dir.isDirectory() || dir.name === "assets") continue
-  const idx = path.join(content, dir.name, "index.md")
-  if (fs.existsSync(idx)) continue
-  const title = CHAPTERS[dir.name]
-  if (!title) console.warn(`chapters.json has no entry for "${dir.name}" — add one (title + position = order)`)
-  const order = chapterOrder.indexOf(dir.name)
-  fs.writeFileSync(
-    idx,
-    `---\ntitle: "${title ?? dir.name}"\norder: ${order === -1 ? 999 : order + 1}\n---\n`,
-    "utf8",
-  )
-}
-
-// 4. Roadmap → index.md (home MOC)
-//    Keeps only the skeleton: `##` chapters (renamed via chapters.json, same order),
-//    `###` sections, and [[links]] to notes that actually exist. Plain bullets, blockquotes
-//    and links to slides are dropped — the home page is a table of contents, not the plan.
+// 3. Read the roadmap skeleton: `##` chapters (in chapters.json order), `###` sections,
+//    and [[links]] to notes that actually exist. Plain bullets, blockquotes and links to
+//    slides are dropped — the site shows a table of contents, not the working plan.
 const noteTitles = new Map() // basename (no .md) → frontmatter title
 const walk = (dir) => {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -79,18 +61,15 @@ const walk = (dir) => {
 }
 walk(content)
 
+const slugs = Object.keys(CHAPTERS)
 const roadmap = stripBom(fs.readFileSync(MOC_FILE, "utf8")).split(/\r?\n/)
-const h1 = roadmap.find((l) => l.startsWith("# "))
-const title = h1 ? h1.slice(2).trim() : "Middle System Analyst Roadmap"
-const out = [`---`, `title: "${title}"`, `---`, ``]
-let chapterIdx = -1
-let chapter = null // { heading, sections: [{ heading, links: [] }] }
-const chapters = []
+const chapters = [] // { slug, title, blurb, sections: [{ heading, links: [] }] }
+let chapter = null
 for (const line of roadmap) {
   if (line.startsWith("## ")) {
-    chapterIdx++
-    const ru = Object.values(CHAPTERS)[chapterIdx]
-    chapter = { heading: ru ?? line.slice(3).trim(), sections: [{ heading: null, links: [] }] }
+    const slug = slugs[chapters.length]
+    const meta = CHAPTERS[slug] ?? { title: line.slice(3).trim(), blurb: "" }
+    chapter = { slug, ...meta, sections: [{ heading: null, links: [] }] }
     chapters.push(chapter)
   } else if (line.startsWith("### ") && chapter) {
     // drop trailing italic asides like "*(мостик: ...)*" — they are notes for the author
@@ -104,22 +83,54 @@ for (const line of roadmap) {
     }
   }
 }
-if (chapterIdx + 1 !== Object.keys(CHAPTERS).length) {
-  console.warn(`roadmap has ${chapterIdx + 1} chapters but chapters.json has ${Object.keys(CHAPTERS).length}`)
+if (chapters.length !== slugs.length) {
+  console.warn(`roadmap has ${chapters.length} chapters but chapters.json has ${slugs.length}`)
 }
-for (const c of chapters) {
-  const filled = c.sections.filter((s) => s.links.length)
-  if (!filled.length) {
-    out.push(`## ${c.heading}`, ``, `*скоро*`, ``)
-    continue
-  }
-  out.push(`## ${c.heading}`, ``)
-  for (const s of filled) {
+for (const c of chapters) c.hasNotes = c.sections.some((s) => s.links.length)
+
+// 4. Chapter pages: <chapter>/index.md = title + blurb + sections with note links.
+//    `order` = position in chapters.json; the explorer sorts chapters by it.
+for (const [i, c] of chapters.entries()) {
+  const dir = path.join(content, c.slug)
+  if (!c.hasNotes && !fs.existsSync(dir)) continue // nothing published yet → no page
+  fs.mkdirSync(dir, { recursive: true })
+  const out = [`---`, `title: "${c.title}"`, `order: ${i + 1}`, `---`, ``, c.blurb, ``]
+  for (const s of c.sections.filter((s) => s.links.length)) {
     if (s.heading) out.push(`### ${s.heading}`, ``)
     out.push(...s.links, ``)
   }
+  fs.writeFileSync(path.join(dir, "index.md"), out.join("\n"), "utf8")
 }
-fs.writeFileSync(path.join(content, "index.md"), out.join("\n"), "utf8")
+for (const dir of fs.readdirSync(content, { withFileTypes: true })) {
+  if (dir.isDirectory() && dir.name !== "assets" && !CHAPTERS[dir.name]) {
+    console.warn(`chapters.json has no entry for "${dir.name}" — add one (title, blurb; position = order)`)
+  }
+}
+
+// 5. Home page: title, description, and a grid of chapters (published ones link to
+//    their page; the rest keep their place in the sequence, muted).
+const HOME_TITLE = "Системный анализ"
+const HOME_LEDE =
+  "Каждая глава ниже это **карта содержания**: порядок чтения по заметкам, где одна заметка " +
+  "раскрывает одну идею. Откройте главу, пройдите её разделы сверху вниз, а в боковой панели " +
+  "найдёте соседние заметки той же главы."
+const card = (c) =>
+  c.hasNotes
+    ? `<a class="chapter" href="./${c.slug}/"><span class="chapter-title">${c.title}</span><span class="chapter-blurb">${c.blurb}</span></a>`
+    : `<div class="chapter chapter-soon"><span class="chapter-title">${c.title}</span><span class="chapter-blurb">${c.blurb}</span></div>`
+const home = [
+  `---`,
+  `title: "${HOME_TITLE}"`,
+  `---`,
+  ``,
+  HOME_LEDE,
+  ``,
+  `<div class="chapter-grid">`,
+  ...chapters.map(card),
+  `</div>`,
+  ``,
+]
+fs.writeFileSync(path.join(content, "index.md"), home.join("\n"), "utf8")
 
 const count = fs.readdirSync(content, { recursive: true }).filter((f) => f.endsWith(".md")).length
 console.log(`synced ${count} markdown files → ${path.relative(vault, content)}`)

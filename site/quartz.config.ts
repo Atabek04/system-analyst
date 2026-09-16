@@ -12,7 +12,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "System Analyst Bootcamp",
+    pageTitle: "Системный анализ",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,

@@ -390,7 +390,7 @@ article {
 }
 
 // ---------------------------------------------------------------------------
-// Home page (index): the table of contents. Single column, no sidebar.
+// Home page (index): title, description, grid of chapters. No sidebar.
 // ---------------------------------------------------------------------------
 body[data-slug="index"] {
   & .page > #quartz-body {
@@ -399,6 +399,7 @@ body[data-slug="index"] {
       "grid-header"
       "grid-center"
       "grid-footer";
+    background: none; // no sidebar panel on the home page
 
     & .sidebar {
       display: none;
@@ -409,21 +410,12 @@ body[data-slug="index"] {
     }
   }
 
-  // toolbar row: site name, search, theme (beforeBody renders inside .page-header)
+  // toolbar row: search + theme, right-aligned (beforeBody renders inside .page-header)
   & .page-header .flex-component {
     align-items: center;
-    gap: 1rem;
-    margin: 0.5rem 0 3.5rem;
+    gap: 0.75rem;
+    margin: 0.5rem 0 2.5rem;
     font-family: var(--headerFont);
-    & .page-title {
-      margin: 0;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      & a {
-        color: var(--dark);
-      }
-    }
     & .search {
       max-width: 15rem;
       & .search-button {
@@ -434,83 +426,80 @@ body[data-slug="index"] {
     }
   }
 
-  // the one bold element on the site
   & .article-title {
-    font-size: clamp(2.8rem, 6vw, 4rem);
+    font-size: 3rem;
     font-weight: 600;
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-    margin: 0 0 3rem;
-    max-width: 14ch;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 1.5rem;
   }
 
-  & article {
-    counter-reset: chapter;
-
-    // chapter: the course is a sequence, so the number carries meaning
-    & h2 {
-      counter-increment: chapter;
-      display: grid;
-      grid-template-columns: 2.4rem 1fr;
-      align-items: baseline;
-      column-gap: 0.5rem;
-      margin: 2.75rem 0 0.75rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--lightgray);
-      font-size: 1.5rem;
-      &::before {
-        content: counter(chapter);
-        font-size: 1.05rem;
-        font-weight: 600;
-        color: var(--gray);
-      }
-      & a[role="anchor"] {
-        display: none;
-      }
-    }
-    // section inside a chapter (sentence case, quiet)
-    & h3 {
-      margin: 1.25rem 0 0.25rem 2.9rem;
-      font-family: var(--headerFont);
+  // description: reading size, ink, ~70 characters per line
+  & article > p:first-child {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--darkgray);
+    max-width: 62ch;
+    margin: 0 0 2.5rem;
+    & strong {
       font-weight: 600;
-      font-size: 0.85rem;
-      color: var(--gray);
-      & a[role="anchor"] {
-        display: none;
-      }
-    }
-    & ul {
-      margin: 0 0 0 2.9rem;
-      padding: 0;
-      list-style: none;
-    }
-    & li {
-      margin: 0;
-      font-size: 1.08rem;
-      line-height: 1.5;
-      & > a.internal {
-        display: block;
-        padding: 0.35rem 0.6rem;
-        margin: 0 -0.6rem;
-        border-radius: 6px;
-        color: var(--dark);
-        text-decoration: none;
-        &:hover {
-          background: var(--highlight);
-        }
-      }
-    }
-    // "скоро" — empty chapter
-    & > p {
-      margin: 0 0 0 2.9rem;
-      & > em {
-        font-family: var(--headerFont);
-        font-style: normal;
-        font-size: 0.85rem;
-        color: var(--gray);
-      }
     }
   }
+
+  // chapter grid
+  & .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3.5rem;
+    border-top: 1px solid var(--lightgray);
+    @media all and (max-width: #{map.get($breakpoints, mobile)}) {
+      grid-template-columns: minmax(0, 1fr);
+      column-gap: 0;
+    }
+  }
+  & .chapter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.4rem 0.75rem 1.4rem 0;
+    border-bottom: 1px solid var(--lightgray);
+    text-decoration: none;
+    color: inherit;
+  }
+  & .chapter-title {
+    font-family: var(--bodyFont);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--dark);
+  }
+  & .chapter-blurb {
+    font-family: var(--headerFont);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--gray);
+  }
+  & a.chapter:hover .chapter-title {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  // not published yet: same place in the sequence, quieter voice
+  & .chapter-soon {
+    & .chapter-title {
+      color: var(--gray);
+      font-weight: 500;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Chapter pages: their index.md already lists the notes in reading order,
+// so hide Quartz's automatic dated listing.
+// ---------------------------------------------------------------------------
+.page-listing {
+  display: none;
 }
 
 // ---------------------------------------------------------------------------
