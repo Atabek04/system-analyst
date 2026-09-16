@@ -3,20 +3,16 @@ import style from "./styles/footer.scss"
 
 interface Options {
   links: Record<string, string>
-  author: string
 }
 
-const defaultOptions: Options = { links: {}, author: "" }
+const defaultOptions: Options = { links: {} }
 
 export default ((userOpts?: Partial<Options>) => {
   const opts: Options = { ...defaultOptions, ...userOpts }
-  const Footer: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
-    const year = new Date().getFullYear()
+  const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <p>
-          Системный анализ, {year}. Автор: {opts.author}
-        </p>
+        <p>{cfg.pageTitle}</p>
         <ul>
           {Object.entries(opts.links).map(([text, link]) => (
             <li>

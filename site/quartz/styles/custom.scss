@@ -102,13 +102,13 @@ body {
     border: 1px solid var(--lightgray);
   }
   & .explorer {
-    & button.explorer-title h2 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--gray);
+    // no root "Оглавление" toggle on desktop: the tree starts at the chapters
+    // (the mobile toggle stays; the tree is hidden behind it on small screens)
+    & > button.desktop-explorer {
+      display: none;
     }
     & .explorer-content {
-      margin-top: 0.6rem;
+      margin-top: 0.25rem;
     }
     & .folder-container {
       margin: 0.2rem 0;
@@ -387,6 +387,10 @@ article {
     margin: 2.5rem 0;
     border-color: var(--lightgray);
   }
+  // a note that ends with `---` would draw a second rule right above the footer
+  & > hr:last-child {
+    display: none;
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -556,27 +560,49 @@ body[data-slug="index"] {
 // ---------------------------------------------------------------------------
 // Footer (UI sans)
 // ---------------------------------------------------------------------------
-footer {
-  margin-top: 4rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--lightgray);
-  font-family: var(--headerFont);
-  font-size: 0.85rem;
-  color: var(--gray);
-  opacity: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 1rem;
-  & p,
-  & ul {
-    margin: 0;
+// Selector matches the layout block's specificity (.page > #quartz-body …) so
+// these win over its `padding: 0 2rem`, and over Quartz's own footer.scss.
+.page > #quartz-body {
+  // Quartz renders a bare <hr> and an empty afterBody slot between article and footer
+  & .center > hr,
+  & .page-footer {
+    display: none;
   }
-  & a {
+
+  & footer {
+    // a grid item with auto margins shrink-wraps: force it to the article width;
+    // no side padding so the rule lines up with the text column, not the gutter
+    box-sizing: content-box;
+    width: 100%;
+    padding: 1.25rem 0 3rem;
+    margin: 2rem auto 0;
+    border-top: 1px solid var(--lightgray);
+    font-family: var(--headerFont);
+    font-size: 0.85rem;
     color: var(--gray);
-    &:hover {
-      color: var(--dark);
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    & p,
+    & ul {
+      margin: 0;
+    }
+    & ul {
+      display: flex;
+      gap: 1.25rem;
+      list-style: none;
+      padding: 0;
+    }
+    & a {
+      color: var(--gray);
+      text-decoration: none;
+      &:hover {
+        color: var(--dark);
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+      }
     }
   }
 }

@@ -37,7 +37,6 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.CourseFooter({
-    author: "Atabek",
     links: {
       GitHub: "https://github.com/Atabek04/system-analyst",
     },
