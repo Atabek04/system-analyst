@@ -461,7 +461,7 @@ body[data-slug="index"] {
     display: grid;
     grid-template-columns: 1.6rem minmax(0, 1fr);
     column-gap: 0.4rem;
-    padding: 1.3rem 0 1.4rem;
+    padding: 1.15rem 0 1.25rem;
     border-bottom: 1px solid var(--lightgray);
   }
   & .chapter-num {
@@ -492,15 +492,9 @@ body[data-slug="index"] {
       text-underline-offset: 0.18em;
     }
   }
-  & .chapter-blurb {
-    font-family: var(--headerFont);
-    font-size: 0.88rem;
-    line-height: 1.5;
-    color: var(--gray);
-  }
   & .chapter-notes {
     list-style: none;
-    margin: 0.5rem 0 0;
+    margin: 0.35rem 0 0;
     padding: 0;
     & li {
       margin: 0;

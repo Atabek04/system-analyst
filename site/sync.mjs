@@ -127,7 +127,7 @@ const card = (c, i) => {
     .filter(Boolean)
     .map(([, slug, t]) => `<li><a href="./${c.slug}/${slug}" data-no-popover="true">${t}</a></li>`)
   const list = notes.length ? `<ul class="chapter-notes">${notes.join("")}</ul>` : ""
-  return `<div class="chapter${c.hasNotes ? "" : " chapter-soon"}">${num}<div class="chapter-body">${title}<span class="chapter-blurb">${c.blurb}</span>${list}</div></div>`
+  return `<div class="chapter${c.hasNotes ? "" : " chapter-soon"}">${num}<div class="chapter-body">${title}${list}</div></div>`
 }
 const home = [
   `---`,
