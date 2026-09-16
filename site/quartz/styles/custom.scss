@@ -53,6 +53,13 @@ body {
     // panel fill on the column (the sticky sidebar itself is only viewport-high)
     background: linear-gradient(to right, var(--panel) $sidebarWidth, transparent $sidebarWidth);
 
+    // Quartz still renders the (empty) right sidebar; its grid-area isn't in the
+    // template above, so it would be auto-placed into an implicit 100vh row below
+    // the footer. Remove it from the grid entirely.
+    & .sidebar.right {
+      display: none;
+    }
+
     & .sidebar.left {
       padding: 2.25rem 1.25rem 2rem 1.5rem;
       gap: 1.1rem;
