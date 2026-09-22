@@ -166,6 +166,7 @@ System-Analyst/
 │       ├── {topic}.md          (Marp source — legacy topics)
 │       ├── {topic}.pdf         (exported PDF — legacy)
 │       └── img/                (diagram PNGs)
+├── apps/web/              (Next.js platform: AI prompt playground; `pnpm dev` to preview)
 ├── site/                  (Quartz static site → GitHub Pages; `npm run dev` to preview)
 │   ├── quartz.config.ts   (site title, base URL, plugins)
 │   ├── quartz.layout.ts   (sidebar / explorer / reader-mode layout)
@@ -174,6 +175,15 @@ System-Analyst/
 │   └── content/           (generated, git-ignored — never edit)
 └── .github/workflows/deploy.yml  (builds site/ and publishes to GitHub Pages on push)
 ```
+
+### Two halves, one repo
+
+The repo root is both the Obsidian vault and a pnpm workspace.
+
+- **Vault + wiki**: `2-MOC/`, `3-permanent/`, `05-Flashcards/`, `7-slides/`, rendered by Quartz from `site/`. This is where teaching content lives and it is the part that ships today.
+- **Platform**: `apps/web/`, a Next.js app for the AI prompt playground. Scope and order of work in `TODO.md`.
+
+`site/` runs on npm with its own lockfile and is deliberately outside the pnpm workspace; `pnpm-workspace.yaml` covers `apps/*` and `packages/*` only. Quartz owns the wiki until the migration in `TODO.md` is done, so do not fold wiki rendering into `apps/web` piecemeal.
 
 ### Roadmap
 - `2-MOC/Middle System Analyst Roadmap.md` — master navigation
