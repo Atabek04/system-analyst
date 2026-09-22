@@ -35,6 +35,14 @@ donations are shy.
 - [ ] Open Collective and GitHub Sponsors, opened only once there is a real bill
 - [ ] Funding page reading a committed ledger JSON
 
+## Graded practice trainers
+
+Spec and build order in [`docs/trainers-spec.md`](docs/trainers-spec.md). Gated on a decision:
+`founder-rules.md` puts AI-graded assignments behind core curriculum and a live curator.
+
+- [ ] T0 brief and band exemplars, then hand-graded submissions; the rubric is derived from those,
+	not written before them
+
 ## Could
 
 - [ ] BPMN prompt tasks

@@ -167,6 +167,9 @@ System-Analyst/
 │       ├── {topic}.pdf         (exported PDF — legacy)
 │       └── img/                (diagram PNGs)
 ├── chapters.json          (chapter slug → { title, blurb } in Russian; key order = chapter order)
+├── docs/
+│   ├── trainers-spec.md   (graded practice trainers: what to build, in what order)
+│   └── researches/        (market + product research with sources; read before scope decisions)
 ├── apps/web/              (Next.js platform: wiki at /wiki + AI prompt playground; `pnpm dev`)
 │   ├── src/lib/source.ts    (reads 3-permanent/ as an Obsidian vault via fumadocs-obsidian)
 │   ├── src/lib/chapters.ts  (reading order and chapter titles, from the MOC + chapters.json)
