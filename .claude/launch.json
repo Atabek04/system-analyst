@@ -7,6 +7,12 @@
       "runtimeArgs": ["run", "dev", "--", "--port", "8123"],
       "cwd": "site",
       "port": 8123
+    },
+    {
+      "name": "web",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "web", "dev"],
+      "port": 3000
     }
   ]
 }

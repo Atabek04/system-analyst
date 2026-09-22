@@ -15,3 +15,13 @@
 # Quartz site: content/ is synced from the vault by site/sync.mjs, public/ is the build output
 site/content/
 site/public/
+
+# Next.js app: build output and caches
+**/.next/
+**/.turbo/
+*.tsbuildinfo
+
+# Secrets
+.env
+.env.*
+!.env.example
