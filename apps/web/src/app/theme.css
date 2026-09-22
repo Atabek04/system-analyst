@@ -1,0 +1,177 @@
+/*
+ * Paper and ink. Warm off-white page, near-black text, no coloured accent:
+ * hierarchy comes from size, weight and space. Links are ink with an underline.
+ *
+ * Source Serif 4 for everything the student reads (headings and body),
+ * Manrope for chrome (sidebar, breadcrumbs, toolbar), JetBrains Mono for code.
+ * All three cover Cyrillic.
+ */
+
+@theme {
+  --color-fd-background: #faf9f5;
+  --color-fd-foreground: #2a2926;
+  --color-fd-muted: #f2f0ea;
+  --color-fd-muted-foreground: #6f6d67;
+  --color-fd-popover: #faf9f5;
+  --color-fd-popover-foreground: #2a2926;
+  --color-fd-card: #f2f0ea;
+  --color-fd-card-foreground: #2a2926;
+  --color-fd-border: #e6e4dd;
+  --color-fd-primary: #141413;
+  --color-fd-primary-foreground: #faf9f5;
+  --color-fd-secondary: #f2f0ea;
+  --color-fd-secondary-foreground: #141413;
+  --color-fd-accent: #eceae2;
+  --color-fd-accent-foreground: #141413;
+  --color-fd-ring: #141413;
+  --color-fd-overlay: rgba(20, 20, 19, 0.2);
+
+  /* Callouts carry no colour; the icon says which kind it is. */
+  --color-fd-info: #141413;
+  --color-fd-note: #141413;
+  --color-fd-tip: #141413;
+  --color-fd-idea: #141413;
+  --color-fd-question: #141413;
+  --color-fd-success: #141413;
+  --color-fd-warning: #141413;
+  --color-fd-error: #141413;
+
+  /* ink, at the reading measure of Source Serif 4 (~75 characters) */
+  --color-ink: #141413;
+  --measure: 46rem;
+}
+
+.dark {
+  --color-fd-background: #1c1b19;
+  --color-fd-foreground: #d8d6ce;
+  --color-fd-muted: #272522;
+  --color-fd-muted-foreground: #8f8d85;
+  --color-fd-popover: #1c1b19;
+  --color-fd-popover-foreground: #d8d6ce;
+  --color-fd-card: #272522;
+  --color-fd-card-foreground: #d8d6ce;
+  --color-fd-border: #33312d;
+  --color-fd-primary: #f5f4ef;
+  --color-fd-primary-foreground: #1c1b19;
+  --color-fd-secondary: #272522;
+  --color-fd-secondary-foreground: #f5f4ef;
+  --color-fd-accent: #33312d;
+  --color-fd-accent-foreground: #f5f4ef;
+  --color-fd-ring: #f5f4ef;
+
+  --color-fd-info: #f5f4ef;
+  --color-fd-note: #f5f4ef;
+  --color-fd-tip: #f5f4ef;
+  --color-fd-idea: #f5f4ef;
+  --color-fd-question: #f5f4ef;
+  --color-fd-success: #f5f4ef;
+  --color-fd-warning: #f5f4ef;
+  --color-fd-error: #f5f4ef;
+
+  --color-ink: #f5f4ef;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Chrome reads as UI, not as prose. */
+#nd-sidebar,
+#nd-subnav,
+#nd-toc,
+.fd-breadcrumb,
+nav {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+#nd-page article {
+  max-width: var(--measure);
+}
+
+#nd-page article > h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.prose {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+}
+
+.prose h2 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin-top: 2.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-fd-border);
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+.prose strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+/* Links are ink with an underline, never a colour. Heading anchors are not links
+   to the reader, so they keep the heading's own styling. */
+.prose :is(h1, h2, h3, h4, h5, h6) a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.prose a:not(:is(h1, h2, h3, h4, h5, h6) a) {
+  color: var(--color-ink);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--color-ink) 45%, transparent);
+  transition: text-decoration-color 0.15s ease;
+}
+
+.prose a:not(:is(h1, h2, h3, h4, h5, h6) a):hover {
+  text-decoration-color: var(--color-ink);
+}
+
+.prose img {
+  display: block;
+  margin: 1.5em auto;
+  border-radius: 8px;
+}
+
+.prose hr {
+  margin-block: 2.5rem;
+  border-color: var(--color-fd-border);
+}
+
+/* A note that ends with `---` would draw a rule against the footer. */
+.prose > hr:last-child {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

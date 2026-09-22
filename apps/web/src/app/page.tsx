@@ -1,14 +1,8 @@
-export default function Home() {
-  return (
-    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center gap-4 px-6 py-24">
-      <h1 className="text-3xl font-semibold tracking-tight">
-        System Analyst Academy
-      </h1>
-      <p className="text-base leading-relaxed opacity-80">
-        Открытая практика системного анализа: заметки, тренажёр промптов и
-        задачи с разбором.
-      </p>
-      <p className="font-mono text-sm opacity-60">Скоро.</p>
-    </main>
-  );
+import { redirect } from "next/navigation";
+import { WIKI_URL } from "@/lib/source";
+
+// The wiki is the only thing the app serves so far; the landing page and the
+// prompt playground will take this route once they exist.
+export default function RootPage() {
+  redirect(WIKI_URL);
 }
