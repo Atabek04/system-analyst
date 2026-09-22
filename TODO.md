@@ -23,13 +23,15 @@ donations are shy.
 
 ## Should
 
-- [ ] Move the wiki off Quartz onto Next.js in `apps/web`
-	- [ ] Render `3-permanent/` chapters, wikilinks and backlinks
-	- [ ] Carry over the current theme and the chapter grid
-	- [ ] Keep every published URL working
-	- [ ] Retire `site/` and `sync.mjs` only once parity is proven
+- [ ] Move the wiki off Quartz onto Next.js in `apps/web`, served at `/wiki`
+	- [x] Render `3-permanent/` chapters via `fumadocs-obsidian`, reading the vault in place
+	- [x] Carry over the paper-and-ink theme and the chapter grid
+	- [x] Sidebar, breadcrumbs, TOC, dark mode, Russian full-text search
+	- [ ] Reader mode: Quartz had one, fumadocs does not
+	- [ ] Retire `site/`, `sync.mjs` and the Pages workflow at cutover
 - [ ] Mermaid rendered client-side, syntax checked without spending a token
-- [ ] Deploy `apps/web`; the wiki stays on Pages until the migration lands
+- [ ] Deploy `apps/web` to a host that runs a server; Pages is switched off at cutover
+	- [ ] Old `atabek04.github.io/system-analyst/...` URLs are allowed to break
 - [ ] Open Collective and GitHub Sponsors, opened only once there is a real bill
 - [ ] Funding page reading a committed ledger JSON
 

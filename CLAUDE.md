@@ -82,8 +82,8 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `les
 
 ### Student Wiki (GitHub Pages)
 - **URL**: `https://atabek04.github.io/system-analyst/` — built by Quartz from `site/`
-- **Home page** = grid of chapters (title + blurb from `site/chapters.json`); each chapter page lists its notes in the order of `2-MOC/Middle System Analyst Roadmap.md`; **sidebar** = folder tree of `3-permanent/`
-- **Chapter folders**: `3-permanent/{chapter-slug}/` (e.g. `api-integration`); when creating one, add `{ "title", "blurb" }` (Russian) to `site/chapters.json` — its position there = chapter order everywhere
+- **Home page** = grid of chapters (title + blurb from `chapters.json`); each chapter page lists its notes in the order of `2-MOC/Middle System Analyst Roadmap.md`; **sidebar** = folder tree of `3-permanent/`
+- **Chapter folders**: `3-permanent/{chapter-slug}/` (e.g. `api-integration`); when creating one, add `{ "title", "blurb" }` (Russian) to `chapters.json` at the repo root — its position there = chapter order everywhere
 - **Deploy**: push to `master` → `.github/workflows/deploy.yml` runs `npm run build` and publishes `site/public`
 - **Local preview**: `cd site && npm run dev` → `http://localhost:8123/system-analyst/` (`site/sync.mjs` copies the vault into `site/content/`, never edit that folder)
 - **Reader mode** (book icon) hides both sidebars and centres the text
@@ -166,11 +166,14 @@ System-Analyst/
 │       ├── {topic}.md          (Marp source — legacy topics)
 │       ├── {topic}.pdf         (exported PDF — legacy)
 │       └── img/                (diagram PNGs)
-├── apps/web/              (Next.js platform: AI prompt playground; `pnpm dev` to preview)
+├── chapters.json          (chapter slug → { title, blurb } in Russian; key order = chapter order)
+├── apps/web/              (Next.js platform: wiki at /wiki + AI prompt playground; `pnpm dev`)
+│   ├── src/lib/source.ts    (reads 3-permanent/ as an Obsidian vault via fumadocs-obsidian)
+│   ├── src/lib/chapters.ts  (reading order and chapter titles, from the MOC + chapters.json)
+│   └── public/vault         (symlink to 3-permanent/, serves the notes' images)
 ├── site/                  (Quartz static site → GitHub Pages; `npm run dev` to preview)
 │   ├── quartz.config.ts   (site title, base URL, plugins)
 │   ├── quartz.layout.ts   (sidebar / explorer / reader-mode layout)
-│   ├── chapters.json      (chapter slug → { title, blurb } in Russian; key order = chapter order)
 │   ├── sync.mjs           (copies 2-MOC + 3-permanent into content/ before build)
 │   └── content/           (generated, git-ignored — never edit)
 └── .github/workflows/deploy.yml  (builds site/ and publishes to GitHub Pages on push)
