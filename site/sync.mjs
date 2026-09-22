@@ -14,7 +14,7 @@ const content = path.join(site, "content")
 
 const NOTES_DIR = path.join(vault, "3-permanent")
 const MOC_FILE = path.join(vault, "2-MOC", "Middle System Analyst Roadmap.md")
-const CHAPTERS = JSON.parse(fs.readFileSync(path.join(site, "chapters.json"), "utf8"))
+const CHAPTERS = JSON.parse(fs.readFileSync(path.join(vault, "chapters.json"), "utf8"))
 
 const stripBom = (s) => s.replace(/^﻿/, "")
 
