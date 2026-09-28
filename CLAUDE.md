@@ -55,6 +55,7 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `les
 2. **First-principles thinking** — explain down to the base need ("two programs must talk — what's the minimum they must agree on?"), never "it's the industry standard". (Rule 17)
 3. **Adult curiosity-gap hooks, NO fairy-tales** — open with a provocative question / contrarian fact / real SA-work stake. Audience is adult career-switchers — no fictional protagonist or invented plot. Analogies (restaurant=API) are fine; stories are not. (Rule 18)
 4. **Research explanations, don't improvise** — before explaining a concept, search the web for how it's actually explained well (`"<concept> in simple terms" / analogy / real world example`), then adapt. Community-vetted analogies beat invented ones. (lesson-page-rules → "Always ground explanations in real sources")
+5. **Real stories make the lesson stick** — use documented cases, origins of a concept, and debunked industry folklore (Mars Climate Orbiter, Denver baggage, the fake "IBM 1:6.5:15:100" chart). Four conditions, all required: directly related to *that* section, verifiable with a source, ends with a stated conclusion for the analyst, honest about the real mechanism (no flattening into a punchline). Max 1-3 per page. This does not contradict Rule 18 — that bans *invented* stories; a documented event is evidence. (lesson-page-rules → "Real stories and historical facts")
 
 ---
 

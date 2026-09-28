@@ -63,6 +63,7 @@
 ## Introduction to System Analysis
 
 ### Why this job exists
+**Урок:** [[why-analyst-exists|Зачем нужен системный аналитик]]
 - What is a software product
 - Client vs User vs Business
 - The cost of bad requirements

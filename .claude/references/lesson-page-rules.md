@@ -60,6 +60,7 @@ The `-` after `]` makes the callout **foldable and collapsed by default** — al
 - **Problem-first, NOT story-first**: every concept opens with the *problem it solves*, lets the reader feel it (ideally with a question), then reveals the solution and explains how it solves that problem. This re-invents the engineering reasoning — the reader understands *why*, not just *what*. (pedagogy Rule 16)
 - **First principles**: explain things down to the base need ("two programs must talk, what's the minimum they must agree on?"), never "it's the industry standard, everyone uses it". (pedagogy Rule 17)
 - **No fairy-tales**: audience is adults. No fictional protagonist, no invented plot ("жил-был Вася..."). Analogies are allowed and encouraged (restaurant/waiter = API) — an analogy is a 1-2 sentence bridge to a mechanism, not a story. (pedagogy Rule 18)
+- **Real stories and historical facts — yes, when they carry the lesson.** See the section below.
 - **Humor**: 1 dry joke per section max — situational, not forced
 - English terms: format & translate by the rules below (never bare English in a Russian sentence)
 - **Examples**: Telegram, Instagram, Kaspi Bank, 2GIS — apps students actually use
@@ -101,6 +102,28 @@ Before writing the explanation of any concept, **search the internet first** for
 4. Verify the analogy doesn't break on the important detail (no misleading bridges — pedagogy Rule 0, pattern B)
 
 **Why:** community-vetted analogies are tested on thousands of confused beginners — they beat anything invented on the spot. This also guards against confident-but-wrong explanations. Researched > improvised, always.
+
+---
+
+## Real stories and historical facts
+
+A page that only defines things is forgettable. A **real** case the reader can check is what makes the lesson stick, and it is how you turn "here is a definition" into "here is what happens when nobody does this job". Use them — but only under the conditions below. This does **not** contradict "no fairy-tales" (Rule 18): that rule bans *invented* stories with a fictional protagonist. A documented event is evidence, not a fairy-tale.
+
+**Admissible material:**
+- **Failures and incidents** with a traceable cause and a price tag: Mars Climate Orbiter, Denver airport baggage system, Hershey's Halloween 1999, Hertz v. Accenture, Knight Capital.
+- **Origins of a concept** when the origin explains the design: why HTTP was stateless, why REST was written as a dissertation, why the tree-swing cartoon predates the software industry.
+- **Debunking industry folklore** the student will otherwise be taught as fact: the "IBM Systems Sciences Institute 1:6.5:15:100" chart, "Henry Ford said faster horses", the 100× cost curve without its caveats. Debunking is doubly valuable: it teaches the concept *and* teaches scepticism.
+- **Where a term literally comes from** when it fixes the mental model: "bug", "daemon", "patch", "boilerplate".
+
+**Four conditions — all must hold:**
+1. **Directly related.** The story must illustrate *the exact concept of that section*, not IT in general. A famous outage in a lesson about ERD is decoration; cut it.
+2. **Real and verifiable.** Named event, real figures, a source you actually checked. If you could not trace a number to a primary source, do not print it — or print it and say it is unverified folklore.
+3. **Carries a conclusion.** Every story ends with the lesson for the analyst, spelled out in one or two sentences. A story with no "therefore" is entertainment and gets cut.
+4. **Honest about the mechanism.** Do not flatten a story into a punchline. Mars Climate Orbiter is not "someone confused metres and feet" — NASA's board listed one root cause and eight contributing ones. Teaching the punchline teaches the wrong lesson.
+
+**Dosage:** 1–3 per page, maximum. They are seasoning. A page that is 60% stories is a blog post, not a reference note.
+
+**Never:** invented anecdotes, "one company I know", unsourced numbers that sound impressive, or a story retold to make a point it does not actually support.
 
 ---
 
