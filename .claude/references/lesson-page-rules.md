@@ -58,7 +58,7 @@ The `-` after `]` makes the callout **foldable and collapsed by default** — al
 5. **Problem setup** — the concrete problem this topic solves, before any solution. Real situation, no fictional protagonist. 2-4 sentences. See pedagogy Rule 16.
 6. **Concept sections (H2)** — one idea per H2, ~400 words max. Each opens **problem → open question to the reader → solution → how it solves it**.
 7. **Inline check-in** `> [!question]-` after each concept (max 2 questions)
-8. **Misconception callouts** — 1-2 per page, placed in the section they belong to
+8. **Misconception callouts** — at most one per concept section, only where research found a real misconception; placed in the section it belongs to
 9. **Типичная ошибка** (optional) — 1 concrete beginner mistake in practice
 10. `---` + **Module Check** — 4-6 foldable `[!question]-` callouts
 
@@ -230,7 +230,7 @@ Run this against the draft before saving. Fix, don't explain away.
 5. Each core concept follows ADEPT, technical definition last.
 6. Every analogy has a mapping and a «где аналогия ломается» sentence; one analogy per idea.
 7. Each abstract definition has ≥ 2 concrete examples and 1 near-miss non-example.
-8. 1-2 misconception callouts, each found in research (not invented), each with «почему так кажется».
+8. Misconception callouts: at most one per section, each found in research (not invented), each with «почему так кажется».
 9. Coherence test passed: nothing decorative, nothing after a conclusion.
 10. ≤ 3 real stories; each needs the concept to be understood, is sourced, ends with a stated conclusion, and keeps the real mechanism.
 11. Every number, date, name and quote is in the fact table with a URL, or is marked unverified.
