@@ -104,6 +104,7 @@
 **Slides:** [[7-slides/sdlc-methodologies/methodologies-slides|Методологии]] · [[7-slides/task-management/task-management-slides|Управление задачами]]
 
 ### SDLC Stages
+**Урок:** [[sdlc-stages|Жизнь системы не заканчивается релизом: этапы SDLC]]
 - Concept & Initiation
 - Requirements
 - Design
@@ -115,6 +116,7 @@
 - Client-Server model — how software systems are structured: client (frontend / app) sends requests, server (backend) responds; this pattern underlies every system SA will work with
 
 ### Methodologies
+**Урок:** [[development-methodologies|Методология решает, как пройти этапы: Waterfall, Agile, Scrum, Kanban]]
 - Waterfall
 - Agile manifesto & principles
 - Scrum (roles, ceremonies, artifacts)
@@ -123,6 +125,7 @@
 - SA in Waterfall vs Agile
 
 ### Task Management
+**Урок:** [[task-management|Как команда планирует работу, которую нельзя точно предсказать]]
 - Story Points & estimation
 - Planning Poker
 - Velocity
