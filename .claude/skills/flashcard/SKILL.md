@@ -112,7 +112,7 @@ Anki assigns each new card a sequential `due` position when added. Obsidian_to_A
 ## Key rules at a glance
 
 - **Language**: Russian for content; English IT terms stay in English (still need first-mention introduction).
-- **Audience**: zero IT experience — define every term on first mention; casual tone; «ты» not «вы».
+- **Audience**: zero IT experience — define every term on first mention; casual tone; address the student as «вы» (polite), never «ты».
 - **One concept per card** — split anything compound.
 - **No hints in stem** — answer not derivable from question.
 - **Use the term in the definition** — «**Sprint** — это короткий цикл разработки …», not «It's a short development cycle …».

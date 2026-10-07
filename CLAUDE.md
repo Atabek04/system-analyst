@@ -33,7 +33,7 @@ Research → Atomic Notes → Excalidraw Slides → Recording
 
 - **Russian** for all teaching content (slides, notes, flashcards)
 - **English** for meta-files (CLAUDE.md, rules)
-- Casual tone, "ты" not "вы"
+- Casual but polite: address students as **"вы"** (plural-polite), never "ты". Friendly tone, no канцелярит: "подумайте", "представьте", "обратите внимание"
 - Define every term on first mention
 - English IT terms stay in English: Sprint, Backlog, API, Agile, Scrum, Kanban, User Story, etc.
 - Translatable terms: write in Russian with English original in brackets — e.g., "Сбор требований (Elicitation)", "Приоритизация (Prioritization)"
@@ -54,8 +54,9 @@ These are mandatory. Full detail in `pedagogy-rules.md` (Rules 16–18) and `les
 1. **Problem before solution (productive failure)** — never show a solution first. State the problem it solves, let the student feel it / try to invent a fix, *then* reveal the concept and explain how it solves that problem. Builds engineering intuition — the student re-invents the reasoning, not memorizes the fact. (Rule 16)
 2. **First-principles thinking** — explain down to the base need ("two programs must talk — what's the minimum they must agree on?"), never "it's the industry standard". (Rule 17)
 3. **Adult curiosity-gap hooks, NO fairy-tales** — open with a provocative question / contrarian fact / real SA-work stake. Audience is adult career-switchers — no fictional protagonist or invented plot. Analogies (restaurant=API) are fine; stories are not. (Rule 18)
-4. **Research explanations, don't improvise** — before explaining a concept, search the web for how it's actually explained well (`"<concept> in simple terms" / analogy / real world example`), then adapt. Community-vetted analogies beat invented ones. (lesson-page-rules → "Always ground explanations in real sources")
+4. **Research explanations, don't improvise** — before writing, build the research pack: primary-source definitions, documented misconceptions, community-vetted analogies (searched in English and Russian) with where each breaks, realistic examples, and a fact table with a URL for every number. Research and writing are separate steps; subagents may research, the page is written by you. (lesson-page-rules → "Research before writing")
 5. **Real stories make the lesson stick** — use documented cases, origins of a concept, and debunked industry folklore (Mars Climate Orbiter, Denver baggage, the fake "IBM 1:6.5:15:100" chart). Four conditions, all required: directly related to *that* section, verifiable with a source, ends with a stated conclusion for the analyst, honest about the real mechanism (no flattening into a punchline). Max 1-3 per page. This does not contradict Rule 18 — that bans *invented* stories; a documented event is evidence. (lesson-page-rules → "Real stories and historical facts")
+6. **Make the reader produce, and refute misconceptions explicitly** — reading smoothly feels like understanding but isn't. Every concept gets an open question before it and a retrieval check-in after it; every analogy states where it breaks; misconceptions found in research are stated and refuted in a `[!failure]` callout. Run the pre-publish checklist before saving. (lesson-page-rules → "Questions", "Misconceptions", "Pre-publish checklist")
 
 ---
 
@@ -153,7 +154,8 @@ System-Analyst/
 ├── .claude/
 │   ├── references/        (project-wide reference docs — always available)
 │   │   ├── founder-rules.md      (EdTech startup operating principles)
-│   │   └── lesson-page-rules.md  (long-form lesson page structure + callouts)
+│   │   ├── lesson-page-rules.md  (long-form lesson page structure + callouts)
+│   │   └── ai-learning-prompts.md (AI-and-learning evidence, student + author prompts)
 │   └── skills/            (task-specific skills)
 │       ├── curriculum-production/  (full lesson pipeline — /curriculum-production)
 │       │   └── references/
@@ -201,7 +203,8 @@ Read these before writing any lesson, slide, flashcard, or making a platform/pro
 | **Pedagogy Rules** | `.claude/skills/curriculum-production/references/pedagogy-rules.md` | Before writing any lesson, outline, or slide. Contains: real-world bridge table, Socratic method, demo-first rule, slide design rules, completeness checklist. |
 | **Instructor Role** | `.claude/skills/curriculum-production/references/instructor-role.md` | Before writing scripts or speaker notes. Defines tone, live demo mechanics, how to handle wrong answers. |
 | **Founder Rules** | `.claude/references/founder-rules.md` | Before any platform feature, pricing, or scope decision. Contains: build priority order, Day 1/3/7 retention mechanics, competitor positioning, assumption tracking. |
-| **Lesson Page Rules** | `.claude/references/lesson-page-rules.md` | Before writing any long-form lesson page. Contains: frontmatter, page structure, writing style, 6 question types, Obsidian callout conventions. |
+| **Lesson Page Rules** | `.claude/references/lesson-page-rules.md` | Before writing any long-form lesson page. Contains: research pack, page structure, ADEPT order, misconception callouts, writing style, question rules, pre-publish checklist. |
+| **AI Learning Prompts** | `.claude/references/ai-learning-prompts.md` | When researching a topic with AI, fact-checking a draft, editing skills/rules, or teaching students to learn with AI. Contains: evidence on AI and learning, student prompt templates (RU), author research prompts. |
 
 ---
 
