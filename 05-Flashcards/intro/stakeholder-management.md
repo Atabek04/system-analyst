@@ -1,114 +1,274 @@
 TARGET DECK: System Analyst::Intro::Stakeholder Management
 Tags: intro stakeholder management
-**Related:** [[Stakeholder identification and management]]
+**Related:** [[stakeholder-management]]
 
 ---
 
 START
 Coding Questions
-Почему управление стейкхолдерами критично для успеха проекта?
-Back: ~70% проектов не доставляют обещанного. Главные причины — неточные требования, неправильные ожидания, конфликты интересов. Проекты с активно вовлечёнными спонсорами успешны на 40% чаще. SA как медиатор предотвращает эти сбои.
+Почему пропущенная заинтересованная сторона это пропущенное требование?
+Back: Её требование всё равно существует и всплывёт позже, когда переделывать больше.
 Tags: intro stakeholder
 <!--ID: 1778007805240-->
 END
 
 START
 Coding Questions
-Сколько техник идентификации стейкхолдеров существует?
-Back: 4 техники: Brainstorming, Organizational Chart Analysis, Stakeholder Interviews, Stakeholder Register
+Что такое заинтересованная сторона (stakeholder)?
+Back: **Заинтересованная сторона** это человек, группа или организация, на которых система влияет или которые могут повлиять на неё.
+Tags: intro stakeholder
+END
+
+START
+Coding Questions
+Почему «стейкхолдер это тот, кто платит» заблуждение?
+Back: Платящий только один из многих: есть пользователи, поддержка, безопасность, регулятор, поставщики.
+Tags: intro stakeholder misconception
+END
+
+START
+Coding Questions
+Банк добавляет оплату по QR-коду. Назовите три неочевидные заинтересованные стороны.
+Back:
+- Информационная безопасность
+- Отдел финансового мониторинга
+- Колл-центр
+Tags: intro stakeholder example
+END
+
+START
+Coding Questions
+Почему директор банка-конкурента не заинтересованная сторона вашей QR-оплаты?
+Back: У него нет права, доли или влияния на систему, и она его не затрагивает.
+Tags: intro stakeholder example
+END
+
+START
+Coding Questions
+Какие три вопроса помогают найти скрытые заинтересованные стороны?
+Back:
+- Кто это проверяет?
+- Чья работа изменится?
+- Кому позвонят, если сломается?
 Tags: intro stakeholder identification
 <!--ID: 1778007805241-->
 END
 
 START
 Coding Questions
-Что такое Brainstorming как техника идентификации стейкхолдеров?
-Back: **1. Brainstorming** — собрать проектную команду и спросить: "Кто может повлиять на проект или быть затронут им?" Начать широко, не фильтровать идеи сразу, потом сгруппировать похожие роли.
-Tags: intro stakeholder identification
-<!--ID: 1778007805242-->
-END
-
-START
-Coding Questions
-Что такое Organizational Chart Analysis как техника идентификации стейкхолдеров?
-Back: **2. Organizational Chart Analysis** — анализ иерархии: кому будут подчиняться пользователи системы, кто принимает решения о бюджете, кто может заблокировать проект.
-Tags: intro stakeholder identification
-<!--ID: 1778007805243-->
-END
-
-START
-Coding Questions
-Что такое Stakeholder Interviews как техника идентификации стейкхолдеров?
-Back: **3. Stakeholder Interviews** — спрашивать ключевых лиц: "Кто ещё, по вашему мнению, должен быть вовлечён?" Рекурсивный процесс: каждый стейкхолдер может назвать других.
-Tags: intro stakeholder identification
-<!--ID: 1778007805244-->
-END
-
-START
-Coding Questions
-Что такое Stakeholder Register (реестр стейкхолдеров)?
-Back: **4. Stakeholder Register** — живой документ, фиксирующий каждого стейкхолдера: роль, интересы, уровень власти/интереса, требования, риски, стратегию коммуникации и контакт. Обновляется по мере появления новой информации.
-Tags: intro stakeholder identification
+Что такое реестр заинтересованных сторон (Stakeholder Register)?
+Back: **Реестр** это таблица, где у каждой заинтересованной стороны записаны роль, интересы, влияние и способ работы с ней.
+Tags: intro stakeholder register
 <!--ID: 1778007805245-->
 END
 
 START
 Coding Questions
-Что такое Power/Interest Grid и для чего он используется?
-Back: **Power/Interest Grid** — матрица для приоритизации стейкхолдеров по двум осям: уровень власти (влияние на решения) × уровень интереса (насколько их задевает проект). Определяет стратегию работы с каждой группой.
+Зачем в реестре колонка «отношение к проекту»?
+Back: От отношения зависит, как работать с человеком: роль говорит, что он может, отношение говорит, что он будет делать.
+Tags: intro stakeholder register
+END
+
+START
+Coding Questions
+Почему реестр нельзя составить один раз в начале проекта?
+Back: Стороны появляются и меняются. Необновлённый реестр описывает другой проект.
+Tags: intro stakeholder register misconception
+END
+
+START
+Coding Questions
+По каким двум осям матрица влияния и интереса раскладывает заинтересованные стороны?
+Back: **Влияние** (может ли изменить или остановить проект) и **интерес** (насколько проект его затрагивает).
 Tags: intro stakeholder power-grid
 <!--ID: 1778007805246-->
 END
 
 START
 Coding Questions
-Какие 4 квадранта в Power/Interest Grid?
-Back: **Manage Closely** (высокая власть + высокий интерес), **Keep Satisfied** (высокая власть + низкий интерес), **Keep Informed** (низкая власть + высокий интерес), **Monitor** (низкая власть + низкий интерес)
+Что означает «интерес» в матрице влияния и интереса?
+Back: Насколько проект затрагивает человека, а не его любопытство.
+Tags: intro stakeholder power-grid
+END
+
+START
+Coding Questions
+Сколько квадрантов в матрице влияния и интереса?
+Back: 4.
 Tags: intro stakeholder power-grid
 <!--ID: 1778007805247-->
 END
 
 START
 Coding Questions
-Какова стратегия для стейкхолдеров в квадранте "Manage Closely"?
-Back: **Manage Closely** (высокая власть, высокий интерес) — регулярные встречи, вовлечение в ключевые решения. Кто: CEO, спонсор проекта, руководитель ключевого отдела. Пример: CFO, определяющий бюджет.
+Какая стратегия в квадранте «высокое влияние, высокий интерес»?
+Back: **Работать плотно (manage closely)**: регулярные встречи, участие в решениях.
 Tags: intro stakeholder power-grid
 <!--ID: 1778007805248-->
 END
 
 START
 Coding Questions
-Какова стратегия для стейкхолдеров в квадранте "Keep Satisfied"?
-Back: **Keep Satisfied** (высокая власть, низкий интерес) — информировать о прогрессе, предотвращать недовольство. Кто: совет директоров, руководители других отделов. Пример: CTO, который может заблокировать проект, но не участвует в деталях.
+Какая стратегия в квадранте «высокое влияние, низкий интерес»?
+Back: **Удовлетворять (keep satisfied)**: не перегружать, но заранее согласовывать то, что их касается.
 Tags: intro stakeholder power-grid
 <!--ID: 1778007805249-->
 END
 
 START
 Coding Questions
-Какова стратегия для стейкхолдеров в квадранте "Keep Informed"?
-Back: **Keep Informed** (низкая власть, высокий интерес) — рассылки новостей, демонстрации, запрос отзывов. Кто: конечные пользователи, группы поддержки. Пример: сотрудники, которые будут пользоваться системой каждый день.
+Какая стратегия в квадранте «низкое влияние, высокий интерес»?
+Back: **Информировать (keep informed)**: держать в курсе, собирать обратную связь.
 Tags: intro stakeholder power-grid
 <!--ID: 1778007805250-->
 END
 
 START
 Coding Questions
-Как SA выступает медиатором при конфликтующих требованиях стейкхолдеров?
-Back: 4 шага: (1) Слушать без осуждения — задавать уточняющие вопросы. (2) Найти скрытые нужды за высказанными позициями. (3) Предложить решение, обращающееся к интересам каждого. (4) Документировать решение с обоснованием — предотвращает споры позже.
-Tags: intro stakeholder mediation
+Какая стратегия в квадранте «низкое влияние, низкий интерес»?
+Back: **Наблюдать (monitor)**: регулярно проверять, не изменилось ли положение.
+Tags: intro stakeholder power-grid
+END
+
+START
+Coding Questions
+Почему заинтересованных сторон с низким влиянием нельзя игнорировать?
+Back: Матрица это снимок на сегодня. Положение меняется, например пользователи объединяются и жалуются.
+Tags: intro stakeholder power-grid misconception
+END
+
+START
+Coding Questions
+В чём ловушка комплаенса на матрице влияния и интереса?
+Back: Интерес низкий, поэтому его легко не позвать, а одно его «нет» останавливает запуск.
+Tags: intro stakeholder power-grid
+END
+
+START
+Coding Questions
+Что такое RACI?
+Back: **RACI** это таблица: строки это задачи или решения, столбцы это люди, в клетках одна из четырёх букв.
+Tags: intro stakeholder raci
+END
+
+START
+Coding Questions
+Что означает буква R в RACI?
+Back: **Responsible, исполнитель**: делает работу. Их может быть несколько.
+Tags: intro stakeholder raci
+END
+
+START
+Coding Questions
+Что означает буква A в RACI?
+Back: **Accountable, утверждающий**: отвечает за результат и ставит финальную подпись.
+Tags: intro stakeholder raci
+END
+
+START
+Coding Questions
+Что означает буква C в RACI?
+Back: **Consulted, консультант**: с ним советуются до решения.
+Tags: intro stakeholder raci
+END
+
+START
+Coding Questions
+Что означает буква I в RACI?
+Back: **Informed, информируемый**: ему сообщают после решения.
+Tags: intro stakeholder raci
+END
+
+START
+Coding Questions
+Сколько букв A должно быть в одной строке RACI?
+Back: Ровно одна.
+Tags: intro stakeholder raci
+END
+
+START
+Coding Questions
+Что происходит, если в строке RACI две буквы A?
+Back: При разногласии решение не принимает никто.
+Tags: intro stakeholder raci pitfall
+END
+
+START
+Coding Questions
+Почему по-русски легко перепутать R и A в RACI?
+Back: Оба слова переводят как «ответственный».
+Tags: intro stakeholder raci misconception
+END
+
+START
+Coding Questions
+Чем вредна буква C у каждого участника строки RACI?
+Back: Решение ждёт самого медленного, а каждый консультант считает, что у него есть право вето.
+Tags: intro stakeholder raci pitfall
+END
+
+START
+Coding Questions
+Какую путаницу в ролях Счётная палата США (GAO) нашла в проекте Healthcare.gov?
+Back: Неясно было, кто имеет право утверждать запросы подрядчиков на оплату дополнительных работ.
+Tags: intro stakeholder raci case
+END
+
+START
+Coding Questions
+Чем позиция заинтересованной стороны отличается от её интереса?
+Back:
+- **Позиция**: что человек требует
+- **Интерес**: ради чего он это требует
+Tags: intro stakeholder conflict
 <!--ID: 1778007805251-->
 END
 
 START
 Coding Questions
-Как меняется роль SA в управлении стейкхолдерами на разных фазах SDLC?
-Back:
-- **Инициация**: выявить всех, создать реестр, Power/Interest Grid
-- **Требования**: медиировать конфликты, уточнять требования
-- **Дизайн/Разработка**: отслеживать соответствие требованиям, обновления о прогрессе
-- **Тестирование (UAT)**: подготовить пользователей, собрать обратную связь
-- **Развёртывание**: обучение, решение проблем адаптации
-Tags: intro stakeholder sdlc
-<!--ID: 1778007805252-->
+Кто предложил разделять позиции и интересы в переговорах?
+Back: Роджер Фишер и Уильям Юри, книга «Getting to Yes» (1981).
+Tags: intro stakeholder conflict
+END
+
+START
+Coding Questions
+Почему «сделаем 7 полей вместо 14 или 3» слабый первый шаг в конфликте?
+Back: Это компромисс между позициями, а не решение под интересы, и он может не устроить никого.
+Tags: intro stakeholder conflict pitfall
+END
+
+START
+Coding Questions
+Что аналитик делает, если интересы сторон всё равно расходятся?
+Back: Выносит вопрос тому, у кого в RACI стоит A, и записывает решение.
+Tags: intro stakeholder conflict
+END
+
+START
+Coding Questions
+Что такое журнал решений (decision log)?
+Back: **Журнал решений** это запись принятых решений с причинами, тем, кто утвердил, и отвергнутыми вариантами.
+Tags: intro stakeholder conflict
+END
+
+START
+Coding Questions
+Что такое план коммуникаций?
+Back: **План коммуникаций** это таблица: кто, какую информацию, как часто и через какой канал получает.
+Tags: intro stakeholder communication
+END
+
+START
+Coding Questions
+По какому принципу выбирают канал коммуникации для заинтересованной стороны?
+Back: По тому, какое действие от неё нужно: утверждающему нужна записанная форма согласования.
+Tags: intro stakeholder communication
+END
+
+START
+Coding Questions
+Какая типичная ошибка новичка с реестром, матрицей и RACI?
+Back: Составить их в первую неделю и больше не открывать.
+Tags: intro stakeholder pitfall
 END
