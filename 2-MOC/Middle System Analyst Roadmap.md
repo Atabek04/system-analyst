@@ -100,8 +100,7 @@
 ---
 
 ## SDLC
-**Урок:** [[sdlc-methodologies|SDLC и методологии разработки]]
-**Slides:** [[7-slides/sdlc-methodologies/methodologies-slides|Методологии]] · [[7-slides/task-management/task-management-slides|Управление задачами]]
+**Slides:** [[7-slides/sdlc-methodologies/methodologies-slides|Методологии]] · [[7-slides/sdlc-methodologies/sdlc-methodologies-script|Сценарий: SDLC и методологии]] · [[7-slides/task-management/task-management-slides|Управление задачами]]
 
 ### SDLC Stages
 **Урок:** [[sdlc-stages|Жизнь системы не заканчивается релизом: этапы SDLC]]
