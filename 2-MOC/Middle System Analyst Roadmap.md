@@ -90,6 +90,7 @@
 - Agile ceremonies and SA's role in them *(Agile defined in SDLC module — here: which ceremonies SA attends and why)*
 
 ### Stakeholder Management
+**Урок:** [[stakeholder-management|Пропущенная заинтересованная сторона это пропущенное требование]]
 - Stakeholder identification and management
 - Types of stakeholders
 - Client vs User vs Business stakeholder goals
