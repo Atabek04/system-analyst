@@ -70,6 +70,7 @@
 - What is a System Analyst
 
 ### Role & Responsibilities
+**Урок:** [[sa-role-and-responsibilities|Системного аналитика определяет работа, а не название должности]]
 - SA role and responsibilities
 - SA vs BA vs Product Manager
 - SA vs Developer
