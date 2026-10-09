@@ -80,6 +80,7 @@
 - SA career path — Junior → Middle → Senior
 
 ### Company Types & Team Structure
+**Урок:** [[company-types-and-teams|Кто платит за работу, тот и определяет работу аналитика]]
 - Product company vs outsource vs in-house IT
 - How SA role differs by company type
 - Startup vs enterprise — how team structure changes
